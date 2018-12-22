@@ -1,0 +1,2204 @@
+<tw-storydata name="Trap Lifev0.01" startnode="65" creator="Twine" creator-version="2.2.1" ifid="EB7E2DC9-C91A-4E86-A946-69C8038C772D" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.x {
+  color: red;
+}
+
+.pc {
+  color: deeppink;
+}
+
+.s {
+  color: gold;
+}
+
+.m {
+  color: pink;
+}
+
+.t {
+  color: darkorchid;
+  
+}
+
+.l {
+  color: cyan;
+}
+
+.b {
+  color: lime;
+}
+.i {
+  color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">macros.printC = {
+	handler : function(place, macroName, params, parser) {
+		new Wikifier(place, "Hello");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Your Bedroom" tags="" position="565,484" size="100,100">@@.l;Your Bedroom@@
+
+In your bedroom you see your [[bed]], your [[desk]], your [[computer]] and your [[wardrobe]].
+[[Masturbate|Your Bedroom][$sex.jOff()]]
+
+[[Go to the kitchen |Kitchen]]
+[[Go to the bathroom |Bathroom]]
+[[Go to the living room|Living Room]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the front door|Entrance]]
+
+&lt;&lt;if $pc.isTopless()&gt;&gt;
+@@.x;You need to wear clothes to go outside!@@
+&lt;&lt;elseif $pc.shoes is &quot;Barefoot&quot;&gt;&gt;
+@@.x;You need to wear shoes to go outside!@@
+&lt;&lt;else&gt;&gt;
+	&lt;&lt;if ($time.isWeekend() eq 1)&gt;&gt;\
+	It&#39;s the weekend!
+	&lt;&lt;elseif $schoolu.wear lt 1&gt;&gt;\
+	@@.x;You need to wear a school uniform to go to school!@@
+	&lt;&lt;else&gt;&gt;\
+	[[Go to school|School Grounds][$time.addMins(15)]]
+	&lt;&lt;/if&gt;&gt;\
+[[Take the bus|Bus][$time.addMins(20)]]
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;if $debug == 1&gt;&gt;\
+Debug
+[[Add $100|Your Bedroom][$cash.addCash(100)]]
+
+[[Add 100 Horny|Your Bedroom][$pc.addHorny(100)]]
+[[Sub 100 Horny|Your Bedroom][$pc.addHorny(-100)]]
+[[Add 100 Energy|Your Bedroom][$pc.addEnergy(100)]]
+[[Sub 100 Energy|Your Bedroom][$pc.addEnergy(-100)]]
+
+[[Add 15 min|Your Bedroom][$time.addMins(15)]]
+[[Add 1 hr|Your Bedroom][$time.addHours(1)]]
+[[add 1 day|Your Bedroom][$time.addDays(1)]]
+[[add 1 week|Your Bedroom][$time.addDays(7)]]
+[[add 1 mon|Your Bedroom][$time.addMonths(1)]]
+[[add 1 year|Your Bedroom][$time.addYears(1)]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Kitchen" tags="" position="402,618" size="100,100">@@.l;Kitchen@@
+&lt;&lt;if $time.dinnerTime() == 1&gt;&gt;\
+@@.m;$mom.name@@ has finished preparing dinner.
+[[Eat Dinner|Kitchen][$pc.addEnergy(30); $time.addHours(1)]]
+&lt;&lt;/if&gt;&gt;
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the bathroom |Bathroom]]
+[[Go to the living room|Living Room]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the front door|Entrance]]
+
+</tw-passagedata><tw-passagedata pid="3" name="Bathroom" tags="" position="685,619" size="100,100">@@.l;Bathroom@@
+&lt;&lt;display &quot;Shower&quot;&gt;&gt;
+
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the kitchen |Kitchen]]
+[[Go to the living room|Living Room]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the front door|Entrance]]
+</tw-passagedata><tw-passagedata pid="4" name="Living Room" tags="" position="526,613" size="100,100">@@.l;Living Room@@
+A standard living room with a couch, coffee table, some armchairs, and a TV.
+&lt;&lt;if $mom.inLiving() == 1&gt;&gt;\
+@@.m;$mom.name@@ is in here watching TV.
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $teach.QW eq 1&gt;&gt;\
+&lt;&lt;display &quot;teachQW1&quot;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the bathroom |Bathroom]]
+[[Go to the kitchen |Kitchen]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the front door|Entrance]]</tw-passagedata><tw-passagedata pid="5" name="Mother Room" tags="" position="820,615" size="100,100">@@.l;Mother&#39;s Bedroom@@
+
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the kitchen |Kitchen]]
+[[Go to the bathroom |Bathroom]]
+[[Go to the living room|Living Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the front door|Entrance]]
+
+</tw-passagedata><tw-passagedata pid="6" name="Sister Room" tags="" position="950,615" size="100,100">@@.l;Sister&#39;s Bedroom@@
+
+&lt;&lt;if $sis.inRoom() eq 0&gt;&gt;\
+@@.s;$sis.name@@ is not in her room.
+&lt;&lt;elseif $sis.inRoom() eq 1 &amp;&amp; sis.QW eq 1&gt;&gt;\
+Go in and talk with @@.s;$sis.name@@.
+&lt;&lt;else&gt;&gt;\
+@@.s;$sis.name@@ is in there right now, you&#39;d better not disturb her.
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sis.quest() eq 1&gt;&gt;\
+	&lt;&lt;linkappend &quot;Search her room for panties&quot;&gt;&gt;\
+	&lt;&lt;display sisQW1&gt;&gt;\
+	&lt;&lt;/linkappend&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[Go to your bedroom|Your Bedroom]]
+[[Go to the kitchen |Kitchen]]
+[[Go to the bathroom |Bathroom]]
+[[Go to the living room|Living Room]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to the front door|Entrance]]
+
+</tw-passagedata><tw-passagedata pid="7" name="Entrance" tags="" position="603,747" size="100,100">@@.l;Front Door@@
+
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the living room|Living Room]]
+[[Go to the Kitchen|Kitchen]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the bathroom |Bathroom]]
+
+&lt;&lt;if ($time.isWeekend() eq 1)&gt;&gt;\
+It&#39;s the weekend!
+&lt;&lt;elseif $schoolu.wear lt 1&gt;&gt;\
+You need to wear a school uniform to go to school!
+&lt;&lt;else&gt;&gt;\
+[[Go to school|School Grounds][$time.addMins(15)]]
+&lt;&lt;/if&gt;&gt;\
+[[Take the bus|Bus][$time.addMins(20)]]</tw-passagedata><tw-passagedata pid="8" name="Homeroom" tags="" position="1681,761" size="100,100">@@.l;Homeroom@@
+&lt;&lt;if $school.over eq 0&gt;&gt;\
+[[Attend morning classes|Morning Class]]
+&lt;&lt;/if&gt;&gt;\
+[[Go to the school grounds|School Grounds][$time.addMins(5)]]
+[[Go to the restrooms|Restrooms]]</tw-passagedata><tw-passagedata pid="9" name="Restrooms" tags="" position="1831,761" size="100,100">@@.l;Hallways@@
+
+[[Go to the school grounds|School Grounds][$time.addMins(5)]]
+[[Go to your homeroom|Homeroom][$time.addMins(5)]]
+
+[[Go to the boy&#39;s room|BRstrm]]
+[[Go to the girl&#39;s room|GRstrm]]</tw-passagedata><tw-passagedata pid="10" name="Gym" tags="" position="1981,761" size="100,100">@@.l;Gym@@
+
+[[Go to the school grounds|School Grounds]]
+[[Go to the track field|Track]]
+[[Go to the pool|Pool]]
+[[Go in the gym storage room|Storage]]
+
+[[Go to the boy&#39;s lockerroom|BLocker]]
+[[Go to the girl&#39;s lockerroom|Glocker]]</tw-passagedata><tw-passagedata pid="11" name="Pool" tags="" position="2131,761" size="100,100">@@.l;Swimming Pool@@
+
+[[Go to the school grounds|School Grounds][$time.addMins(5)]]
+[[Go to the gym|Gym]]
+[[Go to the track field|Track]]
+
+[[Go to the boy&#39;s lockerroom|BLocker]]
+[[Go to the girl&#39;s lockerroom|Glocker]]</tw-passagedata><tw-passagedata pid="12" name="Track" tags="" position="2281,761" size="100,100">@@.l;Track Field@@
+
+[[Go to the school grounds|School Grounds]]
+[[Go to the gym|Gym]]
+[[Go to the pool|Pool]]
+
+[[Go to the boy&#39;s lockerroom|BLocker]]
+[[Go to the girl&#39;s lockerroom|Glocker]]</tw-passagedata><tw-passagedata pid="13" name="Roof" tags="" position="2431,761" size="100,100">@@.l;School Roof@@
+
+[[Go to the school grounds|School Grounds][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="14" name="School Grounds" tags="" position="2033,535" size="100,100">@@.l;School Grounds@@
+
+&lt;&lt;if $school.isLate() eq 1&gt;&gt;\
+[[You are late for class!|Late Class][$school.addLate()]]
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;if $teach.QW gt 0 &amp;&amp; $pc.caged eq 0&gt;&gt;\
+	//You are expected in @@.t;$teach.name@@&#39;s office!//
+	&lt;&lt;else&gt;&gt;\
+	[[Go to class|Homeroom][$time.addMins(5)]]
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+[[Go to Ms. Michael&#39;s Office|Teacher Office][$time.addMins(5)]]
+
+&lt;&lt;silently&gt;&gt;
+[[Go to the restrooms|Restrooms][$time.addMins(5)]]
+[[Go to the gym|Gym][$time.addMins(5)]]
+[[Go to the pool|Pool][$time.addMins(5)]]
+[[Go to the track field|Track][$time.addMins(5)]]
+[[Go to the school rooftop|Roof][$time.addMins(5)]]
+&lt;&lt;/silently&gt;&gt;
+[[Go Home|Entrance][$time.addMins(15)]]
+[[Take the bus|Bus][$time.addMins(20)]]</tw-passagedata><tw-passagedata pid="15" name="BLocker" tags="" position="2133,927" size="100,100">@@.l;Boy&#39;s Locker@@
+
+[[Go to the gym|Gym]]
+[[Go to the pool|Pool]]
+[[Go to the track field|Track]]
+
+[[Go to the girl&#39;s lockerroom|Glocker]]</tw-passagedata><tw-passagedata pid="16" name="Glocker" tags="" position="2251,926" size="100,100">@@.l;Girl&#39;s Locker@@
+
+[[Go to the gym|Gym]]
+[[Go to the pool|Pool]]
+[[Go to the track field|Track]]
+
+[[Go to the boy&#39;s lockerroom|BLocker]]</tw-passagedata><tw-passagedata pid="17" name="BRstrm" tags="" position="1764,925" size="100,100">Boy&#39;s Room
+
+[[Leave|Restrooms]]</tw-passagedata><tw-passagedata pid="18" name="GRstrm" tags="" position="1874,925" size="100,100">Girl&#39;s Room
+
+[[Leave|Restrooms]]</tw-passagedata><tw-passagedata pid="19" name="Storage" tags="" position="1996,926" size="100,100">@@.l;Gym Storage Room@@
+
+[[Leave|Gym]]</tw-passagedata><tw-passagedata pid="20" name="Morning Class" tags="" position="1490,869" size="100,100">@@.l;Class@@
+
+&lt;&lt;set _x to $school.classEvent()&gt;&gt;\
+&lt;&lt;if _x eq 2&gt;&gt;\
+	&lt;&lt;display &quot;School Horny&quot;&gt;&gt;\
+&lt;&lt;elseif _x eq 1&gt;&gt;\
+	&lt;&lt;display &quot;School Tired&quot;&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;display &quot;School Normal&quot;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[Go to lunch|Lunch][$school.goClass()]]</tw-passagedata><tw-passagedata pid="21" name="Lunch" tags="" position="1412,1005" size="100,100">@@.l;Lunch@@
+&lt;&lt;if $school.late eq 1&gt;&gt;\
+[[Go to lunch detention|Detention]]
+&lt;&lt;else&gt;&gt;\
+	[[Go to afternoon classes|Aft Class][$school.eatLunch()]]
+	&lt;&lt;if $pc.horny gt 75&gt;&gt;\
+	[[Masturbate in the Restrooms|School Mast][$sex.jOff()]]
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Aft Class" tags="" position="1586,1011" size="100,100">@@.l;Class@@
+&lt;&lt;set _x = $school.classEvent()&gt;&gt;\
+&lt;&lt;if _x eq 3&gt;&gt;\
+	&lt;&lt;display &quot;School Gym&quot;&gt;&gt;
+&lt;&lt;elseif _x eq 2&gt;&gt;\
+	&lt;&lt;display &quot;School Horny&quot;&gt;&gt;\
+&lt;&lt;elseif _x eq 1&gt;&gt;\
+	&lt;&lt;display &quot;School Tired&quot;&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;display &quot;School Normal&quot;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+[[Finish school|School Over][$school.classOver()]]</tw-passagedata><tw-passagedata pid="23" name="Downtown" tags="" position="484,956" size="100,100">@@.l;Downtown@@
+
+[[Go to the Mall|Mall][$time.addMins(5)]]
+
+&lt;&lt;silently&gt;&gt;\
+[[Go to the Library|Library][$time.addMins(5)]]
+[[Go to the Club|Club][$time.addMins(5)]]
+[[Go to the Park|Park][$time.addMins(5)]]
+[[Go to the Beach|Beach][$time.addMins(5)]]
+[[Go down the Alleyway|Alleyway][$time.addMins(5)]]
+[[Go to the Post Office|Post Office][$time.addMins(5)]]
+[[Go to the Yoga Studio|Yoga][$time.addMins(5)]]
+&lt;&lt;/silently&gt;&gt;\
+[[Take the Bus|Bus][$time.addMins(20)]]
+</tw-passagedata><tw-passagedata pid="24" name="Mall" tags="" position="273,1104" size="100,100">@@.l;Mall@@
+
+[[Go downtown|Downtown][$time.addMins(5)]]
+[[Go to the hospital|Hospital][$time.addMins(5)]]
+
+In the Mall
+[[General Store]]
+[[Salon]]
+[[Cafe]]
+[[Clothing Store]]
+[[Tattoos and Piercings]]
+[[Adult Store]]
+</tw-passagedata><tw-passagedata pid="25" name="Park" tags="" position="625,1104" size="100,100">@@.l;Park@@
+
+[[Go downtown|Downtown][$time.addMins(5)]]
+[[Go to the beach|Beach][$time.addMins(5)]]
+
+In the park
+[[Public Restrooms]]</tw-passagedata><tw-passagedata pid="26" name="Beach" tags="" position="512,1104" size="100,100">@@.l;Beach@@
+
+[[Go downtown|Downtown][$time.addMins(5)]]
+[[Go to the park|Park][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="27" name="Alleyway" tags="" position="390,1109" size="100,100">@@.l;Alleyway@@
+
+[[Go downtown|Downtown][$time.addMins(5)]]
+[[Go to the hospital|Hospital][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="28" name="Hospital" tags="" position="306,1216" size="100,100">@@.l;Hospital@@
+
+[[Go to the mall|Mall][$time.addMins(5)]]
+[[Go down the alleyway|Alleyway][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="1128,33" size="100,100">&lt;&lt;set $debug to 0&gt;&gt;
+</tw-passagedata><tw-passagedata pid="30" name="StoryCaption" tags="" position="1269,30" size="100,100">!!!Date
+$time.year / $time.month / $time.date
+&lt;&lt;print $Days[$time.weekDay()]&gt;&gt;
+!!!Time\
+&lt;&lt;if $time.hour lt 10&gt;&gt;
+	0$time.hour:\
+&lt;&lt;else&gt;&gt;
+	$time.hour:\
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $time.min lt 10&gt;&gt;
+	\0$time.min\
+&lt;&lt;else&gt;&gt;
+	\$time.min\
+&lt;&lt;/if&gt;&gt;
+!!!!Cash:$cash.money
+!!!!Horniness: $pc.horny
+!!!!Energy: $pc.energy
+[[Journal]]
+[[Check Self]]
+[[Inventory]]
+
+
+
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="31" name="Welcome" tags="" position="20,21" size="100,100">!!Welcome to Trap Life!!
+
+This is a life sim game where you play as a trap. The main fetish is sissification and humiliation revolving around being locked in a chastity cage.
+
+[[Normal|Character Creation][$debug to 0]]
+[[Debug Mode|Character Creation][$debug to 1]]</tw-passagedata><tw-passagedata pid="32" name="Salon" tags="" position="89,1165" size="100,100">@@.l;Salon@@
+Makeover, work.
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="33" name="Cafe" tags="" position="94,922" size="100,100">Cafe Work
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="34" name="Clothing Store" tags="" position="98,1044" size="100,100">@@.l;Clothing Store@@
+
+@@.i;Clothes@@
+&lt;&lt;print &quot;$&quot; + $cost.bschoolu&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.bschoolu) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Boy&#39;s Uniform//
+&lt;&lt;elseif $ward.bschoolu == 0&gt;&gt;\
+[[Boy&#39;s Uniform|Clothing Store][$ward.bschoolu to 1; $cash.useCash($cost.bschoolu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.gschoolu&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.gschoolu) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Girl&#39;s Uniform//
+&lt;&lt;elseif $ward.gschoolu == 0&gt;&gt;\
+[[Girl&#39;s Uniform|Clothing Store][$ward.gschoolu to 1; $cash.useCash($cost.gschoolu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sluttyu&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sluttyu) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Slutty Uniform//
+&lt;&lt;elseif $ward.sluttyu == 0&gt;&gt;\
+[[Slutty Uniform|Clothing Store][$ward.sluttyu to 1; $cash.useCash($cost.sluttyu)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.mcasual&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.mcasual) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the T-shirt and Jeans//
+&lt;&lt;elseif $ward.mcasual == 0&gt;&gt;\
+[[T-shirt and Jeans|Clothing Store][$ward.mcasual to 1; $cash.useCash($cost.mcasual)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sdress&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sdress) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Summer Dress//
+&lt;&lt;elseif $ward.sdress == 0&gt;&gt;\
+[[Summer Dress|Clothing Store][$ward.sdress to 1; $cash.useCash($cost.sdress)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.mskirt&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.mskirt) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Tanktop and Miniskirt//
+&lt;&lt;elseif $ward.mskirt == 0&gt;&gt;\
+[[Tanktop and Miniskirt|Clothing Store][$ward.mskirt to 1; $cash.useCash($cost.mskirt)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.cldress&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.cldress) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Slutty Clubbing Dress//
+&lt;&lt;elseif $ward.cldress == 0&gt;&gt;\
+[[Sexy Clubbing Dress|Clothing Store][$ward.cldress to 1; $cash.useCash($cost.cldress)]]
+&lt;&lt;/if&gt;&gt;\
+
+@@.i;Cosplay@@
+&lt;&lt;print &quot;$&quot; + $cost.maidu&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.maidu) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Maid Uniform//
+&lt;&lt;elseif $ward.maidu == 0&gt;&gt;\
+[[Maid Uniform|Clothing Store][$ward.maidu to 1; $cash.useCash($cost.maidu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.smaidu&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.smaidu) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Sexy Maid Uniform//
+&lt;&lt;elseif $ward.smaidu == 0&gt;&gt;\
+[[Sexy Maid Uniform|Clothing Store][$ward.smaidu to 1; $cash.useCash($cost.smaidu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.cheer&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.cheer) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Cheerleader Uniform//
+&lt;&lt;elseif $ward.cheer == 0&gt;&gt;\
+[[Cheerleader Uniform|Clothing Store][$ward.cheer to 1; $cash.useCash($cost.cheer)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.slcheer&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.slcheer) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Slutty Cheerleader Uniform//
+&lt;&lt;elseif $ward.slcheer == 0&gt;&gt;\
+[[Slutty Cheerleader Uniform|Clothing Store][$ward.slcheer to 1; $cash.useCash($cost.slcheer)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.shimakaze&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.shimakaze) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Shimakaze Cosplay//
+&lt;&lt;elseif $ward.shimakaze == 0&gt;&gt;\
+[[Shimakaze Cosplay|Clothing Store][$ward.shimakaze to 1; $cash.useCash($cost.shimakaze)]] 
+&lt;&lt;/if&gt;&gt;\
+
+@@.i;Swimwear@@
+&lt;&lt;print &quot;$&quot; + $cost.trunks&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.trunks) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Trunks//
+&lt;&lt;elseif $ward.trunks == 0&gt;&gt;\
+[[Trunks|Clothing Store][$ward.trunks to 1; $cash.useCash($cost.trunks)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.thong&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.thong) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Man Thong//
+&lt;&lt;elseif $ward.thong == 0&gt;&gt;\
+[[Man Thong|Clothing Store][$ward.thong to 1; $cash.useCash($cost.thong)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.opiece&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.opiece) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the One Piece//
+&lt;&lt;elseif $ward.opiece == 0&gt;&gt;\
+[[One Piece|Clothing Store][$ward.opiece to 1; $cash.useCash($cost.opiece)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.bikini&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.bikini) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Bikini//
+&lt;&lt;elseif $ward.bikini == 0&gt;&gt;\
+[[Bikini|Clothing Store][$ward.bikini to 1; $cash.useCash($cost.bikini)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sbikini&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sbikini) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Sexy Bikini//
+&lt;&lt;elseif $ward.sbikini == 0&gt;&gt;\
+[[Sexy Bikini|Clothing Store][$ward.sbikini to 1; $cash.useCash($cost.sbikini)]] 
+&lt;&lt;/if&gt;&gt;\
+
+@@.i;Underwear@@
+&lt;&lt;print &quot;$&quot; + $cost.boxers&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.boxers) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Boxers//
+&lt;&lt;elseif $ward.boxers == 0&gt;&gt;\
+[[Boxers|Clothing Store][$ward.boxers to 1; $cash.useCash($cost.boxers)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.panties&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.panties) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Panties//
+&lt;&lt;elseif $ward.panties == 0&gt;&gt;\
+[[Panties|Clothing Store][$ward.panties to 1; $cash.useCash($cost.panties)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.gstring&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.gstring) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the G-String//
+&lt;&lt;elseif $ward.gstring == 0&gt;&gt;\
+[[G-String|Clothing Store][$ward.gstring to 1; $cash.useCash($cost.gstring)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.lingerie&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.lingerie) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Lingerie//
+&lt;&lt;elseif $ward.lingerie == 0&gt;&gt;\
+[[Lingerie|Clothing Store][$ward.lingerie to 1; $cash.useCash($cost.lingerie)]]
+&lt;&lt;/if&gt;&gt;\
+
+@@.i;Shoes@@
+&lt;&lt;print &quot;$&quot; + $cost.sneakers&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sneakers) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Sneakers//
+&lt;&lt;elseif $ward.sneakers == 0&gt;&gt;\
+[[Sneakers|Clothing Store][$ward.sneakers to 1; $cash.useCash($cost.sneakers)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.flats&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.flats) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Flats//
+&lt;&lt;elseif $ward.flats == 0&gt;&gt;\
+[[Flats|Clothing Store][$ward.flats to 1; $cash.useCash($cost.flats)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.heels&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.heels) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the High Heels//
+&lt;&lt;elseif $ward.heels == 0&gt;&gt;\
+[[High Heels|Clothing Store][$ward.heels to 1; $cash.useCash($cost.heels)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sheels&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sheels) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Stripper Heels//
+&lt;&lt;elseif $ward.sheels == 0&gt;&gt;\
+[[Stripper Heels|Clothing Store][$ward.sheels to 1; $cash.useCash($cost.sheels)]]
+&lt;&lt;/if&gt;&gt;\
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="35" name="Tattoos and Piercings" tags="" position="93,1287" size="100,100">@@.l;Tattoo and Piercing Parlor@@
+Get tattoos and piercings.
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="36" name="Adult Store" tags="" position="92,1400" size="100,100">@@.l;Adult Store@@
+&lt;&lt;print &quot;$&quot; + $cost.cage&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.cage) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Chastity Cage//
+&lt;&lt;elseif $toys.cage == 0&gt;&gt;\
+[[Chastity Cage|Adult Store][$toy.cage to 1; $cash.useCash($cost.cage)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.egg&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.egg) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Egg Vibrator//
+&lt;&lt;elseif $toys.egg == 0&gt;&gt;\
+[[Egg Vibrator|Adult Store][$toy.egg to 1; $cash.useCash($cost.egg)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.dildo&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.dildo) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Dildo//
+&lt;&lt;elseif $toys.dildo == 0&gt;&gt;\
+[[Dildo|Adult Store][$toy.dildo to 1; $cash.useCash($cost.dildo)]] 
+&lt;&lt;/if&gt;&gt;\
+ &lt;&lt;print &quot;$&quot; + $cost.wand&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.wand) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Wand Vibrator//
+&lt;&lt;elseif $toys.wand == 0&gt;&gt;\
+[[Wand Vibrator|Adult Store][$toy.wand to 1; $cash.useCash($cost.wand)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.plug&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.plug) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Butt Plug//
+&lt;&lt;elseif $toys.plug == 0&gt;&gt;\
+[[Butt Plug|Adult Store][$toy.plug to 1; $cash.useCash($cost.plug)]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.aneros&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.aneros) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Aneros//
+&lt;&lt;elseif $toys.aneros == 0&gt;&gt;\
+[[Aneros|Adult Store][$toy.aneros to 1; $cash.useCash($cost.aneros)]] 
+&lt;&lt;/if&gt;&gt;\
+ &lt;&lt;print &quot;$&quot; + $cost.cockring&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.cockring) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Cock Ring//
+&lt;&lt;elseif $toys.cockring == 0&gt;&gt;\
+[[Cock Ring|Adult Store][$toy.cockring to 1; $cash.useCash($cost.cockring)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.onahole&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.onahole) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the Onahole//
+&lt;&lt;elseif $toys.onahole == 0&gt;&gt;\
+[[Onahole|Adult Store][$toy.onahole to 1; $cash.useCash($cost.onahole]] 
+&lt;&lt;/if&gt;&gt;\
+
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="37" name="Public Restrooms" tags="" position="750,1111" size="100,100">@@.l;Public Restrooms@@
+
+Gloryholes/public cumdump stuff.
+
+[[Exit|Park]]</tw-passagedata><tw-passagedata pid="38" name="bed" tags="" position="726,349" size="100,100">@@.l;In Bed@@
+You lie down in bed.
+
+[[Get out of bed|Your Bedroom]]
+[[Go to Sleep|Sleep]]
+&lt;&lt;set $sleep.hour to 7&gt;&gt;\
+Alarm Set:
+Hours:&lt;span id=&quot;hour&quot;&gt;&lt;&lt;print $sleep.hour&gt;&gt;&lt;/span&gt; \
+( &lt;&lt;link &quot;[+]&quot;&gt;&gt;&lt;&lt;set $sleep.hour++&gt;&gt;&lt;&lt;replace &quot;#hour&quot;&gt;&gt;&lt;&lt;print $sleep.hour&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
+| &lt;&lt;link &quot;[-]&quot;&gt;&gt;&lt;&lt;set $sleep.hour--&gt;&gt;&lt;&lt;replace &quot;#hour&quot;&gt;&gt;&lt;&lt;print $sleep.hour&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )
+Minutes:&lt;span id=&quot;min&quot;&gt;&lt;&lt;print $sleep.min&gt;&gt;&lt;/span&gt; \
+( &lt;&lt;link &quot;[+]&quot;&gt;&gt;&lt;&lt;set $sleep.min++&gt;&gt;&lt;&lt;replace &quot;#min&quot;&gt;&gt;&lt;&lt;print $sleep.min&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; \
+| &lt;&lt;link &quot;[-]&quot;&gt;&gt;&lt;&lt;set $sleep.min--&gt;&gt;&lt;&lt;replace &quot;#min&quot;&gt;&gt;&lt;&lt;print $sleep.min&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; )
+
+</tw-passagedata><tw-passagedata pid="39" name="desk" tags="" position="854,347" size="100,100">@@.l;Desk@@
+Homework and stuff
+
+[[Return|Your Bedroom]]</tw-passagedata><tw-passagedata pid="40" name="computer" tags="" position="976,348" size="100,100">@@.l;Computer@@
+Computers/CamWhoring
+
+[[Shutdown your laptop|Your Bedroom]]</tw-passagedata><tw-passagedata pid="41" name="wardrobe" tags="" position="578,345" size="100,100">@@.l;Wardrobe@@
+[[Strip|wardrobe][$pc.strip()]]
+&lt;&lt;if $schoolu.wear is 1&gt;&gt;\
+[[Save Uniform|wardrobe][$schoolu.save()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $casual.wear is 1&gt;&gt;\
+[[Save Casual Clothes|wardrobe][$casual.save()]]
+&lt;&lt;/if&gt;&gt;\
+//Load Outfits//
+[[Uniform|wardrobe][$schoolu.load()]] 
+[[Casual|wardrobe][$casual.load()]]
+@@.i;School Uniforms@@
+&lt;&lt;if $ward.bschoolu eq 1&gt;&gt;\
+[[$schoolu.bschoolu|wardrobe][$schoolu.putOn($clref.bschoolu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.gschoolu eq 1&gt;&gt;\
+[[$schoolu.gschoolu|wardrobe][$schoolu.putOn($clref.gschoolu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.sluttyu eq 1&gt;&gt;\
+[[$schoolu.sluttyu|wardrobe][$schoolu.putOn($clref.sluttyu)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Casual Clothes@@
+&lt;&lt;if $ward.mcasual eq 1&gt;&gt;\
+[[$casual.mcasual|wardrobe][$casual.putOn($clref.mcasual)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.sdress eq 1&gt;&gt;\
+[[$casual.sdress|wardrobe][$casual.putOn($clref.sdress)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.mskirt eq 1&gt;&gt;\
+[[$casual.mskirt|wardrobe][$casual.putOn($clref.mskirt)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.cldress eq 1&gt;&gt;\
+[[$casual.cldress|wardrobe][$casual.putOn($clref.cldress)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Underwear@@
+&lt;&lt;if $ward.boxers eq 1&gt;&gt;\
+[[$uwear.boxers|wardrobe][$uwear.putOn($clref.boxers)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.panties eq 1&gt;&gt;\
+[[$uwear.panties|wardrobe][$uwear.putOn($clref.panties)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.gstring eq 1&gt;&gt;\
+[[$uwear.gstring|wardrobe][$uwear.putOn($clref.gstring)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.lingerie eq 1&gt;&gt;\
+[[$uwear.lingerie|wardrobe][$uwear.putOn($clref.lingerie)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Cosplay Outfits@@
+&lt;&lt;if $ward.maidu eq 1&gt;&gt;\
+[[$cosplay.maidu|wardrobe][$cosplay.putOn($clref.maidu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.smaidu eq 1&gt;&gt;\
+[[$cosplay.smaidu|wardrobe][$cosplay.putOn($clref.smaidu)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.cheer eq 1&gt;&gt;\
+[[$cosplay.cheer|wardrobe][$cosplay.putOn($clref.cheer)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.slcheer eq 1&gt;&gt;\
+[[$cosplay.slcheer|wardrobe][$cosplay.putOn($clref.slcheer)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.shimakaze eq 1&gt;&gt;\
+[[$cosplay.shimakaze|wardrobe][$cosplay.putOn($clref.shimakaze)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Swimsuits@@
+&lt;&lt;if $ward.trunks eq 1&gt;&gt;\
+[[$swim.trunks|wardrobe][$swim.putOn($clref.trunks)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.thong eq 1&gt;&gt;\
+[[$swim.thong|wardrobe][$swim.putOn($clref.thong)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.opiece eq 1&gt;&gt;\
+[[$swim.opiece|wardrobe][$swim.putOn($clref.opiece)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.bikini eq 1&gt;&gt;\
+[[$swim.bikini|wardrobe][$swim.putOn($clref.bikini)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $ward.sbikini eq 1&gt;&gt;\
+[[$swim.sbikini|wardrobe][$swim.putOn($clref.sbikini)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Shoes@@
+&lt;&lt;if $ward.sneakers eq 1&gt;&gt;\
+[[$shoes.sneakers|wardrobe][$shoes.putOn($clref.sneakers)]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ward.flats eq 1&gt;&gt;\
+[[$shoes.flats|wardrobe][$shoes.putOn($clref.flats)]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ward.heels eq 1&gt;&gt;\
+[[$shoes.heels|wardrobe][$shoes.putOn($clref.heels)]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $ward.sheels eq 1&gt;&gt;\
+[[$shoes.sheels|wardrobe][$shoes.putOn($clref.sheels)]]
+&lt;&lt;/if&gt;&gt;
+[[Return|Your Bedroom]]</tw-passagedata><tw-passagedata pid="42" name="Sleep" tags="" position="684,237" size="100,100">Sleeping, dreaming.
+
+&lt;&lt;set $time.sleep($sleep.hour, $sleep.min)&gt;&gt;
+
+[[Wake Up|Wake]]</tw-passagedata><tw-passagedata pid="43" name="Wake" tags="" position="794,235" size="100,100">Wake up.
+
+[[Get out of bed|Your Bedroom]]</tw-passagedata><tw-passagedata pid="44" name="Post Office" tags="" position="453,1217" size="100,100">@@.l;Post Office@@
+
+Work delivery job.
+
+[[Exit|Downtown][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="45" name="General Store" tags="" position="98,813" size="100,100">@@.l;General Store@@
+&lt;&lt;print &quot;$&quot; + $cost.razors&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.razors) eq 0&gt;&gt;\
+//You do not have enough money to buy razors//
+&lt;&lt;else&gt;&gt;\
+[[Razors(10)|General Store][$inv.buyRazors()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.makeup&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.makeup) eq 0&gt;&gt;\
+//You do not have enough money to buy makeup//
+&lt;&lt;else&gt;&gt;\
+[[Makeup(10)|General Store][$inv.buyMakeup()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.gloss&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.gloss) eq 0&gt;&gt;\
+//You do not have enough money to buy lipgloss//
+&lt;&lt;else&gt;&gt;\
+[[Lip Gloss(10)|General Store][$inv.buyGloss()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.polish&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.polish) eq 0&gt;&gt;\
+//You do not have enough money to buy nail polish//
+&lt;&lt;else&gt;&gt;\
+[[Nail Polish(10)|General Store][$inv.buyPolish()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sunscreen&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sunscreen) eq 0&gt;&gt;\
+//You do not have enough money to buy sunscreen//
+&lt;&lt;else&gt;&gt;\
+[[Sunscreen(10)|General Store][$inv.buySunscreen()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.ties&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.ties) eq 0&gt;&gt;\
+//You do not have enough money to buy hair ties//
+&lt;&lt;else&gt;&gt;\
+[[Hair Ties(10)|General Store][$inv.buyTies()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.condoms&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.condoms) eq 0&gt;&gt;\
+//You do not have enough money to buy condoms//
+&lt;&lt;else&gt;&gt;\
+[[Condoms(10)|General Store][$inv.buyCondoms()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.lube&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.lube) eq 0&gt;&gt;\
+//You do not have enough money to buy lube//
+&lt;&lt;else&gt;&gt;\
+[[Lube(10)|General Store][$inv.buyLube()]] 
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;print &quot;$&quot; + $cost.webcam&gt;&gt;\
+&lt;&lt;if $inv.webcam eq 1&gt;&gt;\
+//You already have a webcam//
+&lt;&lt;elseif $cash.checkCash($cost.webcam) eq 0&gt;&gt;\
+//You do not have enough money to buy the webcam//
+&lt;&lt;else&gt;&gt;\
+[[Webcam|General Store][$inv.webcam + 1, $cash.useCash($cost.webcam)]] 
+&lt;&lt;/if&gt;&gt;
+
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="46" name="Inventory" tags="" position="1438,38" size="100,100">&lt;&lt;back&gt;&gt;
+@@.i;Useable Items@@
+Razors : $inv.razors
+Makeup : $inv.makeup
+Lip Gloss : $inv.gloss
+Nail Polish : $inv.polish
+Sunscreen : $inv.sunscreen
+Hair Ties : $inv.ties
+Condoms : $inv.condoms
+Lube : $inv.lube
+
+@@.i;Sex Toys@@
+&lt;&lt;if $toys.cage == 1&gt;&gt;\
+Chastity Cage
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.egg == 1&gt;&gt;\
+Egg Vibrator
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.dildo == 1&gt;&gt;\
+Dildo
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.wand == 1&gt;&gt;\
+Wand Vibrator
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.plug == 1&gt;&gt;\
+Butt Plug
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.aneros == 1&gt;&gt;\
+Aneros
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.cockring == 1&gt;&gt;\
+Cock Ring
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $toys.onahole == 1&gt;&gt;\
+Onahole
+&lt;&lt;/if&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="47" name="Check Self" tags="" position="1135,139" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $body.setFace()&gt;&gt;
+&lt;&lt;set $body.setMakeup()&gt;&gt;
+&lt;&lt;set $body.setLips()&gt;&gt;
+&lt;&lt;set $body.setHair()&gt;&gt;
+&lt;&lt;set $body.setBoobs()&gt;&gt;
+&lt;&lt;set $body.setHips()&gt;&gt;
+&lt;&lt;set $body.setAss()&gt;&gt;
+&lt;&lt;set $body.setPenis()&gt;&gt;
+&lt;&lt;set $body.setAnus()&gt;&gt;
+&lt;&lt;set $body.setShave()&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+You are a @@.b;$pc.age@@ year old @@.b;$body.build@@.
+Your face is @@.b;$body.faced@@ with @@.b;$body.makeupd@@ applied. You have @@.b;$body.lipsd@@, @@.b;$body.eyec@@ eyes, @@.b;$body.hairc $body.haird@@, and @@.b;$body.skinc skin@@.
+You have @@.b;$body.boobsd@@, @@.b;$body.hipsd@@, and a @@.b;$body.assd@@.
+You have a @@.b;$body.penisd@@ and @@.b;$body.anusd@@ between your legs.
+Your body is @@.b;$body.shaved@@
+
+Your goal for this year is to try and lose your virginity.
+
+Current Hairstyle:@@.b;$body.hairstyle@@
+Clothes:@@.b;$pc.clothes@@
+Underwear:@@.b;$pc.uwear@@	
+Shoes:@@.b;$pc.shoes@@		
+
+
+</tw-passagedata><tw-passagedata pid="48" name="Character Creation" tags="" position="146,17" size="100,100">Character Name: &lt;&lt;textbox &quot;$pc.name&quot; &quot;Trap&quot;&gt;&gt;
+&lt;&lt;silently&gt;&gt;
+Hair Color: 
+&lt;&lt;nobr&gt;&gt;
+Black&lt;&lt;radiobutton &quot;$body.hairc&quot; &quot;blonde&quot;&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.hairc&quot; &quot;brown&quot; checked&gt;&gt;
+Blonde&lt;&lt;radiobutton &quot;$body.hairc&quot; &quot;black&quot;&gt;&gt;
+Red&lt;&lt;radiobutton &quot;$body.hairc&quot; &quot;red&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+Eye Color:
+&lt;&lt;nobr&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.eyec&quot; &quot;brown&quot; checked&gt;&gt;
+Green&lt;&lt;radiobutton &quot;$body.eyec&quot; &quot;green&quot;&gt;&gt;
+Blue&lt;&lt;radiobutton &quot;$body.eyec&quot; &quot;blue&quot;&gt;&gt;
+Hazel&lt;&lt;radiobutton &quot;$body.eyec&quot; &quot;hazel&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+Skin Color:
+&lt;&lt;nobr&gt;&gt;
+Pale&lt;&lt;radiobutton &quot;$body.skinc&quot; &quot;pale&quot; checked&gt;&gt;
+Tanned&lt;&lt;radiobutton &quot;$body.skinc&quot; &quot;tanned&quot;&gt;&gt;
+Olive&lt;&lt;radiobutton &quot;$body.skinc&quot; &quot;olive&quot;&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.skinc&quot; &quot;brown&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+There is no character customization beyond this because, as the name implies, this game is about playing as a trap, so you will be a trap. There will be methods to change your face and body in the game, but for now you will start as a trap.
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $sex.jOff()&gt;&gt;
+&lt;&lt;set $schoolu.putOn($clref.bschoolu)&gt;&gt;
+&lt;&lt;set $uwear.putOn($clref.boxers)&gt;&gt;
+&lt;&lt;set $shoes.putOn($clref.sneakers)&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+
+[[Start the Game|Intro1]]
+[[Skip Intro|Your Bedroom][$time.setTime(16,0)]]</tw-passagedata><tw-passagedata pid="49" name="Bus" tags="" position="1108,896" size="100,100">@@.l;Bus@@
+
+[[Stop at home|Entrance][$time.addMins(5)]]
+[[Stop at school|School Grounds][$time.addMins(10)]]
+[[Stop downtown|Downtown][$time.addMins(20)]]
+</tw-passagedata><tw-passagedata pid="50" name="Journal" tags="" position="1268,137" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;if $mom.meet gt 0&gt;&gt;\
+[[Anri|Mom Journal]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sis.meet gt 0&gt;&gt;\
+[[Bella|Sis Journal]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $teach.meet gt 0&gt;&gt;\
+[[Ms. Michaels|Teach Journal]]
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="51" name="Intro1" tags="" position="264,17" size="100,100">@@.x;BEEP BEEP BEEP@@
+
+You slam your hand down on your alarm clock, rubbing your eyes as you blink them open.
+@@.pc;First day of school@@, you think to yourself, @@.pc;better get ready.@@
+Climbing out of bed and pulling on your new school uniform, you reflect on the harrowing last week of your life. Your mother, @@.m;$mom.name@@, a popular yoga instructor, decided to quit her old job to move to the seaside town of @@.l;Trapston@@ and open her own private yoga studio. And so, you found yourself in a new town going to a new school for your junior year of high school.
+
+[[Go Down for Breakfast|Intro2]]</tw-passagedata><tw-passagedata pid="52" name="Late Class" tags="" position="1685,642" size="100,100">@@.l;Late for Class@@
+
+[[Next|Morning Class]]</tw-passagedata><tw-passagedata pid="53" name="Intro2" tags="" position="386,16" size="100,100">The first thing you see in the kitchen is your mother, @@.m;$mom.name@@, at the sink washing dishes from breakfast. You see that she is already wearing a sports bra, which pushes her K-cup breasts together, and her yoga pants, which hugs thick, toned ass and thighs. Noticing you, she puts the last plate away and turns around, revealing the imprint of her huge cock, pressed against her thigh by her yoga pants. As with all futanari, your mother has a high libido, meaning that her cock is constantly semi-erect. What&#39;s more the mix of hormones in her body causes her pubic and armpit hair to grow fast and thick, so she&#39;s given up on shaving it years ago. You can see a tuft of her bush peeking out the top of her yoga pants as well as her armpit hair as she wipes her hand and reaches up to tie her blonde hair into a ponytail.
+
+@@.m;&quot;Ah@@, @@.pc;$pc.name@@, @@.m;you&#39;re awake. I need to head out to the studio now. Make sure you wash your dishes after you finish breakfast. I hope you have a great first day of school!&quot;@@
+
+As she walks by you on her way out, you catch a whiff of her pheremones that constantly emanate from her body, and you immediately get hard. Despite her lewd nature, you know your mother is a gentle and caring, raising you and your sister @@.s;$sis.name@@ person and you wouldn&#39;t have anyone else, though sometimes you do wonder if she&#39;s actually oblivious to the effect her body has on those around her or if she flaunts it on purpose.
+
+@@.s;&quot;Buh-bye, Mom!&quot;@@
+
+[[Sit down and have breakfast|Intro3]]</tw-passagedata><tw-passagedata pid="54" name="Intro3" tags="" position="500,13" size="100,100">You sit down across from your older sister, @@.s;$sis.name@@. She looks like a younger version of your mother, although her looks is the only physical thing she inherited from her even though @@.s;$sis.name@@&#39;s curvy female body is definitely sexy, it&#39;s a lot softer compared to @@.m;$mom.name@@&#39;s athletic body. She died her hair blonde a few years ago, and goes tanning consistently to highlight some of her bodies features. She uses a lot of makeup in contrast to @@.m;$mom.name@@, who&#39;s job usually prevented her from using too much. Her personality is quite different than @@.m;$mom.name@@&#39;s too. Blunt and obscene, she wasn&#39;t afraid to use her sexy body to get what she want, and you suspect that that was the primary method she used to get by in school all these years. In fact, she took the move way better than you did even though she&#39;s in her senior year, as she viewed it as a new opportunity to meet new people and new dicks. 
+
+@@.s;&quot;See you later, little bro&quot;, $sis.name@@ says, after washing and putting away her dishes. Soon you hear her walk out the front door, closing the door behind her a bit harder than usual.
+
+[[Finish breakfast|Intro4]]</tw-passagedata><tw-passagedata pid="55" name="Time Logic" tags="" position="19,359" size="100,100">//Time related stuff
+&lt;&lt;set $time = 
+{
+	phase : 0,
+	phsname : &quot;&quot;,
+	day : 1,
+	date : 1,
+	month : 9,
+	year : 2016,
+	addPhase : function(x)
+	{
+		this.phase += x;
+		while (this.phase gte 5)
+		{
+			this.phase -= 5;
+			this.addDays(1);
+		}
+	},
+	weekDay : function() 
+	{ 
+		return this.day % 7;
+	},
+	addDays : function(days)	
+	{
+		this.day += days;
+		this.date += days;
+		$pc.newDay();
+		while (this.date gt this.daysInMonth(this.month)) 
+		{
+			this.date -= this.daysInMonth(this.month);
+			this.addMonths(1);
+		}
+	},
+	isWeekend : function()	
+	{
+		return (this.day % 7 eq 0) || (this.day % 7 eq 6);
+	},
+	daysInMonth : function(month)	
+	{
+		if ((month eq 1) || 
+			(month eq 3) ||
+			(month eq 5) ||
+			(month eq 7) ||
+			(month eq 8) ||
+			(month eq 10) ||
+			(month eq 12))	
+		{
+			return 31;
+		}
+		else if (month eq 2)	
+		{
+			return 28;
+		}
+		else 	
+		{
+			return 30;
+		}
+	},
+	addMonths : function(months) 
+	{
+		this.month += months;
+		while (this.month gt 12) 
+		{
+			this.month -= 12;
+			this.addYears(1);
+		}
+	},
+	addYears : function(years) 
+	{
+		this.year += years;
+	},
+	dayPhase : function()
+	{
+		switch(this.phase)
+		case 0
+	},
+}&gt;&gt;
+&lt;&lt;set $Days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, 				&quot;Friday&quot;, &quot;Saturday&quot;]&gt;&gt;
+&lt;&lt;set $Months = [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, 				&quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]&gt;&gt;
+
+&lt;&lt;goto[[PC Logic]]&gt;&gt;
+</tw-passagedata><tw-passagedata pid="56" name="PC Logic" tags="" position="22,244" size="100,100">//Player stats
+&lt;&lt;set $pc = 
+{
+	name : &quot;&quot;,
+	age : 16,
+	bmonth : 10,
+	bday : 12,
+	sissy : $sis.QW + $mom.QW + $teach.QW,
+	horny : 0,
+	libido : 10,
+	energy : 100,
+	rep : 0,
+	caged : 0,
+	plugged : 0,
+	plugtoy : &quot;&quot;,
+	clothes : &quot;&quot;,
+	uwear : &quot;&quot;,
+	shoes : &quot;&quot;,
+	swim : &quot;&quot;,
+	addHorny : function(x)
+	{
+		this.horny += x;
+		if(this.horny gt 100)
+			this.horny = 100;
+		else if(this.horny lt 0)
+			this.horny = 0;
+	},
+	addEnergy : function(x)
+	{
+		this.energy += x;
+		if(this.energy gt 100)
+			this.energy = 100;
+		else if(this.energy lt 0)
+			this.energy = 0;
+	},
+	addLibido : function()
+	{
+		this.libido += $sex.daysorg + $sex.dayslock;
+	},
+	strip : function()
+	{
+		$schoolu.strip();
+		$cosplay.strip();
+		$casual.strip();
+		$uwear.strip();
+		$shoes.strip();
+		$swim.strip();
+	},
+	isNude : function()
+	{
+		return (!$schoolu.wear &amp;&amp; !$swim.wear &amp;&amp; !$cosplay.wear &amp;&amp; 			!$casual.wear &amp;&amp; !$uwear.wear);
+	},
+	isTopless : function()
+	{
+		return (!$schoolu.wear &amp;&amp; !$swim.wear &amp;&amp; !$cosplay.wear &amp;&amp; 			!$casual.wear);
+	},
+	newDay : function()
+	{
+		$school.attend = 0;
+		$school.over = 0;
+		$school.late = 0;
+		$school.absent = 0;
+		$school.punish = 0;
+		$sex.daysOrg ++;
+		this.addLibido();
+	},
+}&gt;&gt;
+&lt;&lt;set $body =
+{
+	build : &quot;trap&quot;,
+	face : 0,
+	faced : &quot;&quot;,
+	setFace : function()
+	{
+		if(this.face eq 0)
+			this.faced = &quot;androgynous&quot;;
+		else
+			this.faced = &quot;feminine&quot;;
+	},
+	skinc : &quot;&quot;,
+	eyec : &quot;&quot;,
+	hairc : &quot;&quot;,
+	hairl : 0,
+	haird : &quot;&quot;,
+	setHair : function()
+	{
+		if(this.hairl eq 0)
+			this.haird = &quot;short hair&quot;;
+		else if(this.hairl eq 1)
+			this.haird = &quot;shoulder-length hair&quot;;
+		else
+			this.haird = &quot;long hair&quot;;
+	},	
+	hairstyle : &quot;Combed&quot;,
+	penisl : 5,
+	penisd : &quot;&quot;,
+	setPenis : function()
+	{
+		if(this.penisl lte 0)
+			this.penisd = &quot;clitty&quot;;
+		else if(this.penisl eq 1)
+			this.penisd = &quot;micro-dick&quot;;
+		else if(this.penisl eq 2)
+			this.penisd = &quot;tiny weenie&quot;;
+		else if(this.penisl eq 3)
+			this.penisd = &quot;small penis&quot;;
+		else if(this.penisl eq 4)
+			this.penisd = &quot;below average penis&quot;;
+		else if(this.penisl eq 5)
+			this.penisd = &quot;average cock&quot;;
+		else if(this.penisl eq 6)
+			this.penisd = &quot;above average cock&quot;;
+		else if(this.penisl eq 7)
+			this.penisd = &quot;large cock&quot;;
+		else
+			this.penisd = &quot;huge cock&quot;;
+	},
+	anusl : 0,
+	anusd : &quot;&quot;,
+	setAnus : function()
+	{
+		if(this.anusl lte 0)
+			this.anusd = &quot;virgin anus&quot;;
+		else if(this.anusl eq 1)
+			this.anusd = &quot;tight asshole&quot;;
+		else if(this.anusl eq 2)
+			this.anusd = &quot;used asshole&quot;;
+		else if(this.anusl eq 3)
+			this.anusd = &quot;loose asshole&quot;;
+		else
+			this.anusd = &quot;boipussy&quot;;
+	},
+	hipsl : 0,
+	hipsd : &quot;&quot;,
+	setHips : function()
+	{
+		if(this.hipsl lte 0)
+			this.hipsd = &quot;girlish hips&quot;;
+		else if(this.hipsl eq 1)
+			this.hipsd = &quot;curvy hips&quot;;
+		else if(this.hipsl eq 2)
+			this.hipsd = &quot;wide hips&quot;;
+		else
+			this.hipsd = &quot;fertile hips&quot;;
+	},
+	assl : 0,
+	assd : &quot;&quot;,
+	setAss : function()
+	{
+		if(this.assl lte 0)
+			this.assd = &quot;dainty butt&quot;;
+		else if(this.assl eq 1)
+			this.assd = &quot;round ass&quot;;
+		else if(this.assl eq 2)
+			this.assd = &quot;big booty&quot;;
+		else
+			this.assd = &quot;T H I C C ass&quot;;
+	},
+	boobsl : 0,
+	boobsd : &quot;&quot;,
+	setBoobs : function()
+	{
+		if(this.boobsl lte 0)
+			this.boobsd = &quot;perky breasts&quot;;
+		else if(this.boobsl eq 1)
+			this.boobsd = &quot;small breasts&quot;;
+		else if(this.boobsl eq 2)
+			this.boobsd = &quot;prominent breasts&quot;;
+		else if(this.boobsl eq 3)
+			this.boobsd = &quot;large breasts&quot;;
+		else 
+			this.boobsd = &quot;huge knockers&quot;;
+	},
+	lipsl : 0,
+	lipsd : &quot;&quot;,
+	setLips : function()
+	{
+		if(this.lipsl lte 0)
+			this.lipsd = &quot;soft lips&quot;;
+		else if(this.lipsl eq 1)
+			this.lipsd = &quot;plump lips&quot;;
+		else if(this.lipsl eq 2)
+			this.lipsd = &quot;thick lips&quot;;
+		else
+			this.lipsd = &quot;cock-sucking lips&quot;;
+	},
+	shavel : 2,
+	shaved : &quot;&quot;,
+	setShave : function()
+	{
+		if(this.shavel lte 0)
+			this.shaved = &quot;smooth and hairless&quot;;
+		else if(this.shavel eq 1)
+			this.shaved = &quot;stubbly&quot;;
+		else 
+			this.shaved = &quot;hairy&quot;;
+	},
+	makeupl : 0,
+	makeupd : &quot;&quot;,
+	setMakeup : function()
+	{
+		if(this.makeupl lte 0)
+			this.makeupd = &quot;no makeup&quot;;
+		else if(this.makeupl eq 1)
+			this.makeupd = &quot;light makeup&quot;;
+		else
+			this.makeupd = &quot;slutty makekup&quot;;
+	}
+}&gt;&gt;
+&lt;&lt;set $job =
+{
+	lib : 0,
+	post : 0,
+	maid : 0,
+	salon : 0,
+	clerk : 0,
+}&gt;&gt;
+&lt;&lt;goto [[Character Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Character Logic" tags="" position="27,138" size="100,100">&lt;&lt;set $mom =
+{
+	name : &quot;Anri&quot;,
+	QW : 0,
+	meet : 1,
+	isHome : function()
+	{
+		return($time.phase == 4);
+	},
+	desc : &quot;A curvy, athletic futanari that teaches yoga. She has blonde hair and brown eyes. You often see her wearing her yoga clothes both before and after school, even when it&#39;s drenched with sweat. Her futanari pheremones has an erotic effect on those around her, though she seems to either be unaware of this fact, or trying to spread it on purpose.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $sis =
+{
+	name : &quot;Aika&quot;,
+	QW : 0,
+	meet : 1,
+	paid : 0,
+	payment : 0,
+	punish : 0,
+	inShower : function()
+	{
+		return($time.hour gte 7 &amp;&amp; $time.hour lt 8 &amp;&amp; $time.day gt 1);
+	},
+	inRoom : function()
+	{
+		return (!this.inShower() &amp;&amp; ($time.dayPhase() == &quot;Dawn&quot; || 			$time.dayPhase() == &quot;Evening&quot; || $time.dayPhase() == &quot;Night&quot;));
+	},
+	quest : function()
+	{
+		if ((!this.inRoom()) &amp;&amp; ($pc.horny gt 60) &amp;&amp; (passage() == 			&quot;Sister Room&quot;) &amp;&amp; (this.QW lte 0))
+		{
+			this.QW = 1;
+			$pc.sissy++;
+			return this.QW;
+			this.payment = 20;
+		}
+		else
+			return 0;
+	},
+	payMoney : function()
+	{
+		if($cash.money gte this.payment)
+		{
+			$cash.useCash(this.payment);
+			return 1;
+		}
+		else
+			return 0;
+	},
+	desc : &quot;A gyaru slut that spends most of her time socializing and fucking and thinks of you as a virgin loser. She lives an expensive lifestyle, spending a lot of money on makeup and clothes. She is 1 year above you in high school.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $teach =
+{
+	name : &quot;Ms. Michaels&quot;,
+	first : &quot;Gianna&quot;,
+	QW : 0,
+	meet : 0,
+	punish : 0,
+	cages : 0,
+	assist : 0,
+	quest : function()
+	{
+		if(($teach.QW lte 0) &amp;&amp; ($school.punish gt 0) &amp;&amp; (passage() == &quot;Teacher Office&quot;))
+		{
+			this.QW = 1;
+			return this.QW;
+		}
+		else if((this.QW gte 1 &amp;&amp; this.inOffice() &amp;&amp; passage() == &quot;Teacher Office&quot;) || (this.QW gte 1 &amp;&amp; passage() == &quot;Detention&quot;))
+		{
+			if(this.QW lt 2)
+			{
+				this.QW = 2;
+				return this.QW;
+			}
+			else
+				return this.QW;
+		}
+		else
+			return 0;
+	},
+	inOffice : function()
+	{
+	 return ($time.phase == 1 ||
+	},
+	setPunish : function()
+	{
+				this.punish = $school.punish;
+				return this.punish;
+	},
+	desc : &quot;A voluptous woman that dresses to leave little to the imagination. Her tight bun and thick square glasses gives off the impression of a stern disciplinarian.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $coach =
+{
+	name : &quot;Mr. Rocco&quot;
+}&gt;&gt;
+&lt;&lt;goto [[Money Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Money Logic" tags="" position="137,132" size="100,100">&lt;&lt;set $cash =
+{
+	money : 0,
+	addCash : function(amt)
+	{
+		this.money += amt;
+	},
+	useCash : function(amt)
+	{
+		if (this.money lt amt)
+			return 0;
+		else
+		{
+			this.money -= amt;
+			return 1;
+		}	
+	},
+	checkCash : function(amt)
+	{
+		return (this.money gte amt);
+	},
+}&gt;&gt;
+
+&lt;&lt;goto [[Welcome]]&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Intro4" tags="" position="617,14" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $body.setPenis()&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+After washing your dishes, you head back up to your room to perform your morning ritual: getting rid of your hard-on. Like @@.s;$sis.name@@, you also inherited your mother&#39;s libido. To your disappointment however, that seems to be the only thing you inherited, as you unzip your pants and pull out your @@.b;$body.penisd@@.You pull out a pair of @@.m;$mom.name@@&#39;s panties that you keep hidden for fapping purpose, and quickly jerk yourself to orgasm while sniffing the panties.
+
+As you clean up, you are suddenly hit by a feeling of disgust as you realize that your bad fapping habits are the reason why you&#39;re not angry about the sudden move like your sister. Once you hit puberty, your grades, hobbies, and social life all suffered because you never tried to keep your libido under control. You were always horny in school, affecting you ability to pay attention in class, and you always ran home immediately after school to fap, affecting your ability to participate in school clubs. What&#39;s even worse is that you&#39;re still a virgin!
+
+@@.pc;&quot;Well, I have a fresh start at this new school, if there was ever a time to change my habits and turn things around, it&#39;s now. Maybe I&#39;ll even get a girlfriend this year!&quot;@@
+
+And with that thought, you zip up your pants, toss your mother&#39;s panties in the laundry, and head out to school.
+
+
+[[Next|Teach Intro]]
+</tw-passagedata><tw-passagedata pid="60" name="Inventory Logic" tags="" position="157,358" size="100,100">&lt;&lt;set $inv = 
+{
+	razors : 0,
+	makeup : 0,
+	gloss: 0,
+	polish : 0,
+	sunscreen : 0,
+	ties : 0,
+	webcam : 0,
+	condoms : 0,
+	lube : 0,
+	buyRazors : function()
+	{
+		this.razors += 10;
+		$cash.useCash($cost.razors);
+	},
+	useRazors : function()
+	{
+		if(this.razors lte 0)
+		{
+			this.razors = 0;
+			return 0;
+		}
+		else
+			this.razors -= 1;
+	},
+	buyMakeup : function()
+	{
+		this.makeup += 10;
+		$cash.useCash($cost.makeup);
+	},
+	useMakeup : function()
+	{
+		if(this.makeup lte 0)
+		{
+			this.makeup = 0;
+			return 0;
+		}
+		else
+			this.makeup -= 1;
+	},
+	buyGloss : function()
+	{
+		this.gloss += 10;
+		$cash.useCash($cost.gloss);
+	},
+	useGloss : function()
+	{
+		if(this.gloss lte 0)
+		{
+			this.gloss = 0;
+			return 0;
+		}
+		else
+			this.gloss -= 1;
+	},
+	buyPolish : function()
+	{
+		this.polish += 10;
+		$cash.useCash($cost.polish);
+	},
+	usePolish : function()
+	{
+		if(this.polish lte 0)
+		{
+			this.polish = 0;
+			return 0;
+		}
+		else
+			this.polish -= 1;
+	},
+	buySunscreen : function()
+	{
+		this.sunscreen += 10;
+		$cash.useCash(cost.sunscreen);
+	},
+	useSunscreen : function()
+	{
+		if(this.sunscreen lte 0)
+		{
+			this.sunscreen = 0;
+			return 0;
+		}
+		else
+			this.sunscreen -= 1;
+	},
+	buyTies : function()
+	{
+		this.ties += 10;
+		$cash.useCash($cost.ties);
+	},
+	useTies : function()
+	{
+		if(this.ties lte 0)
+		{
+			this.ties= 0;
+			return 0;
+		}
+		else
+			this.ties -= 1;
+	},
+	buyCondoms : function()
+	{
+		this.condoms += 10;
+		$cash.useCash($cost.condomms);
+	},
+	useCondoms : function()
+	{
+		if(this.condoms lte 0)
+		{
+			this.condoms = 0;
+			return 0;
+		}
+		else
+			this.condoms -= 1;
+	},
+	buyLube : function()
+	{
+		this.lube += 10;
+		$cash.useCash($cost.lube);
+	},
+	useLube : function()
+	{
+		if(this.lube lte 0)
+		{
+			this.lube = 0;
+			return 0;
+		}
+		else
+			this.condoms -= 1;
+	}
+}&gt;&gt;
+&lt;&lt;set $toys =
+{
+	cage : 0,
+	egg : 0,
+	dildo : 0,
+	wand : 0,
+	plug : 0,
+	aneros : 0,
+	cockring : 0,
+	onahole : 0,
+}&gt;&gt;
+&lt;&lt;set $toysid = 
+{
+	
+}&gt;&gt;
+&lt;&lt;set $cost =
+{
+	cage : 30,
+	egg : 40,
+	dildo : 50,
+	wand : 35,
+	plug : 45,
+	aneros : 60,
+	cockring : 40,
+	onahole : 70,
+	
+	razors : 5,
+	makeup : 20,
+	gloss : 10,
+	polish : 10,
+	sunscreen : 20,
+	ties : 5,
+	webcam : 150,
+	condoms : 20,
+	lube : 10,
+	
+	bschoolu : 30,
+	gschoolu : 40,
+	sluttyu : 50,
+	mcasual : 25,
+	sdress : 35,
+	mskirt : 45,
+	cldress : 80,
+	
+	maidu : 65,
+	smaidu : 85,
+	cheer : 55,
+	slcheer : 95,
+	shimakaze : 125,
+	
+	trunks : 15,
+	thong : 20,
+	opiece : 25,
+	bikini : 40,
+	sbikini : 60,
+	
+	sneakers : 20,
+	flats : 25,
+	heels : 40,
+	sheels : 50,
+	boxers : 10,
+	panties : 15,
+	gstring : 30,
+	lingerie : 110,
+	
+}&gt;&gt;
+&lt;&lt;goto [[Time Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Teach Intro" tags="" position="750,14" size="100,100">&lt;&lt;silently&gt;&gt;\
+&lt;&lt;set $teach.meet to 1&gt;&gt;\
+&lt;&lt;/silently&gt;&gt;\
+@@.t;&quot;Class, let me introduce you to@@ @@.pc;$pc.name@@. @@.t;He just moved into town a short while ago and will be joining our class&quot;@@
+
+@@.t;$teach.name@@, your new homeroom teacher introduces you to your new class. As she does so, you can&#39;t help but stare at her. She is a voluptuous woman, with straight brown hair tied in a bun. Her piercing dark eyes are framed by thick, rectangular glasses, and her plump lips  shine with lip gloss. She wears a tight blouse and blazer that hugs her curvy body and exposes the cleavage of her encumbersome breasts. Her tight black skirt hugs her ass and thighs tightly, and her nylon stockings and short heels amplify her calves.
+
+@@.t;&quot;Well,@@ @@.pc;$pc.name,@@ @@.t;why don&#39;t you tell everyone a bit about yourself&quot;.@@
+
+Still a bit stunned by @@.t;$teach.name@@&#39;s beauty, you stammer out a short introduction. 
+
+@@.t;&quot;Very good. Why don&#39;t you take your seat there in the middle. Oh, and let me warn you, I have high standards for my students and I&#39;m not afraid to use discipline. If you are struggling with the material, be ready for remedial work with me after school. If you are late, not paying attention, or dozing off during class, you will be punished!&quot;@@
+
+You gulp as you walk to you desk. @@.t;$teach.name@@ seems strict, but if you want to improve your grades, she might be the type of teacher you need.
+
+Your first day of school passes without incident. And you finally get back home and up to your bedroom.
+
+[[Next|Your Bedroom][$time.setTime(16,0)]]</tw-passagedata><tw-passagedata pid="62" name="Teacher Office" tags="" position="1687,529" size="100,100">@@.l;Ms. Michaels Office@@
+&lt;&lt;if $teach.inOffice() eq 1&gt;&gt;\
+@@.t;$teach.name@@ is in her office
+&lt;&lt;else&gt;&gt;\
+@@.t;$teach.name@@ is //not// in her office
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;set _x to $teach.quest()&gt;&gt;
+&lt;&lt;if _x eq 1&gt;&gt;\
+	&lt;&lt;display &quot;teachQW1&quot;&gt;&gt;
+&lt;&lt;elseif _x eq 2&gt;&gt;\
+	&lt;&lt;display &quot;teachQW2&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+[[Exit|School Grounds][$time.addMins(5)]]</tw-passagedata><tw-passagedata pid="63" name="School Logic" tags="" position="155,244" size="100,100">&lt;&lt;set $school =
+{
+	attend : 0,
+	late : 0,
+	absent : 0,
+	latedays : 0,
+	absentdays : 0,
+	over : 0,
+	punish : 0,
+	perv : 0,
+	addLate : function()
+	{
+		this.late++;
+		this.latedays++;
+		this.punish++;
+	},
+	addAbsent : function()
+	{
+		this.absent++;
+		this.absentdays++;
+		this.punish++;
+	},
+	isLate : function()
+	{
+		return (($time.isWeekend() eq 0) &amp;&amp; ($time.hour gte 9) &amp;&amp; 				($school.over eq 0));
+	},
+	goClass : function()
+	{
+		this.attend = 1;
+		$pc.addEnergy(-20);
+		$pc.addHorny(30);
+		$time.setTime(12,0);
+	},
+	classOver : function()
+	{
+		$pc.addEnergy(-20);
+		$time.addHours(3);
+		this.over = 1;
+	},
+	eatLunch : function()
+	{
+		$time.addHours(1);
+		$pc.addEnergy(20);
+	},
+	classEvent : function()
+	{
+		if (this.gymDay() &amp;&amp; passage() == &quot;Aft Class&quot;)
+			return 3;
+		else if($pc.horny gt 90)
+		{
+			this.punish++;
+			this.perv++;
+			return 2;
+		}
+		else if($pc.energy lt 25)
+		{
+			this.punish++;
+			return 1;
+		}
+		else
+			return 0;
+	},
+	gymDay : function()
+	{
+		return((passage() == &quot;Aft Class&quot;) &amp;&amp; (($time.weekDay() == 2) || ($time.weekDay() == 4)));
+	},
+}&gt;&gt;	
+
+&lt;&lt;goto [[Inventory Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="School Horny" tags="" position="1788,16" size="100,100">&lt;&lt;if $teach.QW gt 0&gt;&gt;\
+You are called up to the board to complete a problem. You slowly walk up to the chalkboard, your $body.penisd aching in it&#39;s cage.
+	&lt;&lt;if $pc.plugged gt 0&gt;&gt;\
+	The </tw-passagedata><tw-passagedata pid="65" name="Sex Logic" tags="" position="284,362" size="100,100">&lt;&lt;set $sex =
+{
+	vsex : 0,
+	man : 0,
+	org : 0,
+	apitch : 0,
+	acatch : 0,
+	aorg : 0,
+	bjg : 0,
+	bjr : 0,
+	face : 0,
+	swallow : 0,
+	gang : 0,
+	exhib : 0,
+	daysorg : 0,
+	dayslock : 0,
+	addOrgs : function(orgs) 
+	{
+		this.org += orgs;
+		this.daysorg = 0;
+		$pc.addHorny(-30);
+		$pc.libido--;
+	},
+	addAorgs : function(orgs)
+	{
+		this.aorg += orgs;
+		this.daysorg = 0;
+		$pc.addHorny(-50);
+		$pc.libido--;
+	},
+	jOff : function()
+	{
+		if($pc.caged == 0)
+		{
+			$time.addMins(5);
+			this.addOrgs(1);
+			this.man++;
+		}
+		else
+			return 0;
+	},
+}&gt;&gt;
+
+&lt;&lt;goto [[Wardrobe Logic]]&gt;&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Library" tags="" position="572,1216" size="100,100">@@.l;Library@@
+
+
+[[Exit|Downtown]]</tw-passagedata><tw-passagedata pid="67" name="Club" tags="" position="680,1222" size="100,100">@@.l;Club@@
+
+[[Exit|Downtown]]</tw-passagedata><tw-passagedata pid="68" name="Wardrobe Logic" tags="" position="282,246" size="100,100">&lt;&lt;set $ward =
+{
+	bschoolu : 1,
+	gschoolu : 0,
+	sluttyu : 0,
+	mcasual : 1,
+	sdress : 0,
+	mskirt : 0,
+	cldress : 0,
+	maidu : 0,
+	smaidu : 0,
+	cheer : 0,
+	slcheer : 0,
+	shimakaze : 0,
+	trunks : 1,
+	thong : 0,
+	opiece : 0,
+	bikini : 0,
+	sbikini : 0,
+	sneakers : 1,
+	flats : 0,
+	heels : 0,
+	sheels : 0,
+	boxers : 1,
+	panties : 0,
+	gstring : 0,
+	lingerie : 0,
+}&gt;&gt;
+&lt;&lt;set $clref =
+{
+	bschoolu : 0,
+	gschoolu : 1,
+	sluttyu : 2,
+	mcasual : 0,
+	sdress : 1,
+	mskirt : 2,
+	cldress : 3,
+	maidu : 0,
+	smaidu : 1,
+	cheer : 2,
+	slcheer : 3,
+	shimakaze : 4,
+	trunks : 0,
+	thong : 1,
+	opiece : 2,
+	bikini : 3,
+	sbikini : 4,
+	sneakers : 0,
+	flats : 1,
+	heels : 2,
+	sheels : 3,
+	boxers : 0,
+	panties : 1,
+	gstring : 2,
+	lingerie : 3,
+}&gt;&gt;
+&lt;&lt;set $schoolu =
+{
+	wear : 0,
+	bschoolu : &quot;boy&#39;s uniform&quot;,
+	gschoolu : &quot;girl&#39;s uniform&quot;,
+	sluttyu : &quot;slutty uniform&quot;,
+	putOn : function(x)
+	{
+		this.wear = 1;
+		$casual.strip();
+		$swim.strip();
+		$cosplay.strip();
+		switch(x)
+			{
+			case 0:
+				$pc.clothes = this.bschoolu;
+				break;
+			case 1:
+				$pc.clothes = this.gschoolu;
+				break;
+			case 2:
+				$pc.clothes = this.sluttyu;
+				break;
+			default:
+				$pc.clothes = &quot;Naked&quot;;
+			}
+	},
+	strip : function()
+	{
+		this.wear = 0;
+		$pc.clothes = &quot;Barefoot&quot;;
+	},
+	saveTop : &quot;&quot;,
+	saveUwear : &quot;&quot;,
+	saveShoe : &quot;&quot;,
+	save : function()
+	{
+		if (this.wear = 0)
+			return 0;
+		else
+		{
+			this.saveTop = $pc.clothes;
+			this.saveUwear = $pc.uwear;
+			this.saveShoe = $pc.shoes;
+		}
+	},
+	load : function()
+	{
+		this.wear = 1;
+		$pc.clothes = this.saveTop;
+		$pc.uwear = this.saveUwear;
+		$pc.shoes = this.saveShoe;
+	},
+}&gt;&gt;
+&lt;&lt;set $casual =
+{
+	wear : 0,
+	mcasual : &quot;t-shirt and jeans&quot;,
+	sdress : &quot;summer dress&quot;,
+	mskirt : &quot;tanktop and miniskirt&quot;,
+	cldress : &quot;slutty clubbing dress&quot;,
+	saveTop : &quot;&quot;,
+	saveUwear : &quot;&quot;,
+	saveShoe : &quot;&quot;,
+	putOn : function(x)
+	{
+		this.wear = 1;
+		$schoolu.strip();
+		$cosplay.strip();
+		$swim.strip();
+		switch(x)
+		{
+		case 0:
+			$pc.clothes = this.mcasual;
+			break;
+		case 1:
+			$pc.clothes = this.sdress;
+			break;
+		case 2:
+			$pc.clothes = this.mskirt;
+			break;
+		case 3:
+			$pc.clothes = this.cldress;
+			break;
+		default:
+			$pc.clothes = &quot;Naked&quot;;
+		}
+	},
+	strip: function()
+	{
+		this.wear = 0;
+		$pc.clothes = &quot;Naked&quot;;
+	},
+	save : function()
+	{
+		if (this.wear = 0)
+			return 0;
+		else
+		{
+			this.saveTop = $pc.clothes;
+			this.saveUwear = $pc.uwear;
+			this.saveShoe = $pc.shoes;
+		}
+	},
+	load : function()
+	{
+		this.wear = 1;
+		$pc.clothes = this.saveTop;
+		$pc.uwear = this.saveUwear;
+		$pc.shoes = this.saveShoe;
+	},
+}&gt;&gt;
+&lt;&lt;set $cosplay =
+{
+	wear : 0,
+	maidu : &quot;maid uniform&quot;,
+	smaidu : &quot;sexy maid uniform&quot;,
+	cheer : &quot;cheerleader uniform&quot;,
+	slcheer : &quot;slutty cheerleader uniform&quot;,
+	shimakaze : &quot;Shimakaze cosplay&quot;,
+	saveTop : &quot;&quot;,
+	saveUwear : &quot;&quot;,
+	saveShoe : &quot;&quot;,
+	putOn : function(x)
+	{
+		this.wear = 1;
+		$schoolu.strip();
+		$swim.strip();
+		$casual.strip();
+		switch(x)
+		{
+		case 0:
+			$pc.clothes = this.maidu;
+			break;
+		case 1:
+			$pc.clothes = this.smaidu;
+			break;
+		case 2:
+			$pc.clothes = this.cheer;
+			break;
+		case 3:
+			$pc.clothes = this.slcheer;
+			break;
+		case 4:
+			$pc.clothes = this.shimakaze;
+			break;
+		default:
+			$pc.clothes = &quot;Naked&quot;;
+		}
+	},
+	strip : function()
+	{
+		this.wear = 0;
+		$pc.clothes = &quot;Naked&quot;;
+	},
+	save : function()
+	{
+		if (this.wear = 0)
+			return 0;
+		else
+		{
+			this.saveTop = $pc.clothes;
+			this.saveUwear = $pc.uwear;
+			this.saveShoe = $pc.shoes;
+		}
+	},
+	load : function()
+	{
+		this.wear = 1;
+		$pc.clothes = this.saveTop;
+		$pc.uwear = this.saveUwear;
+		$pc.shoes = this.saveShoe;
+	},
+}&gt;&gt;
+&lt;&lt;set $swim = 
+{
+	wear : 0,
+	trunks : &quot;trunks&quot;,
+	thong : &quot;man thong&quot;,
+	opiece : &quot;one piece&quot;,
+	bikini : &quot;bikini&quot;,
+	sbikini : &quot;skimpy bikini&quot;,
+	putOn : function(x)
+	{
+		this.wear = 1;
+		$schoolu.strip();
+		$cosplay.strip();
+		$casual.strip();
+		$uwear.strip();
+		$shoes.strip();
+		switch(x)
+		{
+		case 0:
+			$pc.clothes = this.trunks;
+			break;
+		case 1:
+			$pc.clothes = this.thong;
+			break;
+		case 2:
+			$pc.clothes = this.opiece;
+			break;
+		case 3:
+			$pc.clothes = this.bikini;
+			break;
+		case 4:
+			$pc.clothes = this.sbikini;
+			break;
+		default:
+			$pc.clothes = &quot;Naked&quot;;
+		}
+	},
+	strip : function()
+	{
+		this.wear = 0;
+		$pc.clothes = &quot;Naked&quot;;
+	},
+}&gt;&gt;
+&lt;&lt;set $shoes = 
+{
+	wear : 0,
+	sneakers : &quot;sneakers&quot;,
+	flats : &quot;girl&#39;s flats&quot;,
+	heels : &quot;high heels&quot;,
+	sheels : &quot;stripper heels&quot;,
+	putOn : function(x)
+	{
+		this.wear = 1;
+		switch(x)
+			{
+			case 0:
+				$pc.shoes = this.sneakers;
+				break;
+			case 1:
+				$pc.shoes = this.flats;
+				break;
+			case 2:
+				$pc.shoes = this.heels;
+				break;
+			case 3:
+				$pc.shoes = this.sheels;
+				break;
+			default:
+				$pc.shoes = &quot;Barefoot&quot;;
+			}
+	},
+	strip : function()
+	{
+		this.wear = 0;
+		$pc.shoes = &quot;Barefoot&quot;;
+	},
+}&gt;&gt;
+&lt;&lt;set $uwear =
+{
+	wear : 0,
+	boxers : &quot;boxers&quot;,
+	panties : &quot;panties&quot;,
+	gstring : &quot;g-string&quot;,
+	lingerie : &quot;lingerie&quot;,
+	putOn : function(x)
+	{
+		switch(x)
+			{
+			case 0:
+				$pc.uwear = this.boxers;
+				break;
+			case 1:
+				$pc.uwear = this.panties;
+				break;
+			case 2:
+				$pc.uwear = this.gstring;
+				break;
+			case 3:
+				$pc.uwear = this.lingerie;
+				break;
+			default:
+				$pc.uwear = &quot;None&quot;;
+			}
+	},
+	strip : function()
+	{
+		this.wear = 0;
+		$pc.uwear = &quot;None&quot;;
+	},	
+}&gt;&gt;
+&lt;&lt;goto [[School Logic]]&gt;&gt;
+</tw-passagedata><tw-passagedata pid="69" name="Mom Journal" tags="" position="1184,253" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;print $mom.desc&gt;&gt;
+
+&lt;&lt;if $mom.QW lte 0&gt;&gt;
+There&#39;s nothing happening with her at the moment. Maybe you should try to introduce her to @@.t;$teach.name@@&#39;s!
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Sis Journal" tags="" position="1287,252" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;print $sis.desc&gt;&gt;
+
+&lt;&lt;if $sis.QW lte 0&gt;&gt;
+Unlike your mother, who smells of sweat and raw sex, @@.s;$sis.name@@ smells like flowers and perfume, a completely different kind of erotic.. You&#39;d like to get your hands on a pair of her panties to use. Maybe if you sneak around her room before she gets back for dinner...
+&lt;&lt;elseif $sis.QW eq 1&gt;&gt;
+@@.s;$sis.name@@ caught you sniffing her panties in your room. Now she wants you to pay her $20 every monday or she&#39;ll spread the embarrassing pictures of you around school.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Teach Journal" tags="" position="1393,247" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;print $teach.desc&gt;&gt;
+
+&lt;&lt;if $teach.QW lte 0&gt;&gt;
+You certainly don&#39;t want to get punished by her by being late or not paying attention in class. Or do you? She is the hottest woman in the class after all, and maybe you can find a chance to get closer to her by being punished..
+&lt;&lt;elseif $teach.QW eq 1&gt;&gt;
+You must meet @@.t;$teach.name@@ in her office before and after school for chastity inspection. The chastity is really uncomfortable for you and by the end of the day your penis is basically exploding out of the cage! What&#39;s worse is if you get you&#39;re not able to pay attention in class you have to wear the cage back home for a few extra hours until you complete the take home lesson. If only there was a way to take it off while you&#39;re in the restroom so you can relieve yourself really quickly...
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="School Over" tags="" position="1642,879" size="100,100">&lt;&lt;if $time.day eq 1&gt;&gt;
+You should join a school club. (not yet implemented)
+You should try finding a job around town. (Not yet implemented)
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $teach.QW gt 0&gt;&gt;\
+[[Daily Check-up|Teacher Office]]
+&lt;&lt;elseif $school.punish gt 0&gt;&gt;\
+[[Meet Ms. Michaels after school|Teacher Office]]
+&lt;&lt;else&gt;&gt;\
+[[School is over|Homeroom]]
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="73" name="School Tired" tags="" position="1913,16" size="100,100">You fell asleep in class!
+
+@@.t;&quot;This is unacceptable,@@ @@.pc;$pc.name@@ @@.t;!@@. You should be able to do this! It&#39;s clear that you haven&#39;t been paying attention in class. Meet me in my office after school!@@
+
+</tw-passagedata><tw-passagedata pid="74" name="School Normal" tags="" position="2058,13" size="100,100">The class passes without incident.</tw-passagedata><tw-passagedata pid="75" name="Yoga" tags="" position="691,989" size="100,100">
+
+[[Leave|Downtown]]</tw-passagedata><tw-passagedata pid="76" name="teachQW1" tags="" position="2698,3" size="100,100">&lt;&lt;if passage() is &quot;Teacher Office&quot;&gt;&gt;\
+You sit down across from @@.t;$teach.name@@, shrinking under her gaze. She moves around to sit next to you, bringing with her a couple of school worksheets and setting them down in front of you.
+
+@@.t;&quot;You and I will be going over these today. It&#39;s clear to me that you are lagging behind in these subjects, and I&#39;ll do everything I can to catch you up to speed&quot;.@@
+
+You spend the next hour working your way through the worksheets, problem after problem, with @@.t;$teach.name@@ leaning over you with one of her heavy breats resting on your shoulder, her cleavage dangerously close to your face. It&#39;s a miracle you even finish a worksheet with you trying to get a peek down her cleavage every minute or so.
+
+@@.t;&quot;@@ @@.pc;$pc.name@@ @@.t;!&quot;@@
+
+You jump and look up at her, realizing too late that you got lost in the depth of her bosom, and probably spent a good 30 seconds just staring at it. @@.t;$teach.name@@ looked furious, glancing down at the bulge in your pants as she returned to her side of the desk.
+
+@@.t;&quot;I know you&#39;re a growing young man, and that these interests are natural, but it&#39;s obvious that you can&#39;t control your behaviour even when there&#39;s work to be done. This is not a problem that I can fix only at school, but changes at home need to be implemented as well. Let&#39;s go to your home and talk to your mother.&quot;@@
+&lt;&lt;link &quot;Go Home&quot; &quot;Living Room&quot;&gt;&gt;\
+&lt;&lt;set $time.addHours(1); $time.addMins(20)&gt;&gt;\
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif passage() is &quot;Living Room&quot;&gt;&gt;\
+You and @@.t;$teach.name@@ are greeted by @@.m;$mom.name@@ at the door, still dress in her yoga outfit, and drenched in sweat.
+
+@@.t;&quot;Hello, I am $teach.name. It&#39;s a pleasure to meet you.&quot;@@
+@@.m;&quot;Oh, Hello! My name is $mom.name, nice to meet you. Please come in! What brings you here with@@ @@.pc;$pc.name@@ @@.m;today? He&#39;s not in trouble so early in the school year is he?&quot;@@
+
+You all sit down in the living room, you and your mother on the couch, and @@.t;$teach.name@@ in an armchair across the coffee table. You sit meekly as @@.t;$teach.name@@ explains your problem to your mother, while @@.m;$mom.name@@ sits relaxed, with her arms and legs spread out, nodding understandingly.
+
+@@.t;&quot;Well,@@ @@.pc;$pc.name@@ @@.t;has been having some behavioral problems at school recently, and I believe that it has to do with is inability to keep his sexual urges in check. I have dealt with these types of problem students before and have plan in mind, but I will need your cooperation.&quot;@@
+
+@@.m;&quot;Of course! I alway new my little@@ @@.pc;$pc.name@@ @@.m;was horny little devil after some of my panties mysteriously disappeared over the years, but I didn&#39;t know it was affecting his performance at school that much. What do you need from me?&quot;@@
+
+You wish you could just sink into the couch and disappear. @@.t;$teach.name@@ reaches into her purse and pulls out a some small items and places it on the table. It&#39;s a chastity cage and two small keys. You stare dumbfounded at the items as @@.t;$teach.name@@ continues to explain.
+
+@@.t;&quot;@@ @@.p;$pc.name@@ @@.t;,you will need to learn to ignore and work through your sexual urges, rather than letting them distract you or succumbing to them. From now on while you are at school you will wear this chastity cage. You will present yourself to me in my office every morning before school and after school where I will put on and take off the cage. If I find your behavior still unacceptable however, I may just leave the cage on as discipline. This is where your mother comes in.@@
+
+As she explains, you notice @@.m;$mom.name@@&#39;s smell changing from plain sweaty to more musky as she get&#39;s more excited by this plan. You can see her cock become harder in her yoga pants, and the smell of her musk fills the room. @@.t;$teach.name@@&#39;s face becomes a bit redder and she shifts around in her chair slightly, rubbing her thighs together.
+
+@@.t;&quot;Ahem, as I was saying, if I leave the cage on after school, she will oversee the punishment I send you home with, and will be able to take off the cage after completing the assignment. Remember to bring the chastity cage back the next day or there will be even more dire consequences! See you next morning.&quot;@@
+
+And with that, she takes the chastity cage, leaving a spare key behind for @@.m;$mom.name@@.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="School Mast" tags="" position="1565,1145" size="100,100">[[Go back to class|Aft Class]]</tw-passagedata><tw-passagedata pid="78" name="sisQW1" tags="" position="2896,0" size="100,100">You rummage around @@.s;$sis.name@@&#39;s room while she&#39;s still at school, probably making new friends. After half an hour, you finally find a worn pair under a pile of clothes. You take a deep whiff of them as a familiar sensation begins to stir in your loins. 
+
+@@.pc;&quot;Mmmm, definitely smells different from mom&#39;s panties - more sweet and flowery  - and lewd from still being a bit damp from her juices.@@ you think to yourself. You get lost in the sensations, and foolishly pull the panties over your face like a mask and reach down into your pants.
+
+@@.s;&quot;Oh ho, what do we have here?&quot;@@
+
+You turn around to see @@.s;$sis.name@@ standing at the door with her phone out pointing at you, a leer spreading across her knowing face. You freeze like a deer caught in headlights, as she walks into the room and closes the door behind her. She pushes you onto your knees and stands towering over you.
+
+@@.s;&quot;Well, what do you have to say for yourself, my perverted little brother?&quot;@@
+
+You make to take the panties off your face, but she stops you.
+
+@@.s;&quot;No, keep those one, and keep your hands behind your back. You don&#39;t do anything without my permission now, not unless you want me to spread this video around school.&quot;@@
+
+You try to make an excuse for this, but the lame excuse you make is muffle by the panties.
+
+@@.s;&quot;Blah blah, whatever little bro. I know you&#39;re just a horny virgin loser. Just sit there and let me have some fun with you. Take off your pants and get back down on your knees. And spread your legs more.&quot;
+
+$sis.name@@ pull up a chair to sit in front of you while you take off your pants and kneel back down spreading your knees further apart. She pulls her panties off your head and crams it into your mouth, then shoves her foot, with socks still on, into your face!
+
+@@.s;&quot;How do you like that sissy boy? I bet they&#39;re stinky from being in use all day. Oh will you look at that! Did your little dick just get harder?&quot;@@
+
+To your shame, you realize your dick is now throbbing incredibly, dancing up and down from your lust, but you can&#39;t help but to keep breathing deep the stink of your sisters smelly socks and feet. @@.s;$sis.name@@ uses her other foot to press your erection against your belly, stroking the underside of your cock.
+
+@@.s;&quot;You seem to be enjoying this. No wonder you&#39;re still a virgin! No one wants to fuck such a perverted boy. Tell you what, if you hold off cumming for 5 minutes, I&#39;ll take your virginity right now.&quot;@@
+
+At that, your dick starts spurting cum all over the front of your shirt as @@.s;$sis.name@@ continues to stroke it with her feet.
+
+@@.s;&quot;Aww too bad, looks like you&#39;ll stay a virgin a little longer!@@
+
+As you stay kneeling on the floor, covered in your own cum. @@.s;$sis.name@@ snaps a picture of you with her phone.
+
+@@.s;&quot;Your my little bitch boy now,@@ @@.pc;$pc.name@@ @@.s;. You can start by paying me $20 next monday, and every monday after that. If you don&#39;t, well, I&#39;ll have to think about the punishment for now, but you won&#39;t like it that I can promise! Now get out of my room and clean yourself up&quot;@@
+
+&lt;&lt;link &quot;Leave&quot; &quot;Your Bedroom&quot;&gt;&gt;
+&lt;&lt;set $sex.jOff()&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Shower" tags="" position="2541,10" size="100,100">&lt;&lt;if $mom.inShower() eq 1&gt;&gt;\
+@@.m;$mom.name@@ is in the shower. Peek on her?
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sis.inShower() eq 1&gt;&gt;\
+@@.s;$sis.name@@ is in the shower. Peek on her?
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="80" name="School Gym" tags="" position="2201,8" size="100,100">You have gym today. The school coach $coach.name looks on.</tw-passagedata><tw-passagedata pid="81" name="Detention" tags="" position="1424,1136" size="100,100">&lt;&lt;set _x to $teach.quest()&gt;&gt;\
+&lt;&lt;if _x eq 2&gt;&gt;\
+&lt;&lt;display &quot;teachQW2&quot;&gt;
+&lt;&lt;else&gt;\
+You spend the lunch period in @@.t;$teach.name@@&#39;s office.
+
+[[Finish Detention|Aft Class][$school.eatLunch()]]</tw-passagedata><tw-passagedata pid="82" name="teachQW2" tags="" position="2703,120" size="100,100">&lt;&lt;if $school.over eq 0&gt;&gt;\
+&lt;&lt;set $pc.caged to 1&gt;&gt;\
+&lt;&lt;set $teach.cages++&gt;&gt;\
+You enter @@.t;$teach.name@@&#39;s office and stand before her.
+	&lt;&lt;if passage() eq &quot;Detention&quot;&gt;&gt;\
+	@@.t;&quot;Well, you know what the consequences are, you&#39;ll have to wear the cage home today&quot;@@
+	&lt;&lt;/if&gt;&gt;\
+	&lt;&lt;if $teach.cages eq 0&gt;&gt;\
+	@@.t;&quot;Let me explain what I expect of you when you present yourself to me for caging. I want you to strip completely naked and assume what I refer to as the &quot;Sissy Boy Pose&quot; by first putting your hands behind your head and elbows out. Then spread your feet apart, pointing them outwards, then bend your knees so it looks like you&#39;re walking like a crab. Finally, thrust your hips forwards. This way I have clear access to your $body.penisd for caging. If you have an erection, you will assume the Sissy Boy Pose until it subsides. If you need my assistance, I can help, but you will have to wear it home if that&#39;s the case&quot;@@
+	&lt;&lt;/if&gt;&gt;\
+You follow her instructions and assume the Sissy Boy Pose, presenting your $body.penisd to her.
+	&lt;&lt;if $pc.horny gt 90&gt;&gt;\
+	&lt;&lt;set $teach.assist++&gt;&gt;\
+	&lt;&lt;set $sex.jOff()&gt;&gt;\
+	You&#39;re $body.penisd is throbbing, so you stay in the pose, waiting for it to go down. But after 10 minutes it becomes apparent that it won&#39;t go down
+	@@.pc;&quot;Can I get some help,@@ @@.t;$teach.name@@ @@.pc;?&quot;@@. 		@@.t;$teach.name@@ opens a desk drawer and bring out some lube, applying it to the inside of her thumb and index finger. Then she scoots over to sit besides you and wraps her 2 fingers around the base of your cock, but instead of jerking you off, she just keeps them there.
+		&lt;&lt;if $teach.assist lte 1&gt;&gt;\
+		@@.t;&quot;This is all the assistance I will give you, you&#39;ll have to do everything else by yourself. Come on, you&#39;re a big boy aren&#39;t 	you? Show me what you&#39;ve got.&quot;@@
+		Realizing what she means, you start bucking your hips wildly back and forth while in the Sissy Boy Pose, as she sits next to you 	looking bored. 
+		&lt;&lt;else&gt;&gt;\
+		The office fills with the lewd sounds of you fucking the hole made by her fingers, bucking your hips back and forth wildly while in the shameful pose.
+		&lt;&lt;/if&gt;&gt;\
+	Eventually you orgasm and spurt out long strings of cum across the wall and on the floor in front of you. 
+	@@.t;&quot;My my, that was quite intense. You&#39;ll have to clean that up after I cage you.&quot; $teach.name@@ says as she cleans her hands and puts the chastity cage on your now limp dick.
+		@@.t;&quot;Now, lick that up, and then you can get dressed and go to class.&quot;@@
+	&lt;&lt;elseif $pc.horny gt 60&gt;&gt;\
+	You&#39;re $body.penisd is hard, so you stay in the Sissy Boy Pose until you&#39;re erection subsides, all the while @@.t;$teach.name@@ does paperwork at her desk, looking bored. After you&#39;re $body.penisd is limp, @@.t;$teach.name@@ puts the chastity cage on you.
+	&lt;&lt;else&gt;&gt;\
+	@@.t;$teach.name@@ puts the chastity cage on your limp $body.penisd.
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+&lt;&lt;set _p to $teach.setPunish()&gt;&gt;\
+You return to @@.t;$teach.name@@&#39;s office and present yourself to her.
+	&lt;&lt;if $pc.horny gt 90&gt;&gt;\
+	You&#39;re so horny that you&#39;re $body.penisd is bouncing up and down, even in it&#39;s cage, it&#39;s flesh pressing through the cracks. Beads of precum drip all over @@.t;$teach.name@@&#39;s hands as she removes your cage, and she brings them up to lick it.
+	@@.t;&quot;Mmm, I can taste how horny you are. I bet you&#39;re just straining to get out of that cage aren&#39;t you?&quot;@@
+	&lt;&lt;elseif $pc.horny gt 60&gt;&gt;\
+	Your $body.penisd is straining to get ouf the cage. A bead of precum forms on the tip of your %body.penisd, and @@.t;$teach.name@@ collects it on her finger and rubs it around on her thumb before smelling it.
+	@@.t;&quot;Not quite horny enough, but I bet it&#39;s still quite uncomfortable isn&#39;t it?&quot;
+	&lt;&lt;else&gt;&gt;\
+	You manage to keep your horniness in check today, as your dick stays relatively still.
+	&lt;&lt;/if&gt;&gt;\
+	&lt;&lt;elseif _p gt 0&gt;&gt;\
+	@@.t;&quot;Here&#39;s is your take home assignment.&quot; $teach.name@@ says, as she hands you a piece of paper. @@.t;&quot;Take that home and show it to your mother. She will take the cage off once she thinks you&#39;ve performed the assignment adequately.&quot;@@
+	&lt;&lt;else&gt;&gt;\
+	&lt;&lt;set $pc.caged eq 0&gt;&gt;\
+	@@.t;$teach.name@@ removes the chastity cage.
+	@@.t;&quot;Looks like you&#39;re improving at keeping your libido under control. Good work!&quot;@@
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata></tw-storydata>

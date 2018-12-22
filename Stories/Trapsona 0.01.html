@@ -1,0 +1,381 @@
+<tw-storydata name="Trapsona 0.01" startnode="1" creator="Twine" creator-version="2.2.1" ifid="AEC434B4-8FA5-4677-A935-F9A4BED6E406" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.x {
+  color: red;
+}
+
+.pc {
+  color: deeppink;
+}
+
+.s {
+  color: gold;
+}
+
+.m {
+  color: pink;
+}
+
+.t {
+  color: darkorchid;
+  
+}
+
+.l {
+  color: cyan;
+}
+
+.b {
+  color: lime;
+}
+.i {
+  color: orange;
+}
+.c {
+  color: turquoise;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+</script><tw-passagedata pid="1" name="Time Logic" tags="" position="29,21" size="100,100">//Time related stuff
+&lt;&lt;set $time = 
+{
+	phase : 0,
+	phsname : &quot;Night&quot;,
+	day : 1,
+	date : 1,
+	month : 9,
+	year : 2016,
+	addPhase : function(x)
+	{
+		this.phase += x;
+		while (this.phase gte 4)
+		{
+			this.phase -= 4;
+			this.addDays(1);
+		}
+		this.dayPhase();; 
+	},
+	setPhase : function(x)
+	{
+		this.ticks = 0;
+		x -= this.phase;
+		while(x lte 0)
+			x += 4;
+			this.addPhase(x);
+	},
+	dayPhase : function()
+	{
+		if (this.phase == 0)
+			this.phsname = &quot;Night&quot;;
+		else if (this.phase == 1)
+			this.phsname = &quot;Morning&quot;;
+		else if (this.phase == 2)
+			this.phsname = &quot;Afternoon&quot;;
+		else
+			this.phsname = &quot;Evening&quot;;
+	},
+	weekDay : function() 
+	{ 
+		return this.day % 7;
+	},
+	addDays : function(days)	
+	{
+		this.day += days;
+		this.date += days;
+		$pc.newDay();
+		while (this.date gt this.daysInMonth(this.month)) 
+		{
+			this.date -= this.daysInMonth(this.month);
+			this.addMonths(1);
+		}
+	},
+	isWeekend : function()	
+	{
+		return (this.day % 7 eq 0) || (this.day % 7 eq 6);
+	},
+	daysInMonth : function(month)	
+	{
+		if ((month eq 1) || 
+			(month eq 3) ||
+			(month eq 5) ||
+			(month eq 7) ||
+			(month eq 8) ||
+			(month eq 10) ||
+			(month eq 12))	
+		{
+			return 31;
+		}
+		else if (month eq 2)	
+		{
+			return 28;
+		}
+		else 	
+		{
+			return 30;
+		}
+	},
+	addMonths : function(months) 
+	{
+		this.month += months;
+		while (this.month gt 12) 
+		{
+			this.month -= 12;
+			this.addYears(1);
+		}
+	},
+	addYears : function(years) 
+	{
+		this.year += years;
+	},
+	sleep : function()
+	{
+		if(this.phase == 0)
+			$pc.addEnergy(60);
+		else
+			$pc.addEnergy(90);
+			
+		this.setPhase(1);
+	},
+}&gt;&gt;
+&lt;&lt;set $Days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, 				&quot;Friday&quot;, &quot;Saturday&quot;]&gt;&gt;
+&lt;&lt;set $Months = [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, 				&quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]&gt;&gt;
+
+&lt;&lt;goto[[PC Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="PC Logic" tags="" position="151,28" size="100,100">//Player stats
+&lt;&lt;set $pc = 
+{
+	name : &quot;&quot;,
+	age : 16,
+	bmonth : 10,
+	bday : 12,
+	horny : 0,
+	rep : 0,
+	Courage :
+	{
+		desc : &quot;Timid&quot;,
+		pts : 0,
+		rank : 1,
+		addPts : function(x)
+		{
+			@@.x;Your Courage has increased!@@
+			this.pts += x;
+			if(this.pts gte 10)
+			{
+				this.desc = &quot;Bold&quot;;
+				this.rank = 2;
+			}
+			else if(this.pts gte 30)
+			{
+				this.desc = &quot;Daring&quot;;
+				this.rank = 3;
+			}
+			else if(this.pts gte 60)
+			{
+				this.desc = &quot;Adventurous&quot;;
+				this.rank = 4;
+			}
+			else if(this.pts gte 100)
+			{
+				this.desc = &quot;Dauntless&quot;;
+				this.rank = 5;
+			}
+		},
+	},
+	Beauty :
+	{
+		desc : &quot;Plain&quot;,
+		pts : 0,
+		rank : 1,
+		addPts : function(x)
+		{
+			@@.x;Your Beauty has increased!@@
+			this.pts += x;
+			if(this.pts gte 10)
+			{
+				this.desc = &quot;Androgynous&quot;;
+				this.rank = 2;
+			}
+			else if(this.pts gte 30)
+			{
+				this.desc = &quot;Alluring&quot;;
+				this.rank = 3;
+			}
+			else if(this.pts gte 60)
+			{
+				this.desc = &quot;Graceful&quot;;
+				this.rank = 4;
+			}
+			else if(this.pts gte 100)
+			{
+				this.desc = &quot;Exquisite&quot;;
+				this.rank = 5;
+			}
+		},
+	},
+	Coordination :
+	{
+		desc : &quot;Clumsy&quot;,
+		pts : 0,
+		rank : 1,
+		addPts : function(x)
+		{
+			@@.x;Your Coordination has increased!@@
+			this.pts += x;
+			if(this.pts gte 10)
+			{
+				this.desc = &quot;Able&quot;;
+				this.rank = 2;
+			}
+			else if(this.pts gte 30)
+			{
+				this.desc = &quot;Skilled&quot;;
+				this.rank = 3;
+			}
+			else if(this.pts gte 60)
+			{
+				this.desc = &quot;Adept&quot;;
+				this.rank = 4;
+			}
+			else if(this.pts gte 100)
+			{
+				this.desc = &quot;Uncanny&quot;;
+				this.rank = 5;
+			}
+		},
+	},
+	Charm :
+	{
+		desc : &quot;Boring&quot;,
+		pts : 0,
+		rank : 1,
+		addPts : function(x)
+		{
+			@@.x;Your Charm has increased!@@
+			this.pts += x;
+			if(this.pts gte 10)
+			{
+				this.desc = &quot;Likeable&quot;;
+				this.rank = 2;
+			}
+			else if(this.pts gte 30)
+			{
+				this.desc = &quot;Sweet&quot;;
+				this.rank = 3;
+			}
+			else if(this.pts gte 60)
+			{
+				this.desc = &quot;Charismatic&quot;;
+				this.rank = 4;
+			}
+			else if(this.pts gte 100)
+			{
+				this.desc = &quot;Infatuating&quot;;
+				this.rank = 5;
+			}
+		},
+	},
+	Lewdness :
+	{
+		desc : &quot;Decent&quot;,
+		pts : 0,
+		rank : 1,
+		addPts : function(x)
+		{
+			@@.x;Your Lewdness has increased!@@
+			this.pts += x;
+			if(this.pts gte 10)
+			{
+				this.desc = &quot;Naughty&quot;;
+				this.rank = 2;
+			}
+			else if(this.pts gte 30)
+			{
+				this.desc = &quot;Loose&quot;;
+				this.rank = 3;
+			}
+			else if(this.pts gte 60)
+			{
+				this.desc = &quot;Shameless&quot;;
+				this.rank = 4;
+			}
+			else if(this.pts gte 100)
+			{
+				this.desc = &quot;Obscene&quot;;
+				this.rank = 5;
+			}
+		},
+	},
+	addHorny : function(x)
+	{
+		this.horny += x;
+		if(this.horny gt 100)
+			this.horny = 100;
+		else if(this.horny lt 0)
+			this.horny = 0;
+	},
+}&gt;&gt;
+&lt;&lt;goto[[Money Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Money Logic" tags="" position="274,30" size="100,100">&lt;&lt;set $cash =
+{
+	money : 0,
+	addCash : function(amt)
+	{
+		this.money += amt;
+	},
+	useCash : function(amt)
+	{
+		if (this.money lt amt)
+			return 0;
+		else
+		{
+			this.money -= amt;
+			return 1;
+		}	
+	},
+	checkCash : function(amt)
+	{
+		return (this.money gte amt);
+	},
+}&gt;&gt;
+&lt;&lt;goto [[Welcome]]&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="832,15" size="100,100">!!!Date\
+$time.year / $time.month / $time.date
+&lt;&lt;print $Days[$time.weekDay()]&gt;&gt;
+!!!Time
+&lt;&lt;print $time.phsname&gt;&gt;
+!!!!Cash:$cash.money
+!!!!Horniness: $pc.horny
+
+!!!!Stats
+Courage: $pc.Courage.desc $pc.Courage.rank / 5
+Beauty: $pc.Beauty.desc $pc.Beauty.rank / 5
+Coordination: $pc.Coordination.desc $pc.Coordination.rank / 5
+Charm: $pc.Charm.desc $pc.Charm.rank / 5
+Lewdness: $pc.Lewdness.desc $pc.Lewdness.rank / 5
+
+&lt;&lt;if $debug eq 1&gt;&gt;\
+[[Debug]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="5" name="Debug" tags="" position="938,16" size="100,100">&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Welcome" tags="" position="399,31" size="100,100">!!Welcome to Trapsona!
+
+Gameplay is inspired by the Persona Series, but instead of fighting shadows and demons, you&#39;re trying to turn yourself into a trap. Your Social Links will help you on the way.
+
+Name your Character
+Character Name: &lt;&lt;textbox &quot;$pc.name&quot; &quot;Trap&quot;&gt;&gt;
+
+[[Normal|Intro][$debug to 0]]
+[[Debug Mode|Intro][$debug to 1]]</tw-passagedata></tw-storydata>

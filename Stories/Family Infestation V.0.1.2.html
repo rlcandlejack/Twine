@@ -1,0 +1,2123 @@
+<tw-storydata name="Family Infestation V.0.1.2" startnode="17" creator="Twine" creator-version="2.1.3" ifid="9458948A-1170-4CC7-B44A-8E8091EA6F64" format="SugarCube" format-version="1.0.35" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">a {
+  color: #00cc00;
+}
+
+.embold {
+	font-style: italic;
+	font-weight: bold;
+	color: #00cc00;
+}
+
+.bold {
+	font-style: italic;
+	font-style: bold;
+}
+
+.v {
+	color: #006600;
+}
+
+.t {
+	color: #ff33cc;
+}
+
+.a {
+	color: #ff6600;
+}
+
+.m {
+	color: #ffcc00;
+}
+
+.mo {
+	color: #9900cc;
+}
+
+.ma {
+	color: #0066ff;
+}
+
+.s {
+	color: #996633;
+}
+
+.h {
+	color: #ff0000;
+}
+
+.l {
+	color: #00ffff;
+}
+
+.e {
+	color: #ff6666;
+}
+
+.a {
+	color: #669999;
+}
+
+.j {
+	color: #cc99ff;
+}
+
+.ar {
+	color: #ff6600;
+}
+
+.i {
+	color: #00cc00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Status" tags="" position="575,795">&lt;&lt;back&gt;&gt;
+
+@@.embold;Overall Status@@: $pchar.status
+
+@@.embold;Brain@@: $pchar.brain
+
+@@.embold;Mouth@@: $pchar.mouth
+
+@@.embold;Lungs@@: $pchar.lungs
+
+@@.embold;Stomach@@: $pchar.stomach
+
+@@.embold;Breasts@@: $pchar.breasts
+
+@@.embold;Belly@@: $pchar.belly
+
+@@.embold;Vagina@@: $pchar.vagina
+
+@@.embold;Womb@@: $pchar.womb
+
+@@.embold;Anus@@: $pchar.anus
+
+</tw-passagedata><tw-passagedata pid="2" name="StoryMenu" tags="" position="579,663">$day
+
+$time
+
+&lt;&lt;if $gamestart is true&gt;&gt;
+[[Status]] 
+[[Family &amp; Friends|family change log]]
+[[Purse]]
+[[Objective]]
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $nursery is true&gt;&gt;
+[[Offspring]]
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="family change log" tags="" position="448,664">&lt;&lt;back&gt;&gt;
+
+[[Family]]
+
+[[Friends &amp; Associates]]
+
+[[The Staff of Lovelock]]</tw-passagedata><tw-passagedata pid="4" name="invisible change log" tags="" position="437,916">$eggchoice
+$offspringtotal
+$dogcuriosity
+$dogfuck
+$dogtime
+$flowersmell
+$flowerpick
+$job
+$timmsattraction
+$timmshome
+$infectchoice
+$workdress
+$photo
+$dronewomb
+$laura
+$bikerstance
+$vetvisit
+$vetchoice
+$dronefert
+$motherdefy
+$motherobey</tw-passagedata><tw-passagedata pid="5" name="StoryInit" tags="" position="2394,1307">&lt;&lt;set $box = [&quot;£$money&quot;,]&gt;&gt;
+
+&lt;&lt;set $money = 10&gt;&gt;
+&lt;&lt;set $helenspeak1 to false&gt;&gt;
+
+&lt;&lt;set $pchar = {
+	&quot;name&quot; : &quot;@@.e;Etta@@&quot;,
+	&quot;status&quot; : &quot;Fit and healthy as any other ordinary teenager, @@.e;Etta@@ can&#x27;t actually can&#x27;t remember the last time she was ill. Like her mother, she has shoulder-length auburn hair, green eyes and cute features. She has small AA cup breasts but her hips swell beautifully to accommodate a large but shapely rump.&quot;,
+	&quot;brain&quot; : &quot;@@.i;The Progenitor organism attached to her spine has a direct link to her mind. It knows everything she does and can subtley influence her behaviour@@.&quot;,
+	&quot;mouth&quot; : &quot;She has a normal mouth. Her teeth are sparkling white and her breath is fresh.&quot;,
+	&quot;lungs&quot; : &quot;There is no sign of infestation inside her respiratory system. Her breath comes naturally.&quot;,
+	&quot;stomach&quot; : &quot;There is nothing unusual going on inside her stomach.&quot;,
+	&quot;breasts&quot; : &quot;She has pert, girlish breasts that are regrettably small for her age. The bras she wears fit an AA cup.&quot;, 
+	&quot;belly&quot; : &quot;Her soft belly is nice and flat.&quot;,
+	&quot;vagina&quot; : &quot;Her tight vagina remains unspoiled.&quot;,
+	&quot;womb&quot; : &quot;There are no offspring currently gestating inside her but she&#x27;s more than fertile.&quot;,
+	&quot;anus&quot; : &quot;Her anus is uncorrupted. There is nothing going in or coming out that shouldn’t be.&quot;,
+	&quot;cor&quot; : 0
+}&gt;&gt;
+
+&lt;&lt;set $motherchar = {
+	&quot;name&quot; : &quot;@@.m;Helen&quot;,
+	&quot;age&quot; : &quot;44&quot;,
+	&quot;desc&quot; : &quot;@@.m;Helen@@ is the hard working single parent of two grown girls. She has long auburn hair that she takes great pains to keep in good condition. Her body is in great shape for her age, although there is a little extra weight around her hips, ass, thighs, and breasts. She is fiercely protective of her children and would rather die than let anything bad happen to them.&lt;br&gt;&lt;br&gt;It&#x27;s been nearly eight years since her husband, Glenn, left the family. He disappeared without warning, vanishing one week with no sign and no word. After a lengthy missing persons investigation a verdict was reached: he&#x27;d run off with a younger woman and was taking great pains to cover his tracks. The investigation was dropped, leaving a devasted @@.m;Helen@@ to pick up the pieces.&lt;br&gt;&lt;br&gt;As previously mentioned, @@.m;Helen@@ is extremely hard working. She makes her living as a checkout cashier at the big supermarket, often putting in overtime so she can keep on top of the mortgage. A keen horticulturist, she takes a great pride in her garden and spends any free time she has getting her hands dirty to that end.&quot;,
+	&quot;status&quot; : &quot;Apart from the work-related exhaustion, @@.m;Helen@@ seems fine.&quot;,
+	&quot;fuck&quot; : &quot;&quot;,
+	&quot;obey&quot; : 5
+}&gt;&gt;
+
+&lt;&lt;set $sisterchar = {
+	&quot;name&quot; : &quot;@@.mo;Molly@@&quot;,
+	&quot;age&quot; : &quot;21&quot;,
+	&quot;desc&quot; : &quot;She&#x27;s @@.m;Helen@@’s eldest daughter, a confident and sprightly young woman. Due to a lifelong love of ballet, she has a body many women would kill for. Her limbs are lithe but extraordinarily strong. Molly has much smaller breasts than most girls her age but she makes up for it with a tight ass and a pair of full, kissable lips. Her hair is dark brown and hangs to her shoulders.&lt;br&gt;&lt;br&gt;As her physique might suggest, @@.mo;Molly@@ takes great pains to keep herself in top shape. As well as putting in regular shifts at a bar in the city, she&#x27;s also an apprentice personal trainer and hopes one day to be able to solicit her own clients.&lt;br&gt;&lt;br&gt;@@.mo;Molly@@ sometimes appears emotionally cold but she&#x27;d call herself more of pragmatist. @@.mo;Emotions won&#x27;t help get the job done@@, she&#x27;d say. That doesn&#x27;t mean, however, that she&#x27;s cruel. She has a tender side and zest for life and new experiences that sees her taking great risks. @@.e;Etta@@ looks up to her but also finds herself intimidated by her and her mysterious life.&quot;,
+	&quot;status&quot; : &quot;@@.mo;Molly@@ is a paragon of fitness. Her body is a temple.&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $dogchar = {
+	&quot;name&quot; : &quot;Rocket&quot;,
+	&quot;age&quot; : &quot;4&quot;,
+	&quot;desc&quot; : &quot;He&#x27;s the family pet and has been since he was a puppy. Rocket, a pure-breed black labrador, is kind and affectionate, but often prone to mischief. His pedigree status means that he is unneutered; @@.m;Helen@@ one day hopes to find a suitable partner for him to breed with. In the meantime, the family must take care not to excite him as he has been known to try and get a little &lt;em&gt;too&lt;/em&gt; friendly.&quot;,
+	&quot;status&quot; : &quot;Rocket is as healthy as can be.&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $employerchar = {
+	&quot;name&quot; : &quot;Get a job!&quot;,
+	&quot;age&quot; : &quot;Get a job!&quot;,
+	&quot;desc&quot; : &quot;&quot;,
+	&quot;status&quot; : &quot;Get a job!&quot;,
+	&quot;fuck&quot; : &quot;&quot;,
+	&quot;theyre&quot; : &quot;&quot;,
+	&quot;theyll&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $bfchar = {
+	&quot;name&quot; : &quot;@@.l;Lily&quot;,
+	&quot;age&quot; : &quot;18&quot;,
+	&quot;desc&quot; : &quot;@@.e;Etta@@ and @@.l;Lily@@ have been friends since kindergarten and they&#x27;re about as close as it&#x27;s possible to be without actually being related. She&#x27;s what most people would call a goth, favouring dark, extravagent clothing and equally dark make-up. She pulls it off well, exhibiting a style that would look right at home in a Sisters of Mercy video. Her outlook, however, is anything but dark; with her blonde hair, usually worn up in pig-tails, and her big smile, she&#x27;s much too bubbly to really fit the stereotype.&lt;br&gt;&lt;br&gt;Unlike @@.e;Etta@@, @@.l;Lily@@ has amassed a considerable amount of sexual experience. Girls, boys, even both at the same time, @@.l;Lily@@&#x27;s appetite for fucking would put even a porn-star to shame. She has a particular penchant for older men, a taste she satisfies at the many late-night music gigs she attends. It&#x27;s no secret, but she isn&#x27;t, and never will be, affected by gossip.&lt;br&gt;&lt;br&gt;I know what you&#x27;re thinking. You want to know whether her and @@.e;Etta@@ have ever &lt;em&gt;done anything&lt;/em&gt;? A worthwhile question, but I&#x27;m afraid the answer is no. Even after countless sleepovers and shared changing rooms, the spark of sexual attraction has never so much as flickered between them.&quot;,
+	&quot;status&quot; : &quot;@@.l;Lily@@ currently has no reason to complain about her health&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $teachchar = {
+	&quot;name&quot; : &quot;@@.t;Miss Timms&quot;,
+	&quot;age&quot; : &quot;25&quot;,
+	&quot;desc&quot; : &quot;This fine young woman is @@.e;Etta@@&#x27;s English teacher at Lovelock High. She’s only just out of training so she’s pretty young, only a few years older than @@.m;Molly@@. She’s blonde, tall and a little plump, ensuring that her undeniably feminine curves bring her lots of attention.&lt;br&gt;&lt;br&gt;@@.t;Miss Timms@@ is without a doubt the hottest woman in the school faculty, with admirers among both the staff and the student body. @@.e;Etta@@ would be lying if she said she&#x27;d never been the subject of her day dreams; on long, hot afternoons, she&#x27;s regularly imagined the buttons of her tight blouse popping open to expose the bountiful boobs beneath. There&#x27;s a rumour going round that she lives in a flat above a lingerie store, an idea that only adds to infuse those fantasies with an extra pinch of spice.&quot;,
+	&quot;status&quot; : &quot;There&#x27;s no doubt that Miss Timms is in her prime. Her body exudes vitality.&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $applechar = {
+	&quot;name&quot; : &quot;@@.a;Mrs@@. @@.a;Appleford@@&quot;,
+	&quot;age&quot; : &quot;57&quot;,
+	&quot;desc&quot; : &quot;@@.a;Mrs@@. @@.a;Appleford@@, the school gym teacher, is the terror of Lovelock High. Dubbed @@.a;The Countess@@, her cruel and callous ways have gained her the fear of students and staff alike; even the Head Teacher cowers before her. Although nobody would dare say it to her face, the common theory is that she&#x27;s not actually a &#x27;Mrs&#x27; at all, but lives alone as a spinster, growing more and more bitter in her loneliness with each day. With no husband to nag and belittle, she takes her frustrations out on the students.&lt;br&gt;&lt;br&gt;But all of that is only conjecture. Nobody really knows the truth about @@.a;Mrs@@. @@.a;Appleford@@ and her secretive life.&quot;,
+	&quot;status&quot; : &quot;As her role of gym teacher would suggest, @@.a;Mrs@@. @@.a;Appleford@@ is in top shape. She has thighes that could crush a coconut.&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $vetchar = {
+	&quot;name&quot; : &quot;@@.h;Dr. Harrison&quot;,
+	&quot;age&quot; : &quot;32&quot;,
+	&quot;desc&quot; : &quot;Dr. Harrison owns the nearby veterinary clinic. @@.e;Etta@@ doesn&#x27;t know her very well but, from the few meetings they&#x27;ve had, can tell she&#x27;s a stern, no nonsence sort of woman. She wears thick rimmed glasses with even thicker lenses, but, due to her toned body and statuesque features, is no less beautiful for it.&quot;,
+	&quot;status&quot; : &quot;@@.h;Dr. Harrison@@ seems much more comfortable around animals than people. Well, given her occupation, that&#x27;s not much of a surprise, is it?&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+&lt;&lt;set $neighchar = {
+	&quot;name&quot; : &quot;@@.s;Percival Shaw&quot;,
+	&quot;age&quot; : &quot;79&quot;,
+	&quot;desc&quot; : &quot;Mr. Shaw is the &#x27;retired&#x27; biology teacher who lives just a few houses down the street from @@.e;Etta@@. He’s been a friend of the family for a long time and she can remember how he used to look after her and her sister when she were young and @@.m;Helen@@ had to work late. He has two dogs, a border collie called Missy and a big male doberman called Jackson.&quot;,
+	&quot;status&quot; : &quot;The man has been blind for some years, but his dogs help him get around.&quot;,
+	&quot;fuck&quot; : &quot;&quot;
+}&gt;&gt;
+
+
+&lt;&lt;set $friend1 to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $friend1st to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $friend1fuck to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $friend2 to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $friend2st to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $friend2fuck to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $offspringtotal to &quot;Your nursery is currently empty.&quot;&gt;&gt;
+
+&lt;&lt;set $realise to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $motherdefy = 0&gt;&gt;
+
+&lt;&lt;set $motherobey = 0&gt;&gt;
+
+&lt;&lt;set $jobmoney to &quot;She has no income.&quot;&gt;&gt;
+
+&lt;&lt;set $day to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $time to &quot;&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Offspring" tags="" position="450,791"> &lt;&lt;back&gt;&gt;
+ 
+ @@.bold;$offspringtotal@@
+</tw-passagedata><tw-passagedata pid="7" name="The sister" tags="" position="207,441">@@.embold;Name@@: $sisterchar.name
+
+@@.embold;Age@@: $sisterchar.age
+
+$sisterchar.desc
+
+@@.embold;Status@@: $sisterchar.status
+
+$sisterchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="The Dog" tags="" position="63,428">@@.embold;Name@@: $dogchar.name
+
+@@.embold;Age@@: $dogchar.age
+
+$dogchar.desc
+
+@@.embold;Status@@: $dogchar.status
+
+$dogchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="The Employer" tags="" position="143,646">@@.embold;Name@@: $employerchar.name
+
+@@.embold;Age@@: $employerchar.age
+
+$employerchar.desc
+
+@@.embold;Status@@: $employerchar.status
+
+$employerchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="The mother" tags="" position="321,316">@@.embold;Name@@: $motherchar.name
+
+@@.embold;Age@@: $motherchar.age
+
+$motherchar.desc
+
+@@.embold;Status@@: $motherchar.status
+
+$motherchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Family" tags="" position="291,632">&lt;&lt;back&gt;&gt;
+
+[[The mother]] 
+
+[[The sister]] 
+
+[[The Dog]]
+</tw-passagedata><tw-passagedata pid="12" name="Friends &amp; Associates" tags="" position="268,782">&lt;&lt;back&gt;&gt;
+
+[[The Best Friend]]
+&lt;&lt;if $job is &quot;got&quot;&gt;&gt;
+[[The Employer]]
+&lt;&lt;else&gt;&gt;
+... Get a job first ...
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $jules is &quot;met&quot;&gt;&gt;
+[[Your Sister&#x27;s Friend|Jules]]
+&lt;&lt;else&gt;&gt;
+... Molly&#x27;s special someone...
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $neighmeet is &quot;met&quot;&gt;&gt;
+[[The Neighbour]]
+&lt;&lt;else&gt;&gt;
+... Somebody who lives nearby ...
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $vet is &quot;met&quot;&gt;&gt;
+[[The Vet]]
+&lt;&lt;else&gt;&gt;
+... An animal specialist...
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="The Best Friend" tags="" position="0,704">@@.embold;Name@@: $bfchar.name
+
+@@.embold;Age@@: $bfchar.age
+
+$bfchar.desc
+
+@@.embold;Status@@: $bfchar.status
+
+$bfchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="MissTimms" tags="" position="78,829">@@.embold;Name@@: $teachchar.name
+
+@@.embold;Age@@: $teachchar.age
+
+$teachchar.desc
+
+@@.embold;Status@@: $teachchar.status
+
+$teachchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="The Vet" tags="" position="183,959">@@.embold;Name@@: $vetchar.name
+
+@@.embold;Age@@: $vetchar.age
+
+$vetchar.desc
+
+@@.embold;Status@@: $vetchar.status
+
+$vetchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="The Neighbour" tags="" position="312,907">@@.embold;Name@@: $neighchar.name
+
+@@.embold;Age@@: $neighchar.age
+
+$neighchar.desc
+
+@@.embold;Status@@: $neighchar.status
+
+$neighchar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="titlepage" tags="" position="703,748">&lt;center&gt;&lt;font size=&quot;5&quot;&gt;@@.embold;Family Infestation@@&lt;/font&gt;
+
+@@.embold;A RareBreeds production@@
+
+Welcome to @@.embold;Family Infestation@@, an interactive novel all about alien parasites, impregnation and breeding. Throughout the course of the story you&#x27;ll be encountering a great deal of sexually explicit material, featuring bodily transformation, bestiality and incest. If you don&#x27;t want to read about or see any of that then I suggest you leave now. If you&#x27;re not old enough to view sexually explicit content in whatever country you&#x27;re viewing this from then please close this tab.
+
+As for all of you who are still here, please, [[step this way|skip]]...
+
+@@.embold;All writing and coding by Pizznazz
+All artwork by Weirdybeardy@@&lt;/center&gt;</tw-passagedata><tw-passagedata pid="18" name="intro1" tags="" position="701,1003">This is @@.e;Etta@@. Cute, isn&#x27;t she? She&#x27;s recently turned eighteen and is just about to finish her final year of secondary school. Next comes her first big step into adulthood: university. She&#x27;s hoping to study English Literature at Saint Mary&#x27;s College in Durham, a prestigious establishment that demands top grades and success in a string of high-pressure interviews. Now that the exams are over and the coursework is all handed in, there&#x27;s nothing much left to do but wait.
+
+Do you want to see what she&#x27;s doing [[right now|intro2]]?
+
+Or perhaps you&#x27;d like to know a little bit more [[about her|ettapro]]?
+
+
+</tw-passagedata><tw-passagedata pid="19" name="intro2" tags="" position="704,1140">Today is the last day of term. As @@.e;Etta@@ climbs aboard the double-decker bus she can&#x27;t help but respond to the excitement in the air; summer, that near-timeless stretch of chance and possibility, is just around the corner. The bus is absolutely packed, the air already thick with the scent of bodies, but @@.e;Etta@@ sees @@.l;Lily@@ waving manically from the back.
+
+You should [[listen in|intro3]] to what they have to say to each other.</tw-passagedata><tw-passagedata pid="20" name="ettapro" tags="" position="570,997">@@.e;Etta@@ is a fairly ordinary girl, without much to distinguish her from the other students at college save for slightly above average academic performance. She&#x27;s kind and open, with a generous heart and a desire to please and bring goodness into the world. She has a passion for reading, particularly science-fiction, and her hobbies include playing video games, going to the cinema, and hanging out with her friends at the park.
+
+Like many teenagers, @@.e;Etta@@ isn&#x27;t entirely happy with the way she looks; she has, for instance, long given up the hope that the meagre buds of her flat little breasts will ripen and bloom into the soft and pillowy mounds she assumes all boys crave to get their hands on. She&#x27;d also be lying if she said that she&#x27;d never wished that her bottom was a little smaller and her hips a little narrower. But, for the most part, @@.e;Etta@@ manages to not let such minor issues get the better of her; there&#x27;s no point in fretting about things that can&#x27;t be changed, is there?
+
+Our @@.e;Etta@@ isn&#x27;t the most popular girl at school but she&#x27;s not quite at the bottom of the pile either. This, she realised a few years back, isn&#x27;t so much to do with her own inherent qualities but more due to the lasting influence of her big sister, @@.mo;Molly@@. Back when she was a student at Lovelock High she&#x27;d been the reigning queen of the upper crust, the social elite of the student body. @@.e;Etta@@ knows this and is grateful for the protection such a legacy affords her and her friends because school, as you no doubt know, can be a harsh environment for the weak and isolated. Despite this, however, @@.e;Etta@@ often wishes for a chance to strike out on her own, to forge her own way through life.
+
+Oh, and she&#x27;s a virgin, but don&#x27;t tell her I told you so.
+
+But enough of that. Let&#x27;s see what she&#x27;s doing [[now|intro2]].</tw-passagedata><tw-passagedata pid="21" name="lilypro" tags="" position="571,1142">25.
+@@.e;Etta@@ and @@.l;Lily@@ have been friends since kindergarten and they&#x27;re about as close as it&#x27;s possible to be without actually being related. She&#x27;s what most people would call a goth, favouring dark, extravagent clothing and equally dark make-up. She pulls it off well, exhibiting a style that would look right at home in a Sisters of Mercy video. Her outlook, however, is anything but dark; with her blonde hair, usually worn up in pig-tails, and her big smile, she&#x27;s much too bubbly to really fit the stereotype.
+
+Unlike @@.e;Etta@@, @@.l;Lily@@ has amassed a considerable amount of sexual experience. Girls, boys, even both at the same time, @@.l;Lily@@&#x27;s appetite for fucking would put even a porn-star to shame. She has a particular penchant for older men, a taste she satisfies at the many late-night music gigs she attends. It&#x27;s no secret, but she isn&#x27;t, and never will be, affected by gossip.
+
+I know what you&#x27;re thinking. You want to know whether her and @@.e;Etta@@ have ever &lt;em&gt;done anything&lt;/em&gt;? A worthwhile question, but I&#x27;m afraid the answer is no. Even after countless sleepovers and shared changing rooms, the spark of sexual attraction has never so much as flickered between them.
+
+Let&#x27;s get back to the [[bus|intro3]], shall we?
+
+</tw-passagedata><tw-passagedata pid="22" name="intro3" tags="" position="700,1265">@@.l;Hey babe@@, says blonde and bubbly @@.l;Lily@@ as she moves over to make room. @@.l;You@@&#x27;@@.l;ll never guess what I got up to last night@@.
+
+@@.e;I think I@@&#x27;@@.e;ve got an idea@@, @@.e;Lils@@, laughs @@.e;Etta@@, wondering just what her friend could have gotten herself involved in since the last time she saw her.
+
+@@.l;Well@@, @@.l;remember that man@@... And so Etta listens dutifully while @@.l;Lily@@ recounts another tale of debauchery. She&#x27;s beyond the point of being jealous of her friend&#x27;s activities, despite her own inferiority when it comes to matters of the flesh. @@.e;Etta@@ isn&#x27;t that bothered about her yet-unspoiled virginity; she&#x27;s saving it, at least she hopes, for when it&#x27;ll truly mean something to lose. It&#x27;s obvious that @@.l;Lily@@ has long since left behind such sappy notions. For her it&#x27;s not about love, nor intimacy; she&#x27;s in it for the pleasure and nothing else.
+
+The bus ride is long but @@.l;Lily@@ has a lot to say. Less than a month in the future is the Class of &#x27;97 Summer Leavers Camp, the big send off for all graduating students. She&#x27;s so excited she can barely sit still.
+
+@@.l;I can@@&#x27;@@.l;t believe it@@&#x27;@@.l;s finally here@@, she cries. @@.l;Just think about it@@: @@.l;evening strolls through the woods@@, @@.l;sunbathing by the lake@@ - @@.l;I got a new bikini especially that I can@@&#x27;@@.l;t wait to show off@@. @@.l;Have you ever been skinny dipping@@? @@.l;I have@@. @@.l;It@@&#x27;@@.l;s so fun@@, @@.l;Etty@@, @@.l;you@@&#x27;@@.l;d love it@@.
+
+The Leavers Camp is in the lakelands; it&#x27;s a beautiful part of the country, full of dense forests, gently rolling hills, and, as the name suggests, lakes. It&#x27;s supposed to be purely recreational but the school organises enough activities to keep even the most restless teens busy: rounders, athletics and football for the sporty types, and things like bushcraft, hiking, and orienteering for the more thoughtful sorts. @@.l;Lily@@, judging from the way she&#x27;s talking, isn&#x27;t interested in any of those options; she&#x27;s much more concerned about which members of the faculty she&#x27;ll get to see in [[their swimming costumes|intro4]].</tw-passagedata><tw-passagedata pid="23" name="intro4" tags="" position="702,1390">@@.l;I can almost see it@@, she says over the raccous noise of the surrounding kids. @@.l;Mr@@. @@.l;Jackson in his tiny little Speedos@@. @@.l;Now that@@&#x27;@@.l;s something to look forward to@@.
+
+@@.e;Eurgh@@, @@.e;That@@&#x27;@@.e;s gross@@, exclaims Etta. @@.e;He@@&#x27;@@.e;s so old@@! @@.e;Can you imagine how hairy he is@@?
+
+@@.l;Just the way I like them@@. She looks away to hide the smile growing across her lips. @@.l;Don@@&#x27;@@.l;t worry@@, @@.l;babe@@. @@.l;I&#x27;m sure Miss Timms will make the most of the opportunity@@. @@.l;I know you wouldn@@&#x27;@@.l;t turn away from that view@@.
+
+@@.e;Etta@@ immediatly blushes. She elbows @@.l;Lily@@ in the ribs and says, @@.e;Be quiet@@! @@.e;Someone might hear you@@. @@.e;You know that was just the drink talking@@.
+
+@@.l;Whatever you say@@, @@.l;girl@@. @@.l;You aren@@&#x27;@@.l;t fooling me@@.
+
+@@.e;I can@@&#x27;@@.e;t believe you even remembered that@@. @@.e;You haven@@&#x27;@@.e;t told anybody@@, @@.e;have you@@?
+
+@@.l;Of course I haven@@&#x27;@@.l;t@@. @@.l;Who do you think I am@@?
+
+It goes on like that for a little longer, @@.l;Lily@@ teasing @@.e;Etta@@ about her crush on their form tutor, one young teacher named @@.t;Miss Timms@@. Only last week, after helping consume a few bottles of wine round at @@.l;Lily@@&#x27;s place, @@.e;Etta@@ had let slip that she often fantasised about her during class. @@.l;Lily@@, of course, had jumped at the chance.
+
+Despite the topic of the Leavers Camp dominating their conversation, @@.e;Etta@@ can&#x27;t quiet bring herself to tell @@.l;Lily@@ that she won&#x27;t be going. Shes known this fact for some time but hasn&#x27;t yet found the right time to tell her. It&#x27;s about money, obviously. @@.e;Etta@@&#x27;s mother, @@.m;Helen@@, says there&#x27;s just no way they can make the finances stretch that far. @@.e;Etta@@, being the sweet girl that she is, didn&#x27;t kick up a fuss. She knows how hard her mother works just to put food on the table and clothes on their backs.
+
+The bus shudders to a stop outside of the school gates. @@.e;Etta@@ and @@.l;Lily@@ shoulder their bags and [[head to class|intro5]].</tw-passagedata><tw-passagedata pid="24" name="intro5" tags="" position="696,1518">The two girls make their way through the throngs. Like on any last day of term, the school seems more like a zoo than anything else; kids yell and whoop as they charge across the quadrangle and tear along the corridors. If it were any other day you&#x27;d catch a glimpse of the menacing figure of @@.a;Mrs@@. @@.a;Appleford@@, the gym teacher, wading through the chaos and dishing out detentions as if they were going out of style. Today, however, she&#x27;s nowhere to be seen.
+
+@@.e;Etta@@ and @@.l;Lily@@ reach their form room and find their seats. The other students file in gradually and soon the classroom is abuzz with chatter. One boy, Luke, smiles at @@.e;Etta@@ as he passes her desk; she immediatly blushes and looks away.
+
+@@.l;There@@&#x27;@@.l;s a rumour that he likes you@@, whispers @@.l;Lily@@. @@.l;I heard he@@&#x27;@@.l;s hoping to get to know you better at camp@@.
+
+Before @@.e;Etta@@ can answer, @@.t;Miss Timms@@ arrives. @@.t;Good morning everyone@@, she says. Even though most of the other teachers have made the most of the last day in order to dress more casually, she&#x27;s dressed in her usual ensemble: a black, hip-hugging pencil skirt and a white blouse open at the neck, the latter tight enough to more than emphasise the heavy swell of her chest. Today is a particularly hot day and there&#x27;s a tiny rivulet of sweat running down her slender neck and into her cleavage. As she sits at her desk and starts to unpack her file, @@.e;Etta@@ can&#x27;t help but stare. She pushes her glasses up her nose and addresses the class: @@.t;settle down guys@@. @@.t;The sooner we get this done@@, @@.t;the sooner we can get out of here@@.
+
+The class, bitten by the summertime bug, is rowdy, so registration takes a little longer than usual. When the task is finally complete, @@.t;Miss Timms@@ bids the class farewell, adding that she&#x27;s looking forward to seeing everyone at camp. @@.e;Etta@@ sighs regretfully, knowing that she&#x27;s going to be missing her only chance to see @@.t;Miss Timms@@ in her bathing gear. 
+
+As the class files out, she stops @@.e;Etta@@.
+
+What could [[she want|intro6]]?</tw-passagedata><tw-passagedata pid="25" name="intro6" tags="" position="833,1000">@@.t;Etta@@, @@.t;I@@&#x27;@@.t;ve been meaning to speak to you for some time@@. She closes the door behind the other students and says, @@.t;how are things going with your application@@?
+
+@@.e;Pretty well@@, stammers @@.e;Etta@@, trying her hardest to keep her eyes from dropping towards the enticing site of her teacher&#x27;s breasts. @@.e;I have my second interview in two weeks@@.
+
+@@.t;Miss Timms@@ reaches forwards and touches @@.e;Etta@@ on her forearm. @@.t;You&#x27;re feeling all right about it@@, @@.t;aren@@&#x27;@@.t;t you@@? @@.e;Etta@@ nods meekly and @@.t;Miss Timms@@ quickly adds, @@.t;if you need any help@@, @@.t;with anything at all@@, @@.t;don@@&#x27;@@.t;t hesitate to come and speak to me@@. @@.t;I know what it@@&#x27;@@.t;s like@@.
+
+@@.e;Etta@@&#x27;s heart is thumping in her chest. @@.t;Miss Timms@@ is looking at her directly, peering over her glasses; she can hardly speak.
+
+@@.t;I@@&#x27;@@.t;m thinking of putting together some extra classes for girls applying to the top universities@@. @@.t;Nothing too formal@@; @@.t;think of it more as support group@@. @@.t;I can remember all too well how stressful my application to Trinity was@@. @@.t;What do you say@@?
+
+@@.e;Etta@@ tells @@.t;Miss Timms@@ that she&#x27;ll think about it, but inside she feels like she&#x27;s about to burst. A chance to meet with her in casual setting, probably out of the confines of the school? There&#x27;s no way she&#x27;s going to pass on such an opportunity.
+
+@@.t;You should definitely come@@. @@.t;I@@&#x27;@@.t;ve no doubt you@@&#x27;@@.t;ll be a shoe in at St@@. @@.t;Mary@@&#x27;@@.t;s@@. @@.t;I just thought some of the other girls might benefit from your brilliance@@. She flashes @@.e;Etta@@ a radiant yet undeniably genuine smile. Our girl flushes bright red. She assures @@.t;Miss Timms@@ she&#x27;ll be there and then makes a hasty retreat.
+
+Perhaps @@.e;Etta@@ is in with a chance [[after all|intro7]]...</tw-passagedata><tw-passagedata pid="26" name="timmspro" tags="" position="430,1050">26.
+@@.t;Miss Timms@@ didn&#x27;t always want to be a teacher. After graduating with a first class degree in Classics from Trinity College, Oxford, she pictured herself carving out a successful career in the world of publishing. As a young girl she&#x27;d fostered a feirce love of books, and, although such a passion often breeds a desire to write, she found herself longing to spend her working life as a part of the establishment that made such love possible for people all over the world.
+
+After a brief spell at home, she packed her bags and set out for the Big Smoke, London, that ancient and ever-growing metropolis, the home of the British publishing industry.
+
+Six months into her internship, however, and @@.t;Miss Timms@@ was starting to realise the truth. The industry wasn&#x27;t how she&#x27;d imagined it; it was harsh, callous and cutthroat. With her moral sense outraged and her resolve crumbling, she began to panic. Had she been chasing the wrong ambition all this time? Not only that, but she was lonely; even in a city as crowded and bustling as London, she felt her isolation keenly. Gradually everything fell apart.
+
+She fled the city, returning home to Lancashire to be welcomed lovingly by her parents. Instead of wallowing in defeat, @@.t;Miss Timms@@ took control. Wasting no time, she embarked upon a P.G.C.E. teacher training scheme and, through a startling series of conincidences, ended up with a job at the school of her youth, Lovelock High. Life had knocked her back, true, but @@.t;Miss Timms@@ had a new resolution. She would guide her students along the rocky road towards adulthood, cultivating in them a love of knowledge for its own sake. Time will only tell whether or not she will find success.
+
+[[Back to the classroom|intro6]].</tw-passagedata><tw-passagedata pid="27" name="intro7" tags="" position="831,1128">@@.l;What did &lt;em&gt;she&lt;/em&gt; want with you@@? asks @@.l;Lily@@, who was waiting outside the classroom the whole time.
+
+@@.e;Nothing@@, says @@.e;Etta@@ a little too quickly. @@.e;She just wanted to know if I needed any help with my application@@.
+
+@@.l;Sure@@, sneers @@.l;Lily@@. @@.l;That explains why you@@&#x27;@@.l;re blushing like an unexpentant prom queen@@. @@.l;She made a move on you@@, @@.l;didn@@&#x27;@@.l;t she@@?
+
+@@.e;No@@! @@.e;No way@@! @@.e;Of course she didn@@&#x27;@@.e;t@@, protests @@.e;Etta@@. @@.e;How could you say such a thing@@? She turns and storms off down the corridor.
+
+@@.l;Lily@@ hurries to catch up. @@.l;Woah@@, @@.l;Etty@@, she says, grabbing her sleeve. @@.l;I didn@@&#x27;@@.l;t mean anything by it@@. @@.l;What@@&#x27;@@.l;s gotten into you@@?
+
+@@.e;I told you not to go on about it and you keep bringing it up@@. @@.l;Lily@@ is about to say something but @@.e;Etta@@ cuts her off. @@.e;I@@&#x27;@@.e;m serious@@. @@.e;What if somebody hears you and gets the wrong idea@@? @@.e;You might get her into trouble@@.
+
+@@.l;OK@@, @@.l;OK@@. @@.l;Jeeze@@. @@.l;I@@&#x27;@@.l;m sorry@@. @@.l;God@@, @@.l;you must really have the hots for her if you@@&#x27;@@.l;re being this defensive@@! @@.e;Etta@@ flashes her a withering glare. @@.l;Hey@@, @@.l;I think it@@&#x27;@@.l;s cute@@. @@.l;School@@&#x27;@@.l;s almost over@@, @@.l;and for good too@@. @@.l;Anything could happen@@!
+
+The girls push through the double doors that lead to the language block and [[freeze dead in their tracks|intro8]].</tw-passagedata><tw-passagedata pid="28" name="intro8" tags="" position="835,1260">Standing before them is the towering figure of @@.a;Mrs@@. @@.a;Appleford@@. She&#x27;s blocking their way, her legs akimbo and her hands on her hips. She&#x27;s dressed in her usual t-shirt/leggings/leotard ensemble and a polished whistle hangs on a cord around her neck. @@.a;What@@&#x27;@@.a;s this@@? she says. @@.a;Two young ladies trying to skip out on class@@. @@.a;Think you could get away with it@@, @@.a;did you@@?
+
+@@.e;No@@, @@.e;no@@, says @@.e;Etta@@. @@.e;We@@&#x27;@@.e;re on our way to class right now@@. @@.e;I had to stay back after registration to speak to Miss Timms@@.
+
+@@.a;Then what are you doing here@@? @@.a;Do you have an excuse too@@? asks the stocky woman, this time directing the question at @@.l;Lily@@.
+
+@@.l;Oh@@, she says non-chalantly, @@.l;I had to stay back too@@. @@.l;She said it wouldn@@&#x27;@@.l;t matter if were a little late@@. @@.l;Today is our last ever day@@, @@.l;after all@@.
+
+@@.e;Etta@@ groans inwardly at her best-friend&#x27;s lie. There&#x27;s no way @@.a;Mrs@@. @@.a;Appleford@@ is going to believe them now.
+
+@@.a;And what did she deem so important that it couldn@@&#x27;@@.a;t wait for an arranged meeting@@?
+
+@@.e;University applications@@, blurts @@.e;Etta@@ before @@.l;Lily@@ can make things any worse. @@.e;She wanted to know if my@@, @@.e;our@@, @@.e;application was going well@@.
+
+The furrows in @@.a;Mrs@@. @@.a;Applefords@@ brows grow deeper. @@.a;Detentions for the both of you@@, she growls. @@.a;Come to my office at the end of the day@@. @@.a;Failure to do so will result in further measures@@. @@.a;School may be nearing its end for you two but that doesn@@&#x27;@@.a;t mean you can lie to me@@. With that, she stalks away, her prodigious rear swaying behind her.
+
+@@.l;Good one@@, says @@.l;Lily@@. @@.l;What did you go and say that for@@?
+
+@@.e;What do you mean@@? @@.e;I told the truth@@.
+
+@@.l;For you@@, @@.l;maybe@@, @@.l;but The Countess knows I@@&#x27;@@.l;m starting an apprenticeship at the salon next year@@.
+
+@@.e;But@@...
+
+@@.l;Don@@&#x27;@@.l;t worry about it@@, @@.l;Etty@@. @@.l;Do you think I@@&#x27;@@.l;m actually going to show up for that bitch@@?
+
+School is going to be pretty uneventful. You may as well skip to the [[detention|intro9]].</tw-passagedata><tw-passagedata pid="29" name="applepro" tags="" position="563,1306">27.
+@@.a;Mrs@@. @@.a;Appleford@@ is the terror of Lovelock High. Dubbed @@.a;The Countess@@, her cruel and callous ways have gained her the fear of students and staff alike; even the Head Teacher cowers before her. Although nobody would dare say it to her face, the common theory is that she&#x27;s not actually a &#x27;Mrs&#x27; at all, but lives alone as a spinster, growing more and more bitter in her loneliness with each day. With no husband to nag and belittle, she takes her frustrations out on the students.
+
+The truth, of course, is a little more complex than that. Like @@.t;Miss Timms@@, she began her career planning to make a difference. A vibrant young woman, she hoped that her efforts would change the lives of her students; her dream was to be that one teacher they remembered in later life, the one that believed in them and pushed them towards success.
+
+As the years went by, however, her ideals started to wane. Confronted by year after year of working tirelessly for the benefit of apathetic students and hampered at every corner by an inefficient bureaucracy that seemed to function only to oppose her efforts, she began to grow disillusioned. Soon it wasn&#x27;t the bureaucrats and politicians in the department of education that were the targets of her anger, but the students she taught. As class after class shrank before her baleful eye, her terrible reputation was set. 
+
+Save for the monster on the surface, nobody has a clue about @@.a;Mrs@@. @@.a;Appleford@@ and the sad, repressed and defeated woman within.
+
+Feel a little more sympathetic now? No? Ah well, time for [[detention|intro9]].</tw-passagedata><tw-passagedata pid="30" name="intro9" tags="" position="828,1386">The rest of the day passes without much notice. The day&#x27;s classes barely deserve the name. Nobody is in the mood to learn and it&#x27;s not just the students either; the teachers themselves are winding down for the summer, content to let their classes deteriorate into something near to anarchy. Almost everyone is talking about the leaver&#x27;s camp. @@.e;Etta@@ tries her best not to let it bother her but by the end of the day she can&#x27;t help but feel fed up.
+
+The final bell trills out in the hallway and the classrooms explode open; doors slam back on their hinges and once again chaos reigns as the students, free at last, spew out of the building and out into the sunshine.
+
+@@.e;Etta@@ lags behind. A few of her classmates, Luke included, try to get her to come with them to the shopping precinct but she fobs them off with vague excuses. She can&#x27;t miss the detention, even if it isn&#x27;t exactly deserved. Although she knows @@.a;Mrs@@. @@.a;Appleford@@&#x27;s threats are probably empty, she&#x27;s never been one to take risks; who knows, @@.a;The Countess@@ might have far-reaching influence after all, and @@.e;Etta@@ doesn&#x27;t want to leave having gotten on her bad side.
+
+So, like the good and proper girl she is, @@.e;Etta@@ dutifully reports to @@.a;Mrs@@. @@.a;Appleford@@&#x27;s office, a dingey cupboard of a room next to the sports hall. She swallows her apprehension and taps on the frosted glass window set into the door.
+
+The sound of shuffling comes from within. @@.e;Etta@@ waits a moment and is about to knock again [[when|intro10]]...</tw-passagedata><tw-passagedata pid="31" name="intro10" tags="" position="828,1511">@@.a;Yes@@? @@.a;Who is it@@? Her voice, even though muffled by the closed door, is as strident as ever.
+
+@@.e;Etta@@ opens the door and steps inside. The office is dark and smells strongly of furniture polish. The blinds are closed and the only light comes from a lampstand in the corner of the room. @@.a;Mrs@@. @@.a;Appleford@@ is sitting at her desk, a large leatherbound book open before her. She narrows her eyes as she stares at @@.e;Etta@@.
+
+@@.a;Where@@&#x27;@@.a;s the other one@@? @@.a;I distinctly remember administering two detentions this morning@@.
+
+@@.e;I don@@&#x27;@@.e;t know@@, says @@.e;Etta@@, hoping the tremor in her voice doesn&#x27;t sound too much like fear. @@.e;We weren@@&#x27;@@.e;t together in the last class and I came straight here when it ended@@.
+
+@@.a;Mrs@@. @@.a;Appleford@@ closes the book and then cracks her knuckles in a single deft motion. @@.a;I@@&#x27;@@.a;m not surprised@@. @@.a;That friend of yours has always been trouble@@. @@.a;No respect for authority and responsibility@@. @@.a;Life will not be good to her@@, @@.a;you mark my words@@.
+
+@@.e;That@@&#x27;@@.e;s not fair@@, says @@.e;Etta@@, forgetting for a moment who she&#x27;s speaking to. @@.e;She means well@@. @@.e;You just need to get to know her@@ - @@.e;she@@&#x27;@@.e;s kind and@@... she trails off when she sees @@.a;Mrs@@. @@.a;Appleford@@&#x27;s expression. Her lips are pursed, so tight they&#x27;re almost white.
+
+@@.a;I am not here to &lt;em&gt;get to know&lt;/em&gt; anybody@@, she says slowly. @@.a;My job is to ensure that you all have the necessary training to prepare you for the real world@@. @@.a;Once you leave this school you@@&#x27;@@.a;ll realise that world doesn@@&#x27;@@.a;t care a jot whether or not you@@&#x27;@@.a;re &lt;em&gt;kind&lt;/em&gt;@@.
+
+@@.e;Etta@@ is about to retort and tell the old battle-axe that it&#x27;s not all that bad, but thinks better of it. Who is she to lecture a grown woman on what life is really like?
+
+@@.a;Well don@@&#x27;@@.a;t just stand there@@. @@.a;I@@&#x27;@@.a;ve prepared lines for you@@. @@.a;Sit at that desk and do not say a word until you are finished@@.
+
+@@.e;Etta@@ does as she&#x27;s told. She sits at the tiny desk in the corner of the room. The chair is hard and uncomfortable, forcing her to sit upright with her back straight. There&#x27;s a pile of paper sheets, size A4, on the desk, the first of which has the phrase &lt;em&gt;I must at all times respect my superiors&lt;/em&gt; written along the top. Lines? But she&#x27;s eighteen, almost an adult. Writing lines is for kids. She turns around to see @@.a;Mrs@@. @@.a;Appleford@@ glaring directly at her.
+
+I looks like she [[has no choice|intro11]].</tw-passagedata><tw-passagedata pid="32" name="intro11" tags="" position="960,1005">By the time @@.e;Etta@@ has filled all eight sheets of paper her hand is sore and her wrist is aching. There isn&#x27;t a clock in sight and with the blinds covering the window there&#x27;s no way to tell how much time has passed. There is a clock on the wall behind @@.a;Mrs@@. @@.a;Appleford@@ but she didn&#x27;t once dare to look back and check it.
+
+@@.e;I@@&#x27;@@.e;ve finished@@, she says, tipping back on the chair and stretching her fingers.
+
+@@.a;What@@? barks @@.a;Mrs@@. @@.a;Appleford@@. @@.a;Speak up@@!
+
+@@.e;The lines@@. @@.e;I@@&#x27;@@.e;ve finished them@@.
+
+@@.a;The Countess@@ rises out of her seat and comes to stand behind @@.e;Etta@@. She looms over her, leaning down to peer over her shoulder. The older woman&#x27;s breasts press into her back and she can feel her breath on her cheek.
+
+@@.a;There@@&#x27;@@.a;s a substantial deterioration in form in the last few pages@@, says @@.a;Mrs@@. @@.a;Appleford@@ as she reviews the sheets. @@.a;You mustn@@&#x27;@@.a;t let yourself fall foul of weakness@@, @@.a;young lady@@; @@.a;take pride and take care@@. She straightens out but does not move. @@.a;Mrs@@. @@.a;Appleford@@ places her hands on @@.e;Etta@@&#x27;s shoulders and the younger girl winces; the woman&#x27;s grip is strong and constant. @@.a;If it were any other day I@@&#x27;@@.a;d have you stay behind until these lines were perfect@@, @@.a;but I@@&#x27;@@.a;d be damned before anybody said I was an unfair arbitrator@@. @@.a;You may leave@@. @@.a;The Countess@@ squeezes her shoulders one last time and then returns to her desk.
+
+@@.e;Etta@@ gathers her things and stands so quickly that she knocks over her chair. The noise, in the silence of the office, sounds like a gunshot,  She turns in time to see @@.a;Mrs@@. @@.a;Appleford@@ frowning at her. Mumbling an apology, she makes for the door.
+
+She&#x27;s just about to turn the handle when... @@.a;Wait@@, @@.a;before you go@@. @@.e;Etta@@ turns around slowly to meet @@.a;Mrs@@. @@.a;Appleford@@&#x27;s hard gaze. @@.a;You are a good girl@@, @@.a;Etta@@, @@.a;but you are weak@@. @@.a;The world is not a happy place@@, @@.a;nor a safe place@@. @@.a;It will try to break you@@, @@.a;diminish you@@, @@.a;force you to do things you do not want to@@. @@.a;You must become stronger if you wish to survive unbroken@@.
+
+@@.e;Etta@@ has no idea what to say. She meets @@.a;Mrs@@. @@.a;Appleford@@&#x27;s stare but can do only that. She has no other way to challenge such relentless pessimism. She finally nods, swallowing the lump in her throat as she does.
+
+@@.a;That is all@@, finishes @@.a;Mrs@@. @@.a;Appleford@@. @@.a;You may leave now@@. @@.e;Etta@@ does not need to be told twice. She flees the office, almost forgetting to close the door behind her in her hurry.
+
+That was intense! Time to [[get out of here|intro12]].</tw-passagedata><tw-passagedata pid="33" name="intro12" tags="" position="958,1131">@@.e;Etta@@ has of course missed the bus home. She wanders across the empty grounds, seeing only a few other students and the old caretaker. It&#x27;s eerie to see a place usually so profuse with activity nearly deserted, almost like a ghost town. Normally when this sort of thing happens @@.e;Etta@@ would go to the reception and ask the woman behind the desk if she could call home for a lift. Tonight, however, @@.e;Etta@@ knows this isn&#x27;t an option. @@.m;Helen@@ is working late and @@.mo;Molly@@ is out for the evening with her best friend, @@.j;Jules@@.
+
+Apart from getting a lift home with a stranger, the only option available to @@.e;Etta@@ is to walk home but after @@.a;Mrs@@. @@.a;Appleford@@&#x27;s advice, that doesn&#x27;t seem like such a great idea. @@.e;Etta@@ shivers; @@.a;The Countess@@ may have been exaggerating, trying to put the fear into her, but she cannot deny the earnest look the older woman had in her eye when warning her about the dangers of the world. With such thoughts swirling through her mind, @@.e;Etta@@ decides to walk.
+
+The quickest way home is to cut through the woods behind the school. That way leads to the park and it&#x27;s only a short walk from there to the suburban street where @@.e;Etta@@ and her family live. It&#x27;s a pleasant afternoon and there&#x27;s plenty of time until the sun will start to set. @@.e;Etta@@ sets out with a spring in her step, happy to chance upon some time to be truly alone with her thoughts.
+
+Soon @@.a;Mrs@@. @@.a;Appleford@@ and her severe advice are far behind her. As she walks through the trees, her thoughts flit from subject to subject. University, her family, the leaver&#x27;s camp, and, of course, @@.t;Miss Timms@@. In actual fact, the more she thinks about her, the harder it is to stop, especially now that she has a chance to see her again, even if it is within the context of education. Perhaps there&#x27;s something in what @@.l;Lily@@ said: now that school is out of the picture, anything could happen.
+
+The woodland is thick, the canopy obscuring much of the daylight. What light does get through appears in slanting shafts that reveal the whirling dance of bugs and other particulates. The air is rich with the scent of the mulchy decay taking place all around her. Oddly enough, however, the forest is silent; no sounds, not even the sounds of birds or the chirruping of insects, greet her ears. The remaining springtime proliferation of growth has all but covered the trail and @@.e;Etta@@ feels the snag of thorns on her clothes as she pushes on through.
+
+She hears a sudden snap and the rustling of leaves coming from behind her. [[What was that|intro13]]?</tw-passagedata><tw-passagedata pid="34" name="contents" tags="" position="828,757">Of all the thousands of names, words whispered in as many different tongues, none can truly describe them.
+
+For eons they have voyaged, their starting point the very origin of the universe. With infinite patience they drift from star to star, driven by a need, a hunger, older than time itself. They seek those planets, glowing like beacons in the black void of space, that bear the sweetest fruit: life!
+
+Countless worlds they have consumed, adding the genetic wealth they harvest to an already unfathomably rich archive. Their neverending quest has seen the downfall of mighty system-spanning civilisations and intricate biospheres. Noble species resist them, invariably fooling themselves that they fight for life itself. They struggle bitterly with fire and science, but in the end they always fall. Nothing is spared, no single creature, no single cell; all is consumed, absorbed.
+
+&lt;em&gt;Homo Sapiens&lt;/em&gt;. You are being watched. They see all you do on that watery globe you call Earth. They see all your scurrying, your frantic to-ing and fro-ing. For too long you have sat upon your lofty throne. They, the ultimate expression of universal life, are coming for you. With rumbling stomach and gaping maw, they are coming for you.
+
+[[This is |titlescreen]]...</tw-passagedata><tw-passagedata pid="35" name="titlescreen" tags="" position="702,878">(@@.embold;There will be a big title screen here in future releases. For now, use your imagination ;)@@)
+
+[[Begin|intro1]]...</tw-passagedata><tw-passagedata pid="36" name="intro13" tags="" position="960,1256">High up in the canopy a creature is watching @@.e;Etta@@ as she makes her way through the forest. It is a strange being, obviously not of this world. Its body is long and fleshy, beginning at a blunt snout and tapering down to thin tail that flickers back and forth. It grips its perch with a series of limbs tipped with bony hooks. Close to its snout these limbs are long and multi-jointed but as its body thins they become shorter and shorter until they appear as nothing but spines along the length of its prehensile tail. The creature is a hunter, a being engineered specifically to prowl this environment, to stalk and track, following its prey with unwavering concentration.
+
+The organism, a Progenitor is one of many similar creatures, alike in type but all designed with a specific environment in mind. They form the vanguard, the advanced scouts, of a much greater force. Their mission is simple but fraught with danger: they must find a host creature and multiply through any means available. So far, for this particular specimen, there have been few opportunities. The lifeforms that inhabit the woodland are small and skittish, leading solitary lives that do not suit the requirements of the hunter. It needs to find a social creature to use as a host in order to work effectively. It knows vaguely that this planet is populated by a species of advanced carbon-form bipeds that live in close-knit social groups, ideal breeding stock, but until now it has yet to encounter any.
+
+It has been waiting for weeks now, alert to the approach of a suitable target. Cut off from the beings that bred and sent it on its mission, it roamed tirelessly before settings its current ambush. Patiently, the hunter persists; with food all around it and the wealth of ages in its cells, it can afford to move slowly.
+
+But now, with the scent of the @@.e;young woman@@ kick-starting its instincts, the hunter [[prepares to strike|intro14]].
+</tw-passagedata><tw-passagedata pid="37" name="intro14" tags="" position="960,1381">@@.e;Etta@@ shakes her head to dispel her fright and moves on. Just an animal of some sort going about its business in the undergrowth, no doubt. Just because she can&#x27;t see them, doesn&#x27;t mean nothing lives here. 
+
+The trail has started to clear somewhat as the surrounding trees begin to thin out. Here the ground slopes away and down into a wide ditch with a shallow stream trickling along its base. Gripping roots and tough grass, @@.e;Etta@@ carefully makes her way down the slope. She hops over the stream and starts to climb the opposite bank. This proves a much more difficult task; the slope is steeper and the resulting vegetation more sparse. After trying and failing on a few attempts, @@.e;Etta@@ decides to find a point further along the ditch that might provide her with an easier climb.
+
+As she plods along she starts to ponder over her plans for the Summer. With almost four months until university, provided she gets the grades, that is, she has a lot of time to kill. First of all, she&#x27;s looking forward to taking some time to wind down and catch up with her reading now that there&#x27;s no school work to demand her attention. There&#x27;s the group @@.t;Miss Timms@@ suggested but she can&#x27;t see that happening more than once a week. @@.e;Etta@@ knows from previous experience that the freedom of the Summer break can easily slip into languid boredom and seeing as Lily will be away for a few weeks at the leaver&#x27;s camp there&#x27;s a risk of that happening. Thinking further, she comes to the conclusion that she might as well get a job. As she considers further, a range of possibilities dawn on her. She&#x27;s never earned her own money. If she did, it would be hers to use as she saw fit. Of course she&#x27;d help out her mother and Molly with the housekeeping, but the majority of it would be hers, right? She could always put it towards a university living fund, but she could also buy as many clothes and books as she wanted.
+
+As @@.e;Etta@@ grows more excited, a breeze agitates the thin canopy above, the branches and leaves swishing with a sound like waves on a beach. &lt;em&gt;Summer is going to be great&lt;/em&gt;, she thinks to herself happily, unaware that alien senses are [[following her every move|intro15]].
+
+
+
+</tw-passagedata><tw-passagedata pid="38" name="intro15" tags="" position="956,1506">The alien creature leaps from bower to branch, employing all of its innate abilities to trail the @@.e;girl@@ and remain undetected. Her scent is even stronger now, her animal stench acting like a homing beacon onto which the hunter is locked. The situation couldn&#x27;t be more in its favour; having scrambled down into the sunken stream bed, the @@.e;prey@@-@@.e;animal@@ has sealed its fate. Unable to climb back up the sides, there is only one direction in which to flee.
+
+The hunter strikes, pouncing from a low-hanging branch as the @@.e;girl@@ passes beneath. The attack hits its mark, knocking her forwards so she lands with a thud and splash into the muddy stream. Immune to her screams, the creature wraps the longest six of its limbs around her torso. She&#x27;s covered in a thin layer of flimsy material, not part of her body, and it is difficult to grasp.
+
+The @@.e;girl@@ is unexpectedly strong and is putting up much resistance. She writhes and bucks, yelling hoarsely as she reaches back to claw madly at her attacker. She rolls onto her back and arches her spine, her arms flailing to send mud, water and woodland debris in all directions. The creature can feel the @@.e;girl@@&#x27;s heart beating madly inside her chest, can smell the rich odour of her terror. Her hands grip its body as she lurches forwards onto her knees. 
+
+Aware that it musn&#x27;t harm this potential host, the creature decides to put an end to the struggle. Its flat snout parts to reveal a trio of fangs, their poisoned tips ready to deliver their load. With a quick snap it sinks the needle like points into the nape of its prey&#x27;s neck, pumping a hefty dose of potent neurotoxin into her bloodstream. It releases its grip and leaps away, leaving the poisoned @@.e;girl@@ to flap the last of her energy into the dirt.
+
+The creature watches as her movements become weaker and less frantic. She falls to the side and rolls over onto her belly, her arms stretched out and her fingers reaching for help that will not come. The report of her tumultuous heartbeat gradually ebbs and a moment later she is [[still|intro16]].</tw-passagedata><tw-passagedata pid="39" name="intro16" tags="" position="1090,1000">The successful hunter waits, biding its time in case the @@.e;girl@@ is not fully immobilised. It may be fast but its specialised body is vulnerable; one lucky strike from this plucky animal could be enough to cause fatal, mission-ending damage. After some minutes, when it is clear that the poison has done its work, the creature crawls closer.
+
+It mounts her fleshy rump, clinging to the soft material that covers her body. The scent of fear is now pungent, but the @@.e;girl@@ is helpless, trapped and with nothing to do but accept her fate. The creature insinuates its way under her coverings, tearing and slashing to make room. Once in position, its snout at the base of her spine and its tail at her neck, it wraps its longer limbs around her torso in a tight embrace. The Progenitor organism is ready to meld.
+
+The tip of its tail flickers, the skin peeling back to reveal a waving mass of tiny, filament thin tendrils. The tendrils tickle and probe at the @@.e;girl@@&#x27;s neck, causing tiny hairs to stand on end. The tendrils twist together, forming a sharp point that traces a line up and down the vertebrae, hunting for the perfect spot. The creature, in a sudden motion that causes the paralysed @@.e;girl@@ to spasm, drives the point into her spine,  piercing the skin and penetrating the hard wall of her muscle.
+
+The filaments immediatly disengage from their penetrative form and begin to search out nerves with which to bond. Her eyelids flicker and a steady stream of drool escapes her mouth. She is awake and conscious, alert to but unable to stop what is being done to her. As time passes, the creature fuses with the @@.e;girl@@, its body chemistry synchronising with hers as it taps into her nervous system. Her memories, complete with linguistic context, become part of its knowledge. It knows that her given name is @@.e;Etta@@, that she has existed in this form for eighteen of this planets orbital movements; she&#x27;s on the edge of adulthood, the peak of sexual maturity. It recognises that she exists as an important node in a complex social network, with family, friends and associates aplenty. Her body is strong and capable, her sexual organs operating at optimum efficiency. The Progenitor&#x27;s insticts were right; she will make an [[excellent host|intro17]].</tw-passagedata><tw-passagedata pid="40" name="intro17" tags="" position="1090,1138">Soon the Progenitor organism has near total influence over @@.e;Etta@@&#x27;s motor functions. It requires great concentration, but it bids her to stand. She walks, albeit rather stiffly, further along the stream bed until the banks become less steep and she can be manoeuvered back into the woodlands.
+
+@@.e;Etta@@, after everything, the attack, the sedation and the subsequent loss of control, is only dimly aware of the movements forced upon her. She feels no pain at the invasion, nothing but an unsettling sense of dislocation, as if trapped in a vivid but incongruous dream. Too stunned to feel fear any longer, she can only ride it out, [[a passenger in her own body|intro18]].</tw-passagedata><tw-passagedata pid="41" name="intro18" tags="" position="1088,1263">Eventually @@.e;Etta@@ and her new companion reach her home. She looks a total mess, which isn&#x27;t surprising given what she&#x27;s been through; her clothes are ripped and muddy, while her hair has picked up numerous twigs and leaves.
+
+For the Progenitor, this will prove to be the most dangerous part of the whole symbiotic process. In order to fully fuse with its host, it must allow itself and the potential host to sleep. During this period it will form a permanent attachment, creating the lasting bond it needs. Once this is achieved it can begin to produce the eggs it will lay inside her. If it is caught before this can happen, its mission will be over.
+
+The front door is unlocked so @@.e;Etta@@ has no trouble getting inside. True enough, the Progenitor struggles at first to use her fingers, but after a few fumbling attempts the door is open. From inside come the sounds of other people, movement and communication. There are two voices coming from further inside; one belongs to @@.m;Helen@@, @@.e;Etta@@&#x27;s mother, and the other, @@.mo;Molly@@, her sister. The Progenitor knows this because @@.e;Etta@@ knows this.
+
+Using @@.e;Etta@@&#x27;s memories, it quickly plots a course to her bedroom, the place that belongs to her and, therefore, should be safe. She crosses the dark space of the front room but, before she can reach the stairs, encounters a small warm-blooded quadruped. This is Rocket, a dog, the household pet. After sniffing at her ankles the animal backs away. It growls, a low and gutteral sound. Alerted by the menace of this new threat, the Progenitor sends @@.e;Etta@@ lurching into action. She stumbles up the stairs noisily.
+
+@@.m;Etta@@? @@.m;Is that you@@? comes a voice from below. @@.m;Where have you been@@?
+
+The Progenitor ignores the voice and sends @@.e;Etta@@ crashing through her bedroom door. She lands heavily on her bed, the sounds of footsteps following behind. Using the last ounce of its strength the Progenitor pulls its host to her feet and steers her over to close the door. She manages to block the entrance, shutting out her mother before she can see her. She slumps down to the ground, her back against the door.
+
+@@.m;Darling@@? @@.m;What@@&#x27;@@.m;s the matter@@? Just in time. @@.m;I@@&#x27;@@.m;ve made lasagne@@. @@.m;Do you want any@@?
+
+The Progenitor knows it must reply. It has aroused too much suspicion already and to remain silent [[could prove deadly|into19]].</tw-passagedata><tw-passagedata pid="42" name="into19" tags="" position="1085,1388">@@.e;I@@. @@.e;am@@. @@.e;OK@@, says @@.e;Etta@@, her voice flat and halting.
+
+@@.m;Are you sure@@, @@.m;sweetheart@@? @@.m;You don@@&#x27;@@.m;t sound too good@@.
+
+@@.e;Busy@@. @@.e;day@@. @@.e;Need@@. @@.e;to@@. @@.e;sleep@@.
+
+@@.m;But what about dinner@@? @@.m;You can@@&#x27;@@.m;t go to bed without eating anything@@.
+
+The Progenitor catches the scent of the older woman through the door. Hers is a mature odour, the smell of an animal past its prime. A certain inflection, however, tells the creature that she has promise none the less. Having borne children of her own, her body should be more than receptive to future impregnation.
+
+@@.e;I@@. @@.e;have@@. @@.e;already@@. @@.e;eaten@@. @@.e;Please@@. @@.e;I@@. @@.e;need@@. @@.e;rest@@. @@.e;I@@. @@.e;will@@ @@.e;see@@. @@.e;you@@. @@.e;tomorrow@@.
+
+@@.m;OK@@, @@.m;honey@@. @@.m;But do come down and get some if you change your mind@@. @@.m;It would be lovely to see you@@.
+
+@@.m;Helen@@ leaves, her slippered feet reporting softly on the carpeted stairs. @@.e;Etta@@ hears her greet the dog affectionately. Exhausted, she climbs back into bed, barely managing to lift herself up onto the mattress. She shuffles under the duvet, not bothering to shed her tattered clothes, and wraps the covers tightly around her body. The Progenitor allows her muscles to relax as it prepares her for rest..
+
+Suddenly, the door [[barges open|intro20]] and light from the landing spills into the room...</tw-passagedata><tw-passagedata pid="43" name="intro20" tags="" position="1086,1513">@@.mo;Hey sis@@! @@.mo;What@@&#x27;@@.mo;s the big idea@@? @@.mo;I thought we were celebrating tonight@@? @@.mo;I brought us wine@@.
+
+It is the sister, @@.mo;Molly@@. The Progenitor stirs and prepares to respond, causing @@.e;Etta@@ to stiffen.
+
+@@.e;I am too tired@@, she says, the words coming easier this time.
+
+@@.mo;Oh@@, @@.mo;come on@@, groans @@.mo;Molly@@. @@.mo;Don@@&#x27;@@.mo;t be such a big baby@@.
+
+The young woman steps closer and her powerful aroma rouses the creature instantly. Here is the scent of a powerful will, a dominant spirit. There are hints of confidence and overt sexuality, a mind bent on controlling others. She will be a difficult animal to overpower, but a very useful tool once successfully infested.
+
+@@.mo;You sound weird@@, @@.mo;Ett@@. @@.mo;What@@&#x27;@@.mo;s the deal@@?
+
+@@.e;Nothing@@. @@.e;Please let me sleep@@.
+
+@@.mo;Are you high@@?
+
+@@.e;Of course I am not@@.
+
+@@.mo;You@@&#x27;@@.mo;re high@@, @@.mo;aren@@&#x27;@@.mo;t you@@. She laughs, a high and piercing sound. @@.mo;I always knew it was a matter of time@@. @@.mo;Well@@, @@.mo;don@@&#x27;@@.mo;t let me spoil your fun@@.
+
+@@.mo;Molly@@ leaves, slamming the door behind her. [[Alone at last|intro21]]</tw-passagedata><tw-passagedata pid="44" name="intro21" tags="" position="1088,1647">For hours the Progenitor delays the sleep that will complete the melding process. The sounds of laughter and the smell of cooking food float up from downstairs; it feels @@.e;Etta@@ respond to those traces of her family, but there is nothing she can do to break the control. Eventually the house falls silent as both women retire to their rooms.
+
+Finally confident that nothing will disturb it, the Progenitor puts @@.e;Etta@@ into a state of deep, near comatose, rest. It then sets about restructuring her nervous system, rerouting and splicing it with its own. She will now view the creature riding on her back as a part of herself, an intimate organ whose existance she will not share with a soul.
+
+The Progenitor prepares itself prepares for the next stage of its development: the production of eggs. It will lay these eggs inside its host to gestate, her body providing the safety and nutrients they need. In the meantime, it will send @@.e;Etta@@ out in to the world, breaking down the boundaries of sexual propriety that exist between her and others, paving the way for the formation of an efficient breeding colony.
+
+Its energy spent on the production of eggs, the Progenitor will not be able to control its host directly. To break her remaining resolve and dismantle her inhibitions, it will have to be subtle.
+
+Soon, both lifeforms, for now separate, are deep asleep. Come morning they will be one. [[Phase one|p1-1]] of the infestation is about to begin...</tw-passagedata><tw-passagedata pid="45" name="disclaim" tags="" position="2589,1851">This is the end of content for now! @@.embold;THANK YOU@@ for playing and I hope you&#x27;ll return to see what comes next.
+
+Day 1 of the first phase of infestation is complete. How did you do? Whether willing or not, @@.e;Etta@@ is now full of worm-goo. In less than a day&#x27;s time her body will be ready for its first clutch of eggs. But what about everyone else? Will @@.e;Etta@@ find a way to charm Rocket? And what of her @@.mo;Molly@@&#x27;s trip to the spa? The keys to shed, and many other secrets, remain hidden ... for now.
+
+Our girl isn&#x27;t broken yet. The Progenitor has work to do. Day 2 will see the stakes be raised to new heights, while @@.e;Etta@@&#x27;s besieged morals sink to even greater depths.
+
+Join in with the discussion surrounding the project at the forum over on TFGamesite:
+
+http://www.tfgamessite.com/phpbb3/viewtopic.php?f=6&amp;t=8147
+
+Big thanks to the proofing team for all the help and advice. Also, big thanks to the folks over at the forum; your encouragement has been priceless! 
+
+</tw-passagedata><tw-passagedata pid="46" name="The Staff of Lovelock" tags="" position="13,991">&lt;&lt;back&gt;&gt;
+
+[[Miss Timms|MissTimms]]
+
+[[Mrs. Appleford|Appleford]]
+</tw-passagedata><tw-passagedata pid="47" name="Appleford" tags="" position="103,1119">@@.embold;Name@@: $applechar.name
+
+@@.embold;Age@@: $applechar.age
+
+$applechar.desc
+
+@@.embold;Status@@: $applechar.status
+
+$applechar.fuck
+
+&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Jules" tags="" position="0,556">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="p1-1" tags="" position="1245,1650">When @@.e;Etta@@ wakes she has no recollection of the previous evening. There is a dull thumping in her head, not unlike a hangover, and when she sits up and sees that she not only came to bed fully clothed, but that those clothes are muddied and tattered, she shakes her head in bewilderment. Just what the hell did she do last night? She suddenly recalls her secret and reaches back to check...phew, it’s still there, whatever it is. The thing on her back is still gripping her tightly, its articulated arms reaching round to her belly. Not even vaguely troubled by her inexplicable hitchhiker, @@.e;Etta@@ gets out of bed.
+
+The smell of coffee and bacon comes wafting from downstairs and sets her stomach rumbling. 
+
+[[Send Etta down for breakfast|p1-2]].
+
+[[Check out the room|ettabedroom1]].
+
+&lt;&lt;set $mast1 to true&gt;&gt;
+
+&lt;&lt;set $gamestart to true&gt;&gt;
+
+&lt;&lt;set $indeed to &quot;&quot;&gt;&gt;
+
+&lt;&lt;set $dressed to false&gt;&gt;
+
+&lt;&lt;set $infest1 to false&gt;&gt;
+
+&lt;&lt;set $day to &quot;Day 1: Friday&quot;&gt;&gt;
+
+&lt;&lt;set $time to &quot;Morning&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="p1-2" tags="" position="1231,1512">&lt;&lt;if $pchar.cor eq 1&gt;&gt;
+@@.e;Etta@@ takes a deep breath and picks herself up from the floor. She totters slightly, her legs still unsteady from that power of her orgasm. Her belly grumbles loudly as she takes her dressing gown from the wardrobe; it’s definitely time for breakfast. She tidies up her hair, brushing out the twigs and leaves (&lt;em&gt;I wonder how they got there&lt;/em&gt;? she wonders).
+&lt;&lt;else&gt;&gt;
+Roused by the scene of bacon and coffee, @@.e;Etta@@ puts on her dressing gown and heads downstairs. She feels ravenous, as if she hasn’t eaten in days, and hopes her mother has made extra; it is the first day of the holidays, after all.
+&lt;&lt;/if&gt;&gt;
+Downstairs in the kitchen she finds that her mother has $indeed prepared a feast. There are eggs, bacon, sausages, fried mushrooms, not to mention freshly brewed coffee. The smell is delicious and as @@.e;Etta@@ approaches the breakfast bar she immediately begins to salivate.
+
+@@.m;Good morning@@, @@.m;darling@@, she says, beaming broadly. @@.m;I was about to come up and get you@@. @@.m;It appears I may have made a little too much@@.
+
+@@.e;It@@’@@.e;s a good job@@. @@.e;I@@’@@.e;m starving@@! She kisses her @@.m;mother@@ on the cheek and sits down on one of the stools. @@.m;Helen@@ hands her a plate and she immediately begins to pile it with food. 
+
+@@.e;Where@@’@@.e;s Molly@@?, she says through a mouthful of eggs and bacon
+
+@@.m;Oh@@, @@.m;she had to leave early for work@@. @@.m;The university is having an open day and she@@’@@.m;s volunteered to help show people around the gym@@.
+
+@@.e;Never mind@@, says @@.e;Etta@@, grinning deviously. @@.e;That just means more for us@@.
+&lt;&lt;if $pchar.cor eq 1&gt;&gt;
+@@.e;Etta@@ watches as @@.m;Helen@@ leans over the bar to pour out two large cups of coffee. Her dressing gown is loose and has fallen open slightly to display her freckled and extremely ample cleavage. Her @@.m;mother@@’s unsupported breasts hang gloriously and for a moment she can do nothing but stare. She feels the arms around her belly squeezing gently; almost simultaneously her pussy grows wet and she is faced with the overwhelming desire to plunge her face into that heavenly divide. She hasn&#x27;t seen her mother naked since she was a child, not, come to think of it, even in her underwear. Her breasts are so big and full, much bigger than either hers or @@.mo;Molly@@&#x27;s. They must be really soft ... fleshy... &lt;em&gt;I wonder what they must feel like&lt;/em&gt;? @@.m;Helen@@ leans back and she snaps out of it. &lt;em&gt;Phew&lt;/em&gt; she thinks to herself while shaking her head. &lt;em&gt;What was that all about&lt;/em&gt;?
+&lt;&lt;else&gt;&gt;
+@@.m;Helen@@ pours them each a large cup of coffee. She leans forward with her elbows on the worktop and looks at her daughter with a quizzical expression.
+&lt;&lt;/if&gt;&gt;
+@@.m;Is everything alright@@, @@.m;dear@@? she says, looking rather concerned.
+
+[[Of course. Why wouldn’t it be|p1-3]]?</tw-passagedata><tw-passagedata pid="51" name="ettabedroom1" tags="" position="1090,1772">If ever a bedroom were a good way to learn about an individual’s personality then @@.e;Etta@@’s is the one. While not exactly minimal, there is a distinct lack of clutter, a sign that the few things kept resonate with meaning for their owner. These disparate items, a chunk of unpolished amethyst, an old china doll, and a jam jar half full with shells, serve no obvious purpose.
+
+Aside from the bed, desk, and wardrobe, the main items of furniture are three huge bookshelves that contain all of @@.e;Etta@@’s expansive library. From literary greats to pulp stars, veritable tomes to flimsy bestsellers, her collection appears indiscriminate. On a closer inspection, however, it is clear that she has a keen interest in science-fiction.
+
+Like most teenagers, @@.e;Etta@@ has covered her walls with posters. Again, these displays point towards an eclectic taste. A quick look round and you’d notice the stern visage of Judge Dredd staring down from the wall, while on the opposite wall the mournful Lady of Shalott sits in her gondola. Over the desk are arrayed a range of posters depicting black metal bands, their jagged fonts entirely at odds with her sunny disposition.
+
+[[Send Etta down for breakfast|p1-2]].
+
+[[Inspect the diary|ettadiary1]].
+&lt;&lt;if $mast1 is true&gt;&gt;
+[[Check the mirror|mast1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="ettadiary1" tags="" position="1240,1793">@@.e;Etta@@ takes her diary off the desk and opens it at random. The writing inside is neat, exceptionally so considering nobody is ever supposed to read it but her:
+
+&lt;em&gt;March 6th 1997
+
+Last night I dreamed about @@.t;Miss Timms@@ again. She was in the garden with mum… They were pruning the rose bushes, only she was naked. Not mum, obviously. I mean @@.t;Miss Timms@@. Mum didn’t seem to notice and neither did she. It was as if it was the most natural thing in the world to be doing that. I was watching them from my bedroom window and I could hear them laughing together. It was deeply erotic. She would bend down without an ounce of shame and I could feel myself getting hotter and hotter. Then mum turned round and waved me downstairs. Of course I went, but when I got out into the garden she was gone. @@.t;Miss Timms@@ came over to me and asked if I wanted to get some ice cream. Her face, her voice, her expression; they were all perfect. I said yes, so we went inside. 
+
+I woke up soon after that. Oh, you would not believe how wet that dream made me. I had to touch myself or I’d never get back to sleep. School today was awful. I thought it would never end. @@.l;Lily@@ got herself into another after hours detention and because we’d planned to go into town together I had to wait. I was standing about in the quad when I saw @@.t;Miss Timms@@. I tried to remain unseen but she spotted me and came right over. She wanted to know about my university applications. Good God, I could hardly speak. All I could think of was ice cream!!!&lt;/em&gt;
+
+[[Send Etta down for breakfast|p1-2]].
+&lt;&lt;if $mast1 is true&gt;&gt;
+[[Check the mirror|mast1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="mast1" tags="" position="1375,1799">@@.e;Etta@@ approaches the body length mirror that hangs on the door of her wardrobe. She inspects herself, twisting her body from side to side. She wriggles out of her skirt and lets the torn garment fall to her ankles before kicking it away. Next off comes her ripped top until she’s wearing nothing but her bra and knickers. She runs her fingers over the chitinous arms that reach round from behind and feels them flex, tightening ever so slightly in response to her touch. A frisson runs down her spine and sets her extremities tingling.
+
+She turns to the side and sticks out her bottom to better see her passenger. She can see it moving, the smooth plates of its body expanding and contracting. Then she reaches back to feel the point at which its tail joins to the bottom of her neck. When her fingers touch the spot the muscles in her groin spasm and her legs become weak. 
+
+Her vision blurs as she sinks to her knees in front of the mirror. With both hands against the cold surface her breath comes heavily. She feels a wetness spreading between her legs and soon her panties are sodden. The desire for release comes heavily, as if nothing else in the world matters, and her skin burns with lust. Barely in control, she lets her hand drop to her pussy and runs a single finger tip over the gush soaked fabric covering her. Her toes clench and her hand against the mirror balls involuntarily into a tight, white fist. She runs the point of her tongue over her top lip, tasting the sweat that is now pouring from her brow. With a barely stifled grunt she slides aside her soiled knickers and plunges two fingers into her hungry snatch. There’s no resistance, her pussy is so wet it could probably take a fist. With her thumb pressing against her hard clit, she pumps away at herself, each squelching thrust of her hand bringing her closer to climax. Faster and faster she goes, pushing herself towards the precipice. 
+
+@@.e;Oh yes@@, @@.e;oh yes@@, she squeaks, coming suddenly. A feeling like nothing else floods over her body, expanding like a ball of heat in her belly and flowing into her limbs. Her whole body contracts as if to contain the force of her orgasm. 
+
+@@.e;Oh my God@@, she pants, as the climax ebbs away. @@.e;That was amazing@@! She tries to stand but her legs are shaking. In the mirror she sees that her breast has flushed bright red and then she notices the arms twitching around her belly. She feels pleased with herself, as if she’s just achieved a goal of some sort. Finally managing to haul herself up, she kicks off her now filthy panties. Time to get on with the day!
+
+[[Send Etta down for breakfast|p1-2]].
+
+[[Inspect the diary|ettadiary1]].
+
+&lt;&lt;set $mast1 to false&gt;&gt;
+
+&lt;&lt;set $pchar.cor += 1&gt;&gt;   
+
+&lt;&lt;set $indeed to &quot;indeed&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="p1-3" tags="" position="1368,1507">@@.m;Well@@, @@.m;yesterday you got back from school and didn@@’@@.m;t even come and say hello@@, @@.m;you just went straight upstairs@@. @@.m;Then you didn@@’@@.m;t come and get dinner@@. @@.m;When I came up with some food you were out like a light@@. @@.m;At 10pm on a Friday night@@!
+
+@@.e;Mum@@, @@.e;seriously@@, @@.e;I@@’@@.e;m fine@@.
+
+@@.m;Are you sure@@? @@.m;You can talk to me@@, @@.m;darling@@. She reaches across the counter and strokes a few strands of hair from @@.e;Etta@@’s brow.
+
+@@.e;OK@@, @@.e;OK@@. @@.e;I went to the pub with Lily@@. @@.e;I was a bit@@ … @@.e;worse for wear and you know I hate embarrassing myself when I@@’@@.e;m like that@@. @@.e;Etta@@ knows that she&#x27;s lying, but what else is she supposed to say? That she can&#x27;t remember what happened? That would cause all sorts of problems. For all she knows, she might have been at the pub with @@.l;Lily@@.
+
+@@.m;Helen@@ folds her arms and frowns, but she can’t hide a smirk. @@.m;I should have guessed@@.
+
+@@.e;What about you@@, @@.e;mum@@, says @@.e;Etta@@, seizing the opportunity to change the subject. @@.e;Are you OK@@? @@.e;You look knackered@@. That’s not an exaggeration. She looks exhausted, eyes ringed with dark while the corners of her mouth seem to turn downwards every time she relaxes her face. She’s clearly gone to some pains to cover up the signs but it can’t hide the obvious.
+
+@@.m;It@@’@@.m;s nothing serious@@, she says with a sigh. @@.m;Just the same old problems@@. She forks a few rashers of bacon onto her plate and proceeds to prod at them, clearly disinterested. @@.m;I need to take all the overtime I can get@@, @@.m;what with the car and Rocket@@’@@.m;s veterinary bills@@. @@.m;It@@’@@.m;s turning out to be an expensive year@@.
+
+[[Now would be a good idea to discuss getting a job|p1-4]].</tw-passagedata><tw-passagedata pid="55" name="p1-4" tags="" position="1370,1649">@@.e;Etta@@ mops up her plate with a slice of toast before piling it back up, this time with scrambled eggs and sausages. @@.e;I was thinking about that yesterday@@, @@.e;actually@@. @@.e;I decided that it@@’@@.e;s about time I got a job myself@@. @@.e;I mean@@, @@.e;there@@’@@.e;s quite a while until I leave for uni@@, @@.e;and I@@’@@.e;m not going to camp@@, @@.e;so I may as well do something useful@@.
+
+@@.m;Helen@@ smiles softly. @@.m;That@@’@@.m;s very sweet of you@@, @@.m;dear@@, @@.m;but what about your studies@@?
+
+@@.e;School@@’@@.e;s over@@, @@.e;remember@@?
+
+@@.m;but what about@@ …
+
+@@.e;Mum@@, @@.e;I know you@@’@@.e;ve always provided for us@@. @@.e;You@@’@@.e;ve been amazing@@. @@.e;Let me do this for us@@, @@.e;for the family@@.
+
+@@.m;Helen@@ looks uncertain, staring down into her coffee.
+
+@@.e;I@@’@@.e;m going to have to get a job when I start university@@, @@.e;anyway@@. @@.e;It@@’@@.e;ll be way easier for me to find one if I@@’@@.e;ve had one before@@, @@.e;right@@?
+
+@@.m;Of course@@, she says reluctantly. @@.m;I@@’@@.m;m not so proud to say it wouldn@@’@@.m;t hurt to have a bit of help with the bills@@. @@.m;I just@@ … @@.m;This is your last real summer time@@. @@.m;I don@@’@@.m;t want you to miss out@@.
+
+@@.e;Come on@@, @@.e;mum@@. @@.e;It@@’@@.e;s not like I@@’@@.e;m going to be stuck in an office from dawn until dusk@@. @@.e;Just something part@@-@@.e;time@@, @@.e;at a cafe or restaurant@@. @@.e;That sort of thing@@.
+
+@@.m;If that@@’@@.m;s what you really want@@, @@.m;darling@@, @@.m;then I@@’@@.m;ll support you all the way@@.
+
+[[Finish up with breakfast|p1-5]].</tw-passagedata><tw-passagedata pid="56" name="p1-5" tags="" position="1644,1654">@@.e;Etta@@ and her @@.m;mother@@ chat idly while they eat up the rest of their breakfast. 
+
+When they’re both finished @@.m;Helen@@ heads upstairs to get dressed. By the time @@.e;Etta@@ has finished clearing up she’s back downstairs.
+
+@@.m;I@@’@@.m;m just going out to do a bit of work in the garden@@. @@.m;Good luck finding a job@@!
+
+Now what?
+
+[[Search the kitchen|kitchensearchp1]].
+
+Move @@.e;Etta@@ to:
+
+[[Go to town|townp1]].
+
+[[Check the lounge|loungep1]].
+
+[[Check the garden|gardenp1]].
+
+[[Send Etta upstairs|landingp1]].</tw-passagedata><tw-passagedata pid="57" name="townp1" tags="" position="1637,1877">&lt;&lt;if $dressed is true and $time is &quot;Morning&quot;&gt;&gt;Dressed and ready, @@.e;Etta@@ leaves the house and sets off at a leisurely pace in the direction of the bus stop. The day is turning out to be glorious, bright and sunny but with a pleasant breeze. She passes a number of people, some washing cars or mowing lawns and others just relaxing, all of them dressed for summer. She greets the people she recognises and smiles at the ones she doesn’t. Her spirits are high and she can’t help but feel lucky that she lives in such a wonderful neighbourhood. If only she could get a little bit closer to people … a little bit more intimate ...
+
+Just as she’s nearing the bus stop she sees an old man tottering down the street with two dogs, a big doberman and a border collie. He’s wearing a long beige coat, despite the weather, and there is a grey fedora atop his head. It’s @@.s;Mr@@. @@.s;Shaw@@, the local eccentric. He lives a few doors down from @@.e;Etta@@ and her family, alone with his dogs. The story goes that he used to be a teacher at Lovelock High but was kicked out less than a year shy of retirement for groping a student. There wasn’t any proof but to prevent a scandal they fired him, as quietly as possible, without an investigation. Since then he apparently does nothing but wander around with his dogs, always dressed in his spy-coat and silly hat.
+
+@@.e;Good morning@@, @@.e;Mr@@. @@.e;Shaw@@, says @@.e;Etta@@ sweetly as he passes.
+
+@@.s;Good day@@, @@.s;young miss@@, he says, lifting his hat in an exaggerated manner. @@.s;Such a fine day for a stroll@@, @@.s;don@@&#x27;@@.s;t you think@@? @@.s;How wonderful it is to feel the sunshine on your face@@.
+
+@@.e;It certainly is@@. @@.e;Off anywhere in particular@@? @@.e;Etta@@ is momentarily alarmed as @@.s;Mr@@ @@.s;Shaw@@’s dogs congregate around her, sniffing inquisitively. She gingerly strokes Jackson, the big male doberman, trying her best to avoid his long sloppy tongue.
+
+@@.s;Oh heavens no@@, he laughs. @@.s;I@@’@@.s;m just taking in the air@@. @@.s;There@@’@@.s;s nowhere for an old man like me to go these days@@.
+
+@@.e;Etta@@ isn’t sure exactly how old @@.s;Mr@@. @@.s;Shaw@@ is but he looks fairly ancient. His face is peppered with liver spots and his hair, although by no means thin, is a brilliant white. He’s also blind, having lost his sight to cataracts, and although his animals aren’t trained to act as guide dogs, he maintains that they’re good enough for him.
+
+@@.s;And what about you@@? @@.s;What does the day hold in store for you@@?
+
+@@.e;Etta@@ tells him about her plan to find a job and help contribute towards the family finances.
+
+@@.s;Marvellous@@, he cries. @@.s;Not like some of your contemporaries@@. @@.s;Awful layabouts the lot of them@@. @@.s;Far too content to sit and let the time whittle away@@. @@.s;Well@@, @@.s;when it@@&#x27;@@.s;s all gone they@@&#x27;@@.s;ll be sorry@@. 
+
+@@.e;Etta@@ starts to wonder just how she might be able to get out of this. @@.s;Mr@@. @@.s;Shaw@@ can be a real talker once he gets going. He stares sightlessly off down the road, his expression a little wistful. @@.s;I forget how old you must be now@@. @@.s;My@@, @@.s;I remember when you and your sister were little girls@@. @@.s;So sweet@@. @@.s;So lovely@@. @@.s;Why@@, @@.s;you used to come over to my house and sit on my@@...
+
+[[Woah! What was that|jacksonchoice]]?
+&lt;&lt;elseif $dressed is false&gt;&gt;
+@@.e;Etta@@ can&#x27;t go out without getting dressed first!
+
+[[Back|loungep1]].
+&lt;&lt;elseif $time is &quot;Evening&quot;&gt;&gt;
+@@.e;Etta@@ has only just got back. There&#x27;s no reason to send her out again so soon.
+
+[[Back|loungep1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="kitchensearchp1" tags="" position="1500,1884">A quick search of the kitchen reveals nothing unusual. While rummaging through the draws and cupboards @@.e;Etta@@ find exactly what you’d expect: plates, cutlery, cooking utensils, and a wide range of foodstuffs and sundries.
+
+Looking inside the fridge she notices an entire shelf taken up by @@.mo;Molly@@’s protein drinks. &lt;&lt;if $infest1 is false&gt;&gt;She must make them in batches to save time. @@.e;Etta@@ shudders at the thought of having to drink one of those disgusting things.&lt;&lt;elseif $infest1 is true&gt;&gt;@@.e;Etta reaches in to grab one and, as she does, has an idea.&lt;&lt;elseif $p1 is &quot;molly&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+[[Back|kitchenp1]].</tw-passagedata><tw-passagedata pid="59" name="loungep1" tags="" position="1762,1784">The lounge, or T.V. room as @@.e;Etta@@ and @@.mo;Molly@@ prefer to call it, is the centre of the house. With two sofas, an extremely comfy armchair, and a big beanbag, this is the place to relax. On either side of the television are two floor to ceiling shelves, both almost full with videotapes. The room is well lit by a set of French windows that look out into the garden. The scent of flowers is inescapable.
+
+A snuffling sound betrays the presence of Rocket. He&#x27;s sitting curled up in his bed next to the armchair. He looks up at @@.e;Etta@@ and cocks his head.
+&lt;&lt;if $mumborrow is true&gt;&gt;
+[[Search the lounge|loungesearchp1]].
+
+[[Approach Rocket|rocketp1-1]].
+
+[[Check Helen&#x27;s coat|helencoat]].
+&lt;&lt;elseif $takeout is true&gt;&gt;
+[[Search the lounge|loungesearchp1]].
+
+[[Approach Rocket|rocketp1-1]].
+
+[[Call for takeout|takeout]].
+&lt;&lt;else&gt;&gt;
+[[Search the lounge|loungesearchp1]].
+
+[[Approach Rocket|rocketp1-1]].
+&lt;&lt;/if&gt;&gt;
+Move @@.e;Etta@@ to:
+
+[[Town|townp1]].
+
+[[The kitchen|kitchenp1]].
+
+[[The garden|gardenp1]].
+
+[[Upstairs|landingp1]].</tw-passagedata><tw-passagedata pid="60" name="gardenp1" tags="" position="1497,1536">&lt;&lt;if $time is &quot;Evening&quot;&gt;&gt;@@.e;Etta@@ slides back the door and steps out onto the patio. It’s a little chilly but not unbearably so. The sky above is flushed with the setting sun, the clouds pink like candy floss. This garden is @@.m;Helen@@&#x27;s pride and joy; a quick look around is all it takes to see that she&#x27;s a keen horticulturist. The flowerbeds are brimming with colourful growth and the hedges are all neatly trimmed. Wisteria and other creeping plants adorn the side of the house, and a thick trunked apple tree stands in the centre of the lawn.
+
+To the right is the shed, while to the left is the greenhouse.
+&lt;&lt;else&gt;&gt;
+@@.e;Etta@@ slides back the door and steps out onto the patio. The mixed up sounds of children playing and birds singing drift through the air. It’s a beautiful sunny day and there is barely a cloud in the sky. There’s an old tom cat prowling along the fence at the end of the lawn and dogs can be heard barking in the distance. The garden is @@.m;Helen@@&#x27;s pride and joy; a quick look around is all it takes to see that she&#x27;s a keen horticulturist. The flowerbeds are brimming with colourful growth and the hedges are neatly trimmed. Wisteria and other creeping plants adorn the side of the house, and a thick trunked apple tree stands in the centre of the lawn.
+
+To the right is the shed, while to the left is the greenhouse.
+&lt;&lt;/if&gt;&gt;
+[[Look in the shed|shedp1]].
+
+[[Look in the greenhouse|ghousep1]].
+
+Move @@.e;Etta@@ to:
+
+[[Town|townp1]].
+
+[[The lounge|loungep1]].
+
+[[The kitchen|kitchenp1]].
+
+[[Upstairs|landingp1]].</tw-passagedata><tw-passagedata pid="61" name="landingp1" tags="" position="1760,1525">It&#x27;s dark on the upstairs landing. Aside from the laundry cupboard, there are four doors to chose from:
+
+[[Molly&#x27;s room|mollyroomp1]].
+
+[[Helen&#x27;s room|helenroomp1]].
+
+[[Etta&#x27;s room|ettaroomp1]].
+
+[[The bathroom|bathroomp1]].
+
+Send @@.e;Etta@@ back [[Downstairs|loungep1]].</tw-passagedata><tw-passagedata pid="62" name="shedp1" tags="" position="1591,1386">@@.e;Etta@@ tries the latch only to find that it’s sealed by a big brass padlock. She’s going to need a key to get in here.
+
+[[Back|gardenp1]].</tw-passagedata><tw-passagedata pid="63" name="ghousep1" tags="" position="1457,1378">It’s hot and steamy in the greenhouse, the air close and damp. This is where @@.m;Helen@@ grows her prize-winning vegetables. Cucumbers, tomatoes, courgettes, onions, peas, beans, you name it she’s probably grown it in here. The radio is on, BBC Radio 4 by the sounds of it.
+&lt;&lt;if $time is &quot;Evening&quot;&gt;&gt;
+There&#x27;s nobody here right now.
+
+[[Back|gardenp1]].
+&lt;&lt;else&gt;&gt;
+@@.m;Helen@@ is currently on her knees before a long trough, trowel in hand, busy planting seedlings.
+	&lt;&lt;if $helenroomsearch1 is true and $helenspeak1 is false&gt;&gt;
+[[Talk to her|helengreenp1]].
+	&lt;&lt;/if&gt;&gt;
+[[Back|gardenp1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="kitchenp1" tags="" position="1502,1729">The kitchen shares the room a dining area, with partial divide of the breakfast bar between them. The kitchen houses all the usual appliances: an oven, microwave, fridge-freezer, as well a number of small, more specialised items. The worktop is grey imitation marble but the drawers and cupboards are made from solid oak. 
+
+In the carpeted dining area there is a round table and four chairs. In the centre of the table there is a vase containing a beautiful bouquet of @@.m;Helen@@’s very own red roses.
+&lt;&lt;if $time is &quot;Evening&quot;&gt;&gt;
+	&lt;&lt;if $helentalk1 is true&gt;&gt;@@.m;Helen@@ is here.
+	&lt;&lt;else&gt;&gt;@@.m;Helen is here.
+
+[[Talk to her|helentalk]].
+	&lt;&lt;/if&gt;&gt;
+[[Search the kitchen|kitchensearchp1]].
+&lt;&lt;else&gt;&gt;
+[[Search the kitchen|kitchensearchp1]].
+&lt;&lt;/if&gt;&gt;
+Move @@.e;Etta@@ to:
+
+[[Town|townp1]].
+
+[[The lounge|loungep1]].
+
+[[The garden|gardenp1]].
+
+[[Upstairs|landingp1]].</tw-passagedata><tw-passagedata pid="65" name="mollyroomp1" tags="" position="1746,1387">@@.mo;Molly@@’s bedroom is what could only be described as minimal. It’s meticulously neat, with zero clutter and no real decoration aside from a single photograph of the family on her bedside table. The bed is made close to military standard, the sheets crisp and uncrumpled. This spartan set-up denotes a life lived to a strict regime, one of discipline and personal privation.
+
+In one corner there is an array of exercise equipment. @@.e;Etta@@ can see a set of dumbbells and an aerobics step-up. @@.e;Etta@@ tries to lift the smallest of the weights but struggles. &lt;em&gt;Christ! How does she do it&lt;/em&gt;? On the wall above the gear is a wall chart that shows just how strictly organised @@.mo;Molly@@’s life actually is; there’s not a single day in which she doesn’t engage in some sort of rigorous exercise, but, surprisingly enough, she manages to find the time for a packed and sparkling social life. @@.e;Etta@@ couldn’t be more different to her @@.mo;sister@@ if she tried.
+&lt;&lt;if $time is &quot;Evening&quot;&gt;&gt;
+@@.mo;Molly is here@@
+	&lt;&lt;if $mollytalk is true&gt;&gt;&lt;&lt;if $takeout is true&gt;&gt;
+		[[Ask her about takeout|mollytakeout]].
+	
+		[[Back|landingp1]].
+		&lt;&lt;else&gt;&gt;
+		[[Back|landingp1]].
+		&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;
+	[[Talk to her|Molly talk]].
+
+	[[Back|landingp1]].
+	&lt;&lt;/if&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+[[Search the room|mollyroomsearchp1]].
+
+[[Back|landingp1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="helenroomp1" tags="" position="1896,1452">@@.m;Helen@@’s bedroom is surprisingly messy. The bed is unmade, the duvet hanging from one side, and there are clothes strewn about the floor. The floral print curtains are drawn, giving the room a murky, cave-like feel.
+
+There’s a dressing table against one wall on which stand a number of framed photographs depicting @@.e;Etta@@ and @@.mo;Molly@@ at various stages in their lives. There’s a large family portrait in an ornate frame; the photo inside is conspicuously folded, cutting @@.e;Etta@@’s father out of the picture. Next to that is a much older photograph of a teenage boy and girl. On closer inspection @@.e;Etta@@ realises the picture she’s looking at is of her @@.m;mother@@ and her younger brother, Garrett. @@.m;Helen@@ looks stunning dressed in a modest one piece bathing suit, her long red locks blazing in the sunlight. Even back then, @@.e;Etta@@ notices with interest, @@.m;Helen@@’s breasts were impressive.
+&lt;&lt;if $time is &quot;Evening&quot;&gt;&gt;
+[[Back to the landing|landingp1]].
+&lt;&lt;else&gt;&gt;
+[[Search the room|helenroomsearchp1]].
+
+[[Back to the landing|landingp1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="ettaroomp1" tags="" position="1923,1578">If ever a bedroom were a good way to learn about an individual’s personality then @@.e;Etta@@’s is the one. While not exactly minimal, there is a distinct lack of clutter, a sign that the the few things kept resonate with meaning for their owner. These disparate items, a chunk of unpolished amethyst, an old china doll, and a jam jar half full with shells, serve no obvious purpose.
+
+Aside from the bed, desk, and wardrobe, the main items of furniture are three huge bookshelves that contain all of @@.e;Etta@@’s expansive library. From literary greats to pulp stars, veritable tomes to flimsy bestsellers, her collection appears indiscriminate. On a closer inspection, however, it is clear that she has a keen interest in science-fiction.
+
+Like most teenagers, @@.e;Etta@@ has covered her walls with posters. Again, these displays point towards an eclectic taste. A quick look round and you’d notice the stern visage of Judge Dredd staring down from the wall, while on the opposite wall the mournful Lady of Shalott sits in her gondola. Over the desk are arrayed a range of posters depicting black metal bands, their jagged fonts entirely at odds with the Madonna LPs visible in the record box.
+&lt;&lt;if $dressed is false&gt;&gt;
+[[Get dressed|dressp1]].
+
+[[Let Etta enjoy herself|mastchoice2]].
+
+[[Take a peek in the special box|Look in the box]].
+
+[[Leave|landingp1]].
+&lt;&lt;else&gt;&gt;
+[[Let Etta enjoy herself|mastchoice2]].
+
+[[Take a peek in the special box|Look in the box]].
+
+[[Leave|landingp1]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="bathroomp1" tags="" position="1888,1738">This is bathroom @@.e;Etta@@ shares with her @@.m;mother@@ and @@.mo;sister@@. It is very clean, the polished tiles glistening, and smells of air freshener. Immaculate white towels are hanging on a rack next to the shower and a vase of lillies sits on the windowsill before a pane of frosted glass.
+&lt;&lt;if $shower is true&gt;&gt;
+[[Leave|landingp1]].
+&lt;&lt;elseif $time is &quot;Evening&quot;&gt;&gt;
+[[Leave|landingp1]].
+&lt;&lt;else&gt;&gt;
+[[Take a shower|shower1]].
+
+[[Leave|landingp1]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="loungesearchp1" tags="" position="1770,1929">As soon as @@.e;Etta@@ starts to look around the room Rocket stands up in his bed and growls.
+
+@@.e;What@@’@@.e;s the matter@@, @@.e;boy@@? she says. @@.e;It@@’@@.e;s only me@@.
+
+He snarls, baring his teeth. What’s gotten into him? @@.e;Etta@@ backs away. She’s not going to be able to look around the lounge properly with Rocket behaving like that.
+
+[[Back|loungep1]].</tw-passagedata><tw-passagedata pid="70" name="rocketp1-1" tags="" position="1900,1877">@@.e;Etta@@ reaches out to pet Rocket, smiling at the wetness of his nose against her fingers. Suddenly he growls and snaps and she narrowly avoids a painful nip.
+
+@@.e;Woah@@, she yells, taken completely by surprised. @@.e;What the fuck was that@@?
+
+She tries again only to provoke a similar reaction. Why is he being so aggressive? It was only a few nights ago that she was cuddling up with him on the sofa. Something definitely isn’t right. @@.e;Etta@@ backs away, unable to help but feel a little bewildered.
+
+[[Back|loungep1]].</tw-passagedata><tw-passagedata pid="71" name="helengreenp1" tags="" position="1328,1246">&lt;&lt;if $box.contains(&quot;@@.m;Helen@@&#x27;s dirty knickers&quot;)&gt;&gt;
+@@.m;Helen@@ is working so hard that she hasn’t noticed that her @@.e;daughter@@ is watching her. She’s humming to herself, clearly enrapt by her work, her bottom swaying to her tune. Her jeans have ridden so low that that her knickers can be seen poking over the top. @@.e;Etta@@ is shocked to see that her mother is wearing a skimpy little thong. The material, engulfed by her ample flesh, disappears between her butt cheeks.  She stares, transfixed by the sight of this nearly-naked rump, remembering the smell of the stolen knickers now hidden upstairs in her room. The Progenitor reminds her of its presence, gripping her more tightly as her pussy grows hot. Watching her @@.m;mother@@’s ass, she imagines spreading those cheeks and pressing her face into the divide. She licks her lips, tasting the phantom musk of sex.
+
+@@.m;Etta@@, @@.m;is that you@@? Her @@.m;mother@@’s voice rouses her from her obscene fantasy. She swallows the taste that fills her mouth and takes a deep breath.
+
+@@.e;Hey mum@@, she says. @@.e;I was just wondering if I could borrow some money for the bus@@?
+
+@@.m;Helen@@ straightens up and looks over her shoulder. She wipes a gloved hand over her face, leaving a smear of dirt. @@.m;How much do you need@@?
+
+@@.e;Just a couple of quid@@, @@.e;I@@’@@.e;ll pay you back when I get the job@@.
+
+@@.m;Ah@@-@@.m;ha@@, laughs @@.m;Helen@@. @@.m;By all means@@, @@.m;help yourself@@. @@.m;There should be some money in coat pocket@@. @@.m;It@@’@@.m;s hanging up by the front door@@.
+
+@@.e;Etta@@ hugs her tightly. @@.e;Thanks@@, @@.e;Mum@@. @@.e;You@@’@@.e;re the best@@.
+
+@@.m;No problem@@. @@.m;Now be a dear and pass me that trowel@@, @@.m;will you@@?
+
+As @@.e;Etta@@ leaves her @@.m;mother@@ to her work she can’t help but sneak another look at her butt, almost swooning with lust. &lt;em&gt;I can&#x27;t think about my mother like that&lt;/em&gt;, she thinks to herself, but without conviction. &lt;em&gt;That&#x27;s perverse&lt;/em&gt;.
+
+[[Back|ghousep1]].
+
+&lt;&lt;set $mumborrow to true&gt;&gt;
+&lt;&lt;set $helenfant to true&gt;&gt;
+&lt;&lt;set $helenspeak1 to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+@@.e;Hey mum@@, says @@.e;Etta@@. @@.e;I was wondering if I could borrow some money for the bus@@?
+
+@@.m;Helen@@ straightens up and looks over her shoulder. Her face is smeared with dirt. @@.m;How much do you need@@?
+
+@@.e;Just a couple of quid@@, @@.e;I@@’@@.e;ll pay you back when I get the job@@.
+
+@@.m;Ah@@-@@.m;ha@@, laughs @@.m;Helen@@. @@.m;By all means@@, @@.m;help yourself@@. @@.m;There should be some money in coat pocket@@. @@.m;It@@’@@.m;s hanging up by the front door@@.
+
+@@.e;Etta@@ hugs her tightly. @@.e;Thanks@@, @@.e;Mum@@. @@.e;You@@’@@.e;re the best@@.
+
+[[Back|ghousep1]].
+
+&lt;&lt;set $mumborrow to true&gt;&gt;
+&lt;&lt;set $helenspeak1 to true&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="helenroomsearchp1" tags="" position="1957,1315">&lt;&lt;if $helenroomsearch1 is true&gt;&gt;
+@@.e;Etta@@ spends some more time searching but finds nothing else of any interest. Maybe she should check again another time.
+
+[[Back|helenroomp1]].
+&lt;&lt;else&gt;&gt;
+Checking over her shoulder and listening out for any movement downstairs, @@.e;Etta@@ decides that it’s safe to search her @@.m;mother@@’s room.
+
+Looking through the dressing room drawers, she finds an assortment of cosmetic items, makeup, skin and hair care products. There are also sanitary items, wet wipes, tampons, and pads.
+
+The wardrobe is full of clothes that haven’t been worn in a long time. There are beautiful gowns and blouses, smart trousers and daring mini-skirts. &lt;em&gt;What a shame @@.m;Mum@@ doesn’t get a chance to wear these anymore&lt;/em&gt;, thinks @@.e;Etta@@.
+
+Before calling off the search she has a quick rummage through the clothes on the ground. They’re mostly the jeans and plain shirts @@.m;Helen@@ wears for work but there are also quite a few pieces of underwear. @@.e;Etta@@ picks up one of the bras that support her @@.m;Mother@@’s colossal breasts and gapes in awe. She holds it against her own chest and sighs … &lt;em&gt;Maybe one day&lt;/em&gt;. Next she scoops up a pair of panties. She quickly glances over her shoulder as a bizarre compulsion hits her. Should she take the panties?
+
+[[Yes|pantiesyes]].
+
+[[No|pantiesno]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="Look in the box" tags="" position="2093,1603">@@.e;Etta@@ peers into her special box and sees:
+
+&lt;&lt;print $box&gt;&gt;.
+
+[[Back|ettaroomp1]] </tw-passagedata><tw-passagedata pid="74" name="mollyroomsearchp1" tags="" position="1656,1256">&lt;&lt;if $mollydiary is &quot;read&quot; and $dildochoice is &quot;made&quot;&gt;&gt;It is obvious that @@.mo;Molly@@, although a deeply secretive person, keeps those secrets closely guarded. Even a detailed search would be unlikely to find anything of value. Just before giving up her investigation, however, @@.e;Etta@@ finds a little box in the bottom of the wardrobe. She hunts and hunts but cannot find a key to open the lock. It must be somewhere else.
+
+[[Back|mollyroomp1]].&lt;&lt;else&gt;&gt;After a meticulous search that reveals nothing much interesting, @@.e;Etta@@ drops to her belly to take a look under the bed. She sees a large box in the shadows and, after a bit of reaching about, manages to pull it out into the open.
+
+Eureka! She&#x27;s found @@.mo;Molly@@&#x27;s personal stash. Here is where she keeps the articles of her personal life, well out of the sight of others. There&#x27;s a bundle of photos, snapshots of group holidays and wild nights, tickets from concerts and days out, and a surprising amount of old letters and birthday cards. @@.e;Etta@@ had no idea her @@.mo;sister@@ could be so sentimental!
+
+At the bottom of the box, almost doubly hidden, are two things of particular interest. One is a diary, the pages dog-eared and the leather cover worn, the other is large red dildo. @@.e;Etta@@ raises an eyebrow. &lt;em&gt;What have we here&lt;/em&gt;?
+	&lt;&lt;if $dildochoice is &quot;made&quot;&gt;&gt;
+[[Read the diary|mollydiary1]].
+
+[[Back|mollyroomp1]].
+	&lt;&lt;else&gt;&gt;
+[[Read the diary|mollydiary1]].
+
+[[Inspect the dildo|takemollydildo]].
+
+[[Back|mollyroomp1]].
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="75" name="pantiesyes" tags="" position="2021,1445">@@.e;Etta@@ holds the panties out before her, testing the elastic. Without thinking she brings them up to her face, burying her nose into the fabric and breathing in deeply. Her @@.m;mother@@’s scent is strong, a mixture of sweat and pussy, and she is struck momentary dizziness. She feels the Progenitor squeeze her belly. Quickly, she stows the panties into her pocket and stands up, fully aware that she’s started getting wet.
+
+@@.embold;Etta now has a pair of her mother&#x27;s dirty knickers in her special box@@.
+
+[[Back|helenroomp1]].
+
+&lt;&lt;set $box.push(&quot;@@.m;Helen@@&#x27;s dirty knickers&quot;)&gt;&gt;
+
+&lt;&lt;set $helenroomsearch1 to true&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="pantiesno" tags="" position="2084,1318">@@.e;Etta@@ shakes her head at such a ridiculous notion and throws the panties back down into the messy pile of dirty washing.
+
+[[Back|helenroomp1]].
+
+&lt;&lt;set $helenroomsearch1 to true&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="Purse" tags="" position="386,507">&lt;&lt;back&gt;&gt;
+
+@@.e;Etta@@ currently has £$money.
+
+$jobmoney</tw-passagedata><tw-passagedata pid="78" name="helencoat" tags="" position="2080,1735">Inside the coat pocket you find two £1 coins.
+
+[[Back|loungep1]].
+
+&lt;&lt;set $mumborrow to false&gt;&gt;
+&lt;&lt;set $money +=2&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="mollydiary1" tags="" position="1489,1196">Plucking the leatherbound diary out of the box, @@.e;Etta@@ settles down to read. She opens the book, flicking through the pages until she’s at the most recent entry, dated from only two nights ago. @@.mo;Molly@@’s handwriting is messy, a slap-dash scrawl, but not entirely indecipherable:
+
+&lt;em&gt;Dear Diary:
+
+I’m sorry it’s been so long since my last entry, but I was away with @@.j;Jules@@, remember. I thought about taking you with me but I knew I wouldn’t get time to write. 
+
+The cottage was lovely, right on the edge of Dartmoor, miles away from the closest village. At night it was so dark that we could see the stars like never before. @@.j;Jules@@ has only ever known the city, so she was dumbstruck by the beauty of the unpolluted night sky. On the first night we lay out on the decking for hours and I showed her the constellations I knew.
+
+We spent a long time walking the moors, following trails and barely meeting another soul. There were a few walkers, mainly aging couples or solitary old men, and they were always polite and greeted us warmly. I hated seeing them; they ruined the illusion of isolation that I needed so badly. @@.j;Jules@@ seemed less bothered by these intrusions, and was keen to strike up conversation&lt;/em&gt;.
+
+The entry goes on and on like that, with @@.mo;Molly@@ describing the moors and her many thoughts as her and @@.j;Jules@@ hiked through the days. @@.e;Etta@@ started to think that she wouldn’t find anything interesting, but then she turned the last page and bingo! 
+
+&lt;em&gt;It happened again on our last night. We actually hadn’t drunk much of the wine we’d brought with us so we decided the have a blow-out and finish the lot. I can’t remember who moved first, but before I knew what was happening @@.j;Jules@@ was kissing me, or I was kissing her - I can’t be sure. It all happened so quickly. In a matter of seconds we were both naked and I was on my back before the fire, my legs spread and @@.j;Jules@@’s tongue in my pussy. God dammit, I promised myself I wouldn’t let it happen again. How I supposed to make her see that I only want to be friends when I keep on finding myself between her thighs?&lt;/em&gt;
+&lt;&lt;if $pchar.cor eq 2&gt;&gt;
+As @@.e;Etta@@ reads the diary she imagines the scene described. She pictures her @@.mo;sister@@’s naked body, her cries as @@.j;Jules@@ feasts on her wet cunt. She grows excited and her hand starts to waver around her own pussy. Is it wrong to be turned on by such thoughts? It takes all of @@.e;Etta@@’s willpower to close the book and slip it back into the box. Perhaps she can use this knowledge to her own ends? And what other secrets dirty little secrets are hiding underneath @@.mo;Molly@@’s squeaky clean exterior? 
+&lt;&lt;else&gt;&gt;
+@@.e;Etta@@ closes the diary. @@.e;I knew it@@, she whispers to herself. She slips the book back into the box, pleased with herself for digging out such juicy information. Who knows when such knowledge will come in handy!
+&lt;&lt;/if&gt;&gt;
+[[Back|mollyroomsearchp1]].
+
+&lt;&lt;set $mollydiary to &quot;read&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="takemollydildo" tags="" position="1830,1210">@@.e;Etta@@ hefts the dildo; it feels solid and weighs heavily in her palm. It must be almost eight inches long! The hard rubber is moulded to look like a human penis, complete with sticky-out veins. The head is bulbous, easily close to an inch and a half in girth. @@.e;Etta@@ winces at the thought of putting such a monster to use. &lt;em&gt;There’s no way this would fit in my pussy&lt;/em&gt;, she thinks to herself. &lt;em&gt;@@.mo;Molly@@, you have my respect&lt;/em&gt;! 
+
+She’s about to put the thing away when she feels the Progenitor shifting behind her. Maybe it would be a good idea to keep it for herself?
+
+[[Yes|takedildo]].
+
+[[No|leavedildo]].</tw-passagedata><tw-passagedata pid="81" name="takedildo" tags="" position="1689,1060">@@.e;Etta@@ looks around. Surely nobody would know if she were to take it … And even if @@.mo;Molly@@ did notice it was gone, who could she blame? She’s never caught @@.e;Etta@@ snooping before, so there are no reasons for her to make any assumptions in that direction.
+
+She slips the rubber cock into her pocket, excited at the thought of soon putting it to use.
+
+@@.embold;Etta now has her sister&#x27;s dildo in her special box@@.
+
+[[Back|mollyroomsearchp1]].
+
+&lt;&lt;set $dildochoice to &quot;made&quot;&gt;&gt;
+
+&lt;&lt;set $box.push(&quot;@@.mo;Molly@@&#x27;s dildo&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="leavedildo" tags="" position="1868,1065">@@.e;Etta@@ puts the dildo back in the box. There’s no way she has the guts to steal such an item off her @@.mo;sister@@, let alone put it to use. She hides it under the sheaf of letters. It would be a good idea to forget about that.
+
+[[Back|mollyroomsearchp1]].
+
+&lt;&lt;set $dildochoice to &quot;made&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="shower1" tags="" position="2046,1875">Still somewhat dirty from whatever the hell she got up to last night, @@.e;Etta@@ decides that it’s high time she had a wash. She strips out of her clothes and climbs into the cubicle. 
+
+Under the stream of hot water she soaps herself up, massaging the creamy lather into her skin. She shivers in near bliss as the water cascades against her back. Her passenger squeezes her, showing its appreciation for the care its host is taking. It decides a little reward might be in order ...
+&lt;&lt;if $pchar.cor gte 4&gt;&gt;
+By this point the Progenitor is well on the way to breaking down the barriers that stand between it and effective use of its host. Her readiness to masturbate and the interest she has already shown in the other members of her family is very promising indeed. Perhaps now is the time for a little direct intervention?
+
+Slowly as not to startle her, the Progenitor lifts its flat snout from the small of her back. A small mouth-like slit opens and from within projects a thick and slime-slick tentacle. While she rubs shampoo into her hair it injects a large dose of alien hormones into her bloodstream. Struck unawares by a sudden desire to fuck, she tears the shower head down from its holder and rams it against her pussy. Then, just as she starts to buck her hips, the Progenitor slips its tentacle tongue between her thighs, sliding between her parted lips. Extending further, it insinuates its way between the gushing showerhead and her body, rubbing its flat, puckered tip against her clit. It flaps back and forth, mercilessly teasing the hot little nub. In response @@.e;Etta@@ drops the shower head; it clatters against the wall and dangles from the hose, spraying water over @@.e;Etta@@’s chest as she drops to her knees.
+
+The Progenitor plants its tongue firmly against her clit, enveloping and taking it inside. As it sucks and sucks @@.e;Etta@@ can barely contain herself. She cries and yelps, unaccustomed to such extreme pleasure delivered in such a strange way. She comes once, and then again and again, each time more strong than the last. Still the Progenitor continues its activity, the thick width of its tongue throbbing lewdly between @@.e;Etta@@’s pussy lips. The multiple orgasms arrive in regular waves until @@.e;Etta@@ can no longer stand it. She flops into the base of the shower, her body twitching pitifully with each crash of impossible sensation. Eventually the Progenitor stops; it lets go of her clit, reeling back its tentacular tongue.
+
+@@.e;Etta@@ climbs shakily to her feet. She gingerly fingers her clit and is shocked to find that it appears swollen and engorged; it’s sensitive to the touch and even the tiniest poke sends a shock, not altogether unpleasant, through her body.
+
+She grins to herself, feeling an immense gratitude towards the bizarre hitchhiker on her back. With her heart bursting with affection, @@.e;Etta@@ finishes up in the shower.
+
+[[Back|bathroomp1]].
+&lt;&lt;set $shower to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 2&gt;&gt;
+&lt;&lt;else&gt;&gt;
+@@.e;Etta@@ is washing her butt when the Progenitor’s dose of hormones overcomes her senses. Overwhelmed by the desire to fuck, she takes the shower head down from its holder and rams it against her pussy. The high-pressure spray beats against her clit, the enveloping warmth washing her already gushing juices down her legs.
+
+She rubs and humps, the foamy water frothing around her groin. With a twist of the shower nozzle she ups the pressure; @@.e;Etta@@ groans with lust as the water pounds her pussy with an even greater force. She leans back against the soapy tiles behind her, holding the head firmly against her snatch as she thrusts her hips forward, grunting bestially with each hump.
+
+Finally @@.e;Etta@@ comes. A torrent of girly gush sprays from her pussy and blends with the water as a cry of strangled joy bursts from between her lips. She spits the wet hair out of her mouth and straightens herself up. She’s going to have to wash all over again now!
+
+[[Back|bathroomp1]].
+&lt;&lt;set $shower to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="84" name="dressp1" tags="" position="2154,1463">It doesn&#x27;t take @@.e;Etta@@ much time to pick out her outfit for the day. She feels good to know that it&#x27;s the holidays now and she doesn&#x27;t have to agonise over what to where, worrying about what people will think and whether the guys will find her attractive.
+
+She chooses a short denim skirt and an orange strappy top and slips out of her dressing gown. She appraises herself in the mirror, taking in her pale skin, her pert little breasts and pointed nipples. Maybe she can get a boyfriend along with the job? An older one, perhaps. She certainly likes the sound of that. Most of the other girls at college are no longer virgins (at least that’s what they claim) and she&#x27;s starting to think it’s high time she got her cherry popped.
+
+[[Back|ettaroomp1]].
+
+&lt;&lt;set $dressed to true&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="mastchoice2" tags="" position="2244,1588">&lt;&lt;if $mast is true&gt;&gt;
+@@.e;Etta@@ has already masturbated recently. She needs time to recuperate!
+
+[[Back|ettaroomp1]].
+&lt;&lt;else&gt;&gt;&lt;&lt;if $box.contains(&quot;@@.mo;Molly@@&#x27;s dildo&quot;)&gt;&gt;
+	[[Play with the dildo|dilmastvag]].
+	
+	[[Play with her hands|fingersmast1]].
+	
+	[[Back|ettaroomp1]].
+	&lt;&lt;else&gt;&gt;
+	@@.e;Etta@@ has nothing but her hands. Oh well, [[use them anyway|fingersmast1]].
+	
+	[[Back|ettaroomp1]].
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="86" name="dilmastvag" tags="" position="2243,1737">@@.e;Etta@@ gets on the bed and, after arranging the cushions, lies back and closes her eyes. She breathes slowly, tracing her hands over her body, circling her nipples until they start to harden. Kneading the flesh with one hand, she plucks and tweaks with the other, rolling the erect nubs between her fingers. She knows her body intimately, knows just how to get herself hot. She helps herself along with a fantasy or two, first imagining herself bent over @@.a;Mrs@@. @@.a;Appleford@@&#x27;s knee, the venerable gym teacher dishing out a well-deserved spanking, before switching to ... &lt;&lt;if $helenfant is true&gt;&gt;her @@.m;mother@@ climbing onto the breakfast bar, crawling messily through the food while her big, heavy breasts swing beneath her&lt;&lt;elseif $mollydiary is &quot;read&quot;&gt;&gt;@@.mo;Molly@@ alone in her bedroom, hot and sweaty as she wields her dildo, stuffing the stiff tool deep into her yearning cunt&lt;&lt;else&gt;&gt;looking down to see @@.m;Helen@@ and @@.mo;Molly@@ taking turns in eating her cunt before pressing their pussy slickened lips together is a passionate kiss&lt;&lt;/if&gt;&gt; ... &lt;em&gt;woah&lt;/em&gt;, thinks @@.e;Etta@@, somewhat disturbed by her incestuous vision. The Progenitor clings tighter, feeding her building  lust with a potent cocktail of hormones until she gives in to the fantasy. It doesn’t take long until her pussy is wet and ready.
+&lt;&lt;if $dildouse is &quot;1&quot;&gt;&gt;
+@@.e;Etta@@ brings the dildo back out of the box. This time she has no doubts in the slightest; yes, the toy does belong to @@.mo;Molly@@, but that just seems to @@.e;Etta@@ to be even more of a reason to use it. It doesn’t smell of her @@.mo;sister@@’s pussy anymore, not after she sucked it all off earlier that morning. It’s a real shame but @@.e;Etta@@ has different plans this time around.
+
+She opens her legs slowly, exposing her already sopping wet cunt. The tip of the mammoth plastic cock feels good between her pussy lips as she sweeps it up and down in long sweeping motions. Each time it rubs against raw clit, a little trickle of juice dribbles out of her and runs between her buttocks. She pictures @@.mo;Molly@@ doing the same thing and with every second her desire grows. @@.e;Etta@@ knows that her lust for her @@.mo;sister@@ is shameful, but right now she doesn’t care. If only @@.mo;Molly@@ were here now, then she’d get a real taste of depravity.
+
+@@.e;Etta@@ finally builds up the courage to put the fake cock inside of her. She takes a deep breath and pushes hard. The dildo, lubricated by her liberally flowing pussy juice, slides right inside, penetrating her virgin pussy and filling her out entirely. For a moment she daren’t move, daren’t breath, and just lies there. Then, taking things slowly, she begins to slide the tool in and out. She’s so wet that there’s barely any friction, but the width of the thing and the tightness of her pussy mean that she feels everything. Faster and faster she goes, her body writhing in bliss. &lt;em&gt;Slap!&lt;/em&gt; @@.e;Etta@@ brings her other hand down against her clit. &lt;em&gt;Slap! Squelch! Slap!&lt;/em&gt; She rubs and swipes, swirling her fingertips against her hard little nub. 
+
+Holding on tight while she bucks and thrusts, the Progenitor prepares a dose of hormones that will further increase @@.e;Etta@@’s sensitivity. Just as it detects the slow build of synaptic activity that signifies the onset of an orgasm, it injects the dose. The resulting effect of the alien chemicals on @@.e;Etta@@’s nervous system are explosive; her vision blacks out as the the neuro-electrical fireworks short circuit her visual cortex. No longer in control of her actions, she is lost in a maelstrom of pleasure. Her body continues without her direction, her hands continuing to pump away at her pussy with astonishing vigour. The muscles in her pelvis convulse and a torrent of sticky girl cum jets from her pussy with such pressure that it crosses the room and splatters messily against the mirror.
+
+@@.e;Etta@@ opens her eyes. It’s over. She sits up slowly and looks around. Wait a minute. &lt;em&gt;What am I doing on the floor?!&lt;/em&gt;. She lies back, giggling in delight. That was incredible! Even the dull aching throb of her well-used pussy can’t suppress her delight. 
+
+[[Back|ettaroomp1]].
+&lt;&lt;set $mast to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 2&gt;&gt;
+&lt;&lt;set $dildouse to &quot;2&quot;&gt;&gt;
+&lt;&lt;else&gt;&gt;
+She reaches down into her special box and feels around for the dildo she stole from @@.mo;Molly@@. As soon as her fingers close around the hard rubber shaft she knows that she shouldn’t use it. Not only is it huge, but it belongs to her @@.mo;sister@@, meaning that it has, without a doubt, been in her vagina (and goodness knows where else). She brings it to her nose and gives it a delicate sniff; is that the faint smell of pussy she can detect?
+
+She’s about to put it back when the Progenitor tightens its grip around her belly, as if telling her to go ahead. But she can’t use a dildo that’s been inside @@.mo;Molly@@, that’s gross. But then again, is it really that bad? It’s not like it’s wet or anything. Surely it’s no worse than using the same towel or sharing clothes, right? 
+
+@@.e;Etta@@ shrugs and gives the tool another sniff. That’s definitely pussy, @@.mo;Molly@@’s pussy. She runs her tongue over the tip, flicking and licking while she deftly fingers herself with her other hand. Then she opens her mouth wide and in it goes. She slurps and slurps, sucking lewdly at the illicit toy as if it were a lollipop. &lt;em&gt;If only I could taste that pussy too&lt;/em&gt;, she thinks to herself, no longer caring at how perverse that sounds. With drool running down her chin, she sucks away at @@.mo;Molly@@’s dildo until she brings herself to a surprisingly potent orgasm. It hits her unexpectedly and she almost chokes on the big rubber tool between her lips. She spits and coughs, then shivers and giggles. How naughty! What would @@.mo;Molly@@ say if she knew? 
+
+@@.e;Etta@@ wipes the spit off the dildo and drops it back into her special box. Maybe next time she’ll be brave enough to put it in her pussy.
+
+[[Back|ettaroomp1]].
+
+&lt;&lt;set $mast to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 2&gt;&gt;
+&lt;&lt;set $dildouse to &quot;1&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="87" name="fingersmast1" tags="" position="2281,1432">@@.e;Etta@@ gets on the bed and, after arranging the cushions, lies back and closes her eyes. She breathes slowly, tracing her hands over her body, circling her nipples until they start to harden. Kneading the flesh with one hand, she plucks and tweaks with the other, rolling the erect nubs between her fingers. She knows her body intimately, knows just how to get herself hot. She helps herself along with a fantasy or two, first picturing @@.t;Miss Timms@@ in a corset and thong, bending over to pick up a pencil she&#x27;s dropped, before switching to ... &lt;&lt;if $helenfant is true&gt;&gt;lying on her back in the greenhouse, her @@.m;mother@@ naked and smiling down at her as she lowers herself slowly, pushing her big, fleshy butt into her face&lt;&lt;elseif $mollydiary is &quot;read&quot;&gt;&gt;watching as @@.mo;Molly@@ spreads @@.j;Jules@@&#x27;s buttcheeks from behind, flicking her tongue across the other girls puckered anus&lt;&lt;else&gt;&gt;@@.m;Helen@@ and @@.mo;Molly@@ naked and entwined on the sofa, their lips together in a passionate kiss and their eager hands searching out eachothers most intimate areas&lt;&lt;/if&gt;&gt; ... &lt;em&gt;woah&lt;/em&gt;, thinks @@.e;Etta@@, somewhat disturbed by her obscene vision. The Progenitor clings tighter, feeding her building  lust with a potent cocktail of hormones until she gives in to the fantasy. It doesn’t take long until her pussy is wet and ready.
+
+Taking her time, she sends one hand towards her snatch. She feels her wetness, running her index finger between her folds while rubbing her clit with her thumb. She tosses her head from side to side as her fingers pick up speed. Her flesh is so sensitive that @@.e;Etta@@ is soon writhing uncontrollably. She flips over onto her belly and starts to hump, her bubble-butt jiggling as she grinds her pussy down into her fingers. Face down, her cries muffled by a plush pillow, she gets closer and closer to climax. She starts to shake, her legs quivering as her pleasure grows in intensity, her fingers squelching wildly against her sopping pussy. Suddenly an orgasm erupts and her legs go stiff as her a board. She bites into the pillow, unable to stand it any longer.
+
+When the pleasure ebbs away, @@.e;Etta@@ roles back onto her back. Her nerves are jangling and the bed feels wet underneath her bum. She waves her numb, gush-slicked hand, wincing as the pins and needles spread down her arm and into her shoulder. Reaching over to bedside table, she takes out a packet of wet wipes. Time to get cleaned up.
+
+[[Back|ettaroomp1]].
+
+&lt;&lt;set $mast to true&gt;&gt;
+&lt;&lt;set $pchar.cor += 1&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="jacksonchoice" tags="" position="1637,2041">While @@.s;Mr@@. @@.s;Shaw@@ waxes lyrical about the past, Jackson has started to show a worrying interest in @@.e;Etta@@’s crotch. He lifts the edge of her skirt with his snout, sniffing wetly at her inner thighs. She crosses her legs, trying her best to bar entry but the hound is persistent. Pushing him away, she shuffles along the bench but he just follows her. In an attempt to get away she stands, instantly regretting her mistake. Taking the opportunity to press forward the attack, Jackson rams his snout between @@.e;Etta@@’s legs. She gasps and cringes.
+
+A prickling sensation runs down her spine, terminating in a warmth that blossoms in the bottom of her belly. Maybe she should just let this filthy creature do what it wants with her? @@.s;Mr@@. @@.s;Shaw@@ is oblivious and there’s nobody else about to see. There&#x27;s no way she can let this happen ... it&#x27;s just wrong ...
+
+[[Boost Etta’s lust|jackson1]].
+
+[[Hold back for now|jacksonno]].</tw-passagedata><tw-passagedata pid="89" name="jacksonno" tags="" position="1511,2037">The Progenitor quickly decides that moderation is key. It cannot allow @@.e;Etta@@ to become too compliant too quickly. If it isn’t careful then she will lose her mind entirely and degenerate into a sex-crazed husk, unable to act herself and good only as carrier for future offspring. Although that in itself is a fate that indeed awaits many Earthlings, it needs @@.e;Etta@@ for a more complex role. It closes off the flow of hormones, immediately shutting down @@.e;Etta@@’s libido. 
+
+@@.e;Get off me@@, she cries, pushing away at Jackson with all her strength.
+
+@@.s;Mr@@. @@.s;Shaw@@ stops mid-sentence, looking shocked. He tugs on the lead. @@.s;Jackson@@, he barks with a surprising amount of authority (no doubt he learned to shout like that during his years as a teacher). @@.s;Leave her alone@@.
+
+Jackson yelps as the leash tightens around his neck. @@.e;Etta@@ quickly sorts herself out, pulling her skirt back in position and putting as much distance between her and Jackson as she can. 
+
+@@.s;I@@’@@.s;m so sorry@@, @@.s;Etta@@, says @@.s;Mr@@. @@.s;Shaw@@. He pulls Jackson closer to him. @@.s;I don@@’@@.s;t know what has come over him these last few days@@.
+
+@@.e;That@@’@@.e;s OK@@, @@.e;Etta@@ says, @@.e;but please@@, @@.e;do try to keep a control of him@@. @@.e;There are children about@@.
+
+@@.s;Mr@@. @@.s;Shaw@@ mutters another apology and shuffles away, Jackson slinking behind him with his tail between his legs.
+
+@@.e;Etta@@ shakes her head in disbelief. Somebody should take those animals off him if he’s so unable to keep control of them!
+
+@@.e;Etta@@ has encountered @@.s;Mr@@. @@.s;Shaw@@ and his dogs. Click [[here|The Neighbour]] for more details.
+
+A few moments later the bus arrives. @@.e;Etta@@ climbs on board, paying the £2 fair, and finds herself a seat.
+
+[[On to town|towncent1]].
+
+&lt;&lt;set $neighmeet to &quot;met&quot;&gt;&gt;
+
+&lt;&lt;set $money -=2&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="jackson1" tags="" position="1768,2054">The Progenitor realises that this is an excellent opportunity to deliver a considerable blow to its host&#x27;s sexual inhibitions. Detecting a spike in @@.e;Etta@@’s arousal, it wastes no time in pumping alien chemicals into her bloodstream. The effect is almost instantaneous; @@.e;Etta@@&#x27;s heart begins to thump harder as it pumps blood into her nethers, engorging her clit. Her nipples stand to attention, hardening so much that they can be seen peeking through the fabric of her top. She sits back against the bus stop and opens her legs. Jackson needs no further encouragement as his snout disappears up her skirt. She sighs softly, lifting her feet off the ground to allow her new friend a closer look.
+
+@@.s;You see@@, drones @@.s;Mr@@. @@.s;Shaw@@, @@.s;I@@’@@.s;ve always maintained that kids your age should@@...
+
+@@.e;Etta@@ can only half-heartedly agree as she feels the hot moisture of the dog’s breath against the sensitive flesh of her inner thighs. She bites her lip to suppress a moan as the canine tongue, wet and warm, slaps against her panty-clad pussy. She closes her eyes just as Missy, clearly not wanting to be left out, joins in the feast. Lost in her growing desire, she slides her hand down to her belly and slips aside her panties, revealing her pink pussy. Missy and Jackson hungrily lap up her flowing juices as she sinks her fingers into the flesh of her thighs until her knuckles turn white.
+
+@@.s;You agree with me@@, @@.s;don@@’@@.s;t you@@?
+
+@@.e;Of course@@, @@.e;Mr@@. @@.e;Shaw@@, pants @@.e;Etta@@. @@.e;You@@’@@.e;re exactly right@@. 
+
+What the dogs lack in technique they certainly make up for in enthusiasm. Their tongues are long and supple, sliding all the way from @@.e;Etta@@’s anus up her clitoris in single, messy strokes. She feels the preliminary rumblings of an orgasm and prepares herself for what is sure to be a real bone-shaker.
+
+Just as she’s about to come, @@.s;Mr@@. @@.s;Shaw@@ snaps to attention, yanking at the leads of his dogs. @@.s;Come along@@, @@.s;chaps@@, he says. @@.s;We@@’@@.s;ve taken enough of the young lady@@’@@.s;s time@@. Missy and Jackson stop their assault upon @@.e;Etta@@&#x27;s groin and obediently return to their master’s side. @@.s;It@@’@@.s;s been a pleasure@@, he says. @@.e;Etta@@ can barely speak. @@.s;Good day to you@@, @@.s;Etta@@. @@.s;Say hello to your sister for me when you see her@@.
+
+With that, @@.s;Mr@@. @@.s;Shaw@@ departs, taking his dogs with him. @@.e;Etta@@ takes a few moments to collect herself, breathing deeply. Her legs and pussy are sticky with a mixture of dog saliva and her own girly juices. She barely has a moment to tidy herself up before she hears the honk of the bus as it approaches the stop.
+
+@@.e;Etta@@ has encountered @@.s;Mr@@. @@.s;Shaw@@ and his dogs. Click [[here|The Neighbour]] for more details.
+
+@@.e;Etta@@ clambers on board, paying the £2 fair, and finds herself a seat. The journey passes in a daze. All she can think of is getting another chance to play with @@.s;Mr@@. @@.s;Shaw@@&#x27;s hounds.
+
+[[On to town|towncent1]].
+
+&lt;&lt;set $neighmeet to &quot;met&quot;&gt;&gt;
+
+&lt;&lt;set $money -=2&gt;&gt;
+
+&lt;&lt;set $pchar.cor += 2&gt;&gt;
+
+&lt;&lt;set $jackson to true&gt;&gt;
+
+&lt;&lt;set $neighchar.fuck to &quot;@@.embold;Sexual connection:@@ @@.e;Etta@@ let herself get eaten out by @@.s;Mr@@. @@.s;Shaw@@&#x27;s dogs. She can still feel the awful stickiness between her legs.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="towncent1" tags="" position="1635,2169">@@.e;Etta@@ gets off the bus near the centre of town. From here it’s only a short walk to the high street, the place where all the coolest shops, cafes and restaurants are. She’s feeling pretty good about her chances and is looking forwards to seeing what options are available to her. 
+
+As she gets closer to the centre, the crowds start to thicken. @@.e;Etta@@ looks around cautiously, suddenly aware of her secret. She reaches back, checking that her clothes fully cover the thing she can’t let anyone see. &lt;em&gt;It’s OK&lt;/em&gt;, she tells herself firmly. &lt;em&gt;Nobody will find out&lt;/em&gt;. She takes care, all the same, doing her best to appear inconspicuous, just part of the crowd.
+
+She spends a considerable amount of time checking out the surrounding shops. There are quite a few with staff vacancies, so she can afford to be judicious in her decision making. A lot of her friends at college complain to no end about how much they hate their shitty jobs and @@.e;Etta@@ certainly doesn’t want to join in; she’s going to make sure that whatever job she picks is the right one for her. She speaks to the different shopkeepers, making sure to get as much information as she can: shift patterns, wages, potential benefits. If only her @@.m;mother@@ could see her being so grown up!
+
+Eventually she whittles the decision down to two options: 
+
+There’s the Rainbow Boutique, a cute little clothes shop owned and run by an aging woman named Mary, and a family owned coffee house called Spirella’s.
+
+Which will @@.e;Etta@@ choose?
+
+That Mary seems awfully nice and the clothes she has on sale are great! If @@.e;Etta@@ plays her cards right, she might even get a discount! Send her to &lt;&lt;choice [[Rainbow Boutique|Rainbow]]&gt;&gt;.
+
+Spirella&#x27;s seems like a lively and happening place. It would be a great place to meet people! Pick &lt;&lt;choice [[Spirella&#x27;s|Spirella]]&gt;&gt;.
+
+&lt;&lt;set $time to &quot;Afternoon&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Rainbow" tags="" position="1507,2168">A bell tinkles cheerfully as @@.e;Etta@@ opens the shop door. It’s a quaint little shop, compact and full of character. Clothes hang from railings all around the walls and from wheeled stands dotted across the floor. It’s the sort of place you could dig around in for hours. The proprietor, Mary, is sitting behind the counter, busy with her knitting. She looks up and smiles warmly, her wrinkles deepening. She’s a kind looking woman with silver hair cut into a stylish bob. Her clothing is a little demure, a pale blue knitted cardigan and a grey knee length skirt, but it’s clear that this is a woman of style; she must have been quite the knockout in her youth.
+
+ @@.ma;Hello again, dear@@, she says. @@.ma;Have you thought about the job@@? 
+
+@@.e;I@@’@@.e;ll take it@@, says @@.e;Etta@@ excitedly.
+
+@@.ma;My@@, @@.ma;my@@, @@.ma;I wasn@@’@@.ma;t expecting such enthusiasm@@. @@.ma;The girls I usually get enquiring about work are a sombre lot@@.
+
+@@.e;Well@@, says @@.e;Etta@@. @@.e;It@@’@@.e;s such a lovely little shop@@. She starts on about how it’s just the sort of place she’d shop herself if she had the money: not too big and flashy but unique enough to draw some real appeal.
+
+@@.ma;That@@&#x27;@@.ma;s wonderful@@, says @@.ma;Mary@@. @@.ma;I@@’@@.ma;m getting pretty old and my joints aren@@’@@.ma;t as supple as they used to be. A little help around here is just what I need@@. 
+
+She starts to show @@.e;Etta@@ around the shop, which admittedly isn’t much, explaining the way she likes to run things. @@.ma;I don@@’@@.ma;t care much for those bigger shops where the staff are always bothering the customers@@. @@.ma;I@@’@@.ma;ve always preferred to let my stock to speak for itself@@. @@.ma;I keep an eye out@@, @@.ma;but only interfere when I can tell they need my help@@. @@.e;Etta@@ nods attentively, already thinking how perfect this job is going to be. @@.ma;Mary@@ goes on a little about the history of the place, saying how she originally founded the shop with her husband Ken. She made the clothes while he handled the business side of things. @@.ma;But we all know who was really in charge@@, she adds with a wink. Unfortunately Ken had a stroke and died a few years ago, leaving the shop in her care. @@.ma;Times aren@@’@@.ma;t as lucrative as they once were but I@@’@@.ma;m living well within my means@@.
+
+@@.e;When can I start@@? asks @@.e;Etta@@, now convinced that this is job for her. @@.e;College is over now so I can start as soon as you want me to@@. 
+
+@@.ma;That’s great. How about Monday@@? @@.ma;It can get rather busy at the weekend and it would be much easier to show you the ropes on a quiet morning@@.
+
+@@.e;That@@’@@.e;s perfect@@. 
+
+@@.ma;Fantastic@@, cries Mary, and comes round to the other side of the counter to envelop @@.e;Etta@@ in a friendly embrace. The youthful exuberance of the action surprises her but she returns the gesture. The rich and complex scent of @@.ma;Mary@@’s perfume fills her nostrils. The old lady gives her a final squeeze and @@.e;Etta@@ can feel the surprising bulge of her breasts hidden underneath her cardigan. She returns to the stool behind the counter and picks up her knitting. @@.ma;I@@’@@.ma;ll see you in a few days time@@, @@.ma;dear@@.
+
+@@.e;Etta@@ has met &lt;&lt;click &quot;Mary&quot;&gt;&gt;&lt;&lt;goto &quot;The Employer&quot;&gt;&gt;&lt;&lt;/click&gt;&gt; and has got herself a [[job|Purse]]!
+
+&lt;em&gt;That was easy enough&lt;/em&gt;! thinks @@.e;Etta@@ as she leaves the shop. She feels light and bouncy, as is she could hop all the way home. &lt;em&gt;I can’t wait to tell Mum&lt;/em&gt;!
+
+[[Back to town|timms1]].
+
+&lt;&lt;set $employerchar.name to &quot;@@.ma;Mary@@&quot;&gt;&gt;
+&lt;&lt;set $employerchar.age to &quot;83&quot;&gt;&gt;
+&lt;&lt;set $employerchar.desc to &quot;@@.ma;Mary@@ is a kind old lady  and the proprietor of Rainbow Boutique, an independent clothes shop in town. She’s a cheerful character, with an energy that makes her seem a lot younger than she actually is. Short and a little stooped, Mary still manages to look stylish with her silver hair and skillfully applied makeup. You’ve no doubt that in the past she was the talk of the town.&quot;&gt;&gt;
+&lt;&lt;set $employerchar.status to &quot;Age aside, Mary is healthy and alert.&quot;&gt;&gt;
+
+&lt;&lt;set $job to &quot;got&quot;&gt;&gt;
+&lt;&lt;set $job1 to &quot;Rainbow Boutique&quot;&gt;&gt;
+&lt;&lt;set $employerchar.theyre to &quot;she&#x27;s&quot;&gt;&gt;
+&lt;&lt;set $employerchar.theyll to &quot;she&#x27;ll&quot;&gt;&gt;
+&lt;&lt;set $jobmoney to &quot;Every day @@.e;Etta@@ works at the Rainbow Boutique earns her £20.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Spirella" tags="" position="1760,2179">The smell of freshly roasted coffee beans hits @@.e;Etta@@ as soon as she walks into Spirella’s. It’s almost lunch time so the place is absolutely jam packed with customers. Their chatter, mixing with the squawks of mewling babies, fills the air, intermittently drowned out by the hiss of the milk steamer and the whir of the coffee grinder. She wonders if it’s always this busy. She’ll certainly have her work cut out for her in a place like this! Unsure of where to go and who to speak to she joins the queue.
+
+When it’s her turn the man working at the till slams a tray onto the counter. @@.ar;What can I get you@@? he asks flatly. 
+
+@@.e;I came in earlier to ask about a job@@, says @@.e;Etta@@ over the din.
+
+The man looks puzzled for a moment and then seemingly remembers her. @@.ar;Hey, Laura@@, he shouts to a girl out cleaning tables on the shop floor. @@.ar;Cover the till for me a moment@@, @@.ar;will you@@. He beckons @@.e;Etta@@ to follow him so she does, struggling to keep up with his long legged pace.
+
+He leads her back to the office, a cluttered space full of large cardboard boxes and sacks of coffee beans. She stands awkwardly while he clears some room and sets out two chairs. He sits down and pats the other chair. @@.ar;Come on then@@, he says impatiently. @@.ar;Sit down@@. The man looks her up then says, @@.ar;my name is Archie Spirella and I own the business@@.
+
+@@.e;It@@’@@.e;s a lovely little place@@, says @@.e;Etta@@, now feeling even more out of her depth.
+
+@@.ar;Right@@, sneers @@.ar;Archie@@. @@.ar;Do you have a name@@?
+
+@@.e;Oh@@! @@.e;How silly of me@@! @@.e;I@@’@@.e;m Etta@@. She holds out her hand for him to shake but he just looks at it, unamused.
+
+@@.ar;Okay, Etta@@, he says. @@.ar;I@@’@@.ar;m a busy man so I@@’@@.ar;ll cut right to the chase@@.@@.ar;Have you ever worked in a coffee shop before@@?
+
+@@.e;No@@, @@.e;I haven@@’@@.e;t@@, @@.e;but@@ …
+
+He scribbles something into the notebook spread over his kness. @@.ar;Right@@, @@.ar;ever worked in retail before@@? 
+
+@@.e;Etta@@ shakes her head as her heart slowly sinks. This is going awfully.
+
+@@.ar;Well@@, @@.ar;what sort of experience can you bring to Spirella@@’@@.ar;s then@@?
+
+She swallows. If she’d have known it was going to be like this she’d have chosen to go with the Rainbow Boutique. Not one to give up without a fight, however, she prepares to make her case. She tells Archie that she’s never had a proper job before because she thought it was best to focus on her studies at school and college. He jots something else in his notebook. She continues, telling him she’s decided she needs to help out with family finances and to do that she needs a job. @@.e;Etta@@ feels her confidence grow with each passing second.
+
+@@.ar;Archie@@ sighs and closes his notebook. @@.ar;Well@@, @@.ar;Etta@@, he says. @@.ar;As a rule I don@@’@@.ar;t take on anyone unless they@@’@@.ar;ve got experience@@. @@.ar;I run a fast@@-@@.ar;paced business here and we don@@’@@.ar;t have any time for dead weight@@. @@.e;Etta@@ feels her newly found confidence start to deflate. @@.ar;That being said@@, @@.ar;I appreciate your desire to help your mother@@, @@.ar;I really do@@. @@.ar;This is a family business and I@@’@@.ar;m a family man@@. @@.ar;When my father opened this shop in 1968 he had next to nothing@@, @@.ar;and now look at it@@. @@.ar;He couldn@@’@@.ar;t have done that without the help and support of his family@@. @@.ar;I@@&#x27;@@.ar;ll offer you a trial run this coming Monday@@, @@.ar;no assurances@@, @@.ar;just to see if you can handle it@@.
+
+@@.e;Etta@@’s heart leaps. @@.e;Thank you@@, @@.e;Mr@@. @@.e;Spirella@@! @@.e;I won@@’@@.e;t let you down@@!
+
+@@.ar;We@@’@@.ar;ll see@@. @@.ar;I need to get back to work@@. @@.ar;You can show yourself out@@.
+
+@@.ar;Archie@@ marches out of the office leaving @@.e;Etta@@ feeling rather shell-shocked. That was intense! She leaves the cafe, feeling a bit rattled, but pleased with herself nonetheless.
+
+@@.e;Etta@@ has encountered &lt;&lt;click &quot;Archie&quot;&gt;&gt;&lt;&lt;goto &quot;The Employer&quot;&gt;&gt;&lt;&lt;/click&gt;&gt; and has got herself a [[job|Purse]].
+
+[[Back to town|timms1]].
+
+&lt;&lt;set $employerchar.name to &quot;@@.ar;Archie@@&quot;&gt;&gt;
+&lt;&lt;set $employerchar.age to &quot;52&quot;&gt;&gt;
+&lt;&lt;set $employerchar.desc to &quot;Archie the owner and manager of Spirella’s Coffee House. A tall and broad shouldered man with a cleanly shaven face and a hairline that has started to recede, Archie would be quite attractive if he wasn&#x27;t so rude. He’s blunt and abrasive but, then again, he’s a busy man and has little time for games.&quot;&gt;&gt;
+&lt;&lt;set $employerchar.status to &quot;Archie looks tough for an older man. He probably works out a lot.&quot;&gt;&gt;
+
+&lt;&lt;set $job to &quot;got&quot;&gt;&gt;
+&lt;&lt;set $job1 to &quot;Spirella&#x27;s&quot;&gt;&gt;
+&lt;&lt;set $employerchar.theyre to &quot;he&#x27;s&quot;&gt;&gt;
+&lt;&lt;set $employerchar.theyll to &quot;he&#x27;ll&quot;&gt;&gt;
+&lt;&lt;set $jobmoney to &quot;Every day @@.e;Etta@@ works at the Spirella&#x27;s earns her £25.&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="timms1" tags="" position="1635,2294">@@.e;Etta@@ spends a bit of time wandering around, looking at other shops and feeling pretty pleased with herself. She definitely wasn’t expecting to complete her task so quickly so she’s got plenty of time left over before she should start thinking about getting herself back home.
+
+As she’s browsing, the thought of having her own money occurs to her. She starts to think of all the possibilities, of all the things she’ll be able to afford. Of course she’s still going to contribute at home, but she’s bound to have some money left over for herself, right? Perhaps she’ll finally be able to save up for a Nintendo 64. @@.l;Lily@@’s older brother has one and she always has such fun playing with the both of them. The thought of owning one herself is almost too good to believe. Perhaps with her own machine she’ll get good enough to beat them. She shakes her head. Look at her, making plans before she’s even earned a penny!
+
+After a few hours @@.e;Etta@@ starts to get bored and decides that it’s time to go home. She’s just heading back to the bus station when she spots @@.t;Miss Timms@@. She’s some way off and hasn’t appeared to have noticed her yet. She looks incredible; the low neckline of her bright red top boldly displays her voluminous cleavage while her pleated skirt shows off her long and svelte legs. She’s wearing her waist length blonde hair freely and her glasses are missing; she must be wearing contact lenses.
+
+She’s getting closer. What should @@.e;Etta@@ do? Say [[hello|Miss Timms 2]] or [[hide|timms3]]?</tw-passagedata><tw-passagedata pid="95" name="Miss Timms 2" tags="" position="1501,2293">Trapped by indecision, @@.e;Etta@@ is rooted to the spot. She wants more than anything to speak to @@.t;Miss Timms@@ but she has no idea what to say. It’s one thing to talk at school, but what could she have to say for herself here? Thinking about what @@.l;Lily@@ had said to her, she considers a flirty approach. But even then, what does she do? She’s never been one for flirting, especially not with teachers. &lt;em&gt;Jesus Christ&lt;/em&gt;, she thinks. &lt;em&gt;Why am I so bad at this?&lt;/em&gt;
+
+@@.t;Etta@@? @@.t;Is that you@@? @@.e;Etta@@ was so busy worrying about what to say that she forgot to think that @@.t;Miss Timms@@ might spot her and say something first. @@.t;I thought I recognised you there@@.
+
+@@.e;Oh@@, @@.e;Hey@@, @@.e;Miss Timms@@, she shoots back, trying and failing to act surprised. @@.e;Etta@@ feels her cheeks burn. Only a few seconds into their meeting and already she’s blushing.
+
+@@.t;You OK there@@? says @@.t;Miss Timms@@ with concern. @@.t;You looked like you were a million miles away@@.
+
+@@.e;Etta@@ laughs nervously and says, @@.e;Yeah@@. @@.e;I@@ … @@.e;I was trying to remember where else I needed to go@@. &lt;em&gt;Stupid, stupid, stupid!&lt;/em&gt;
+
+@@.t;Miss Timms@@ laughs along with her. @@.t;Wondering what to do with all your free time now that’s school’s over@@, @@.t;I expect@@.
+
+@@.e;Something like that@@. @@.e;Etta@@ can’t help but look at her teacher’s chest, following the perfect curves of each breast swelling beneath her top until they burst out of the shadowy valley of her cleavage. @@.t;Miss Timms@@ must have noticed because she pulls up at the neck of her top, attempting to hide her cleavage but succeeding only in hoisting her breasts a little higher, crushing the ample flesh against her body. @@.e;Etta@@ averts her eyes but not before catching an eyeful of heaving boob-flesh and the hint of a lacey black bra.
+
+Thankfully she doesn’t seem to have minded because she smiles and says, @@.t;I@@’@@.t;m glad I ran into you@@, @@.t;actually@@. @@.t;Remember that help group I told you about@@?
+
+@@.e;The university thingy-ma-jig@@?
+
+@@.t;That@@’@@.t;s the one@@. @@.t;Well@@, @@.t;I@@’@@.t;ve decided to go ahead with it@@. @@.t;Like I said before@@, @@.t;you@@’@@.t;d be an excellent example of how to go about applying successfully@@. @@.t;Would you be happy to help me out@@?
+
+@@.e;Etta@@ can’t help but feel a jolt of pride at such praise. @@.e;Count me in@@, she says excitedly. @@.e;Anything you want me to do@@, @@.e;just say it@@.
+
+@@.t;Really@@? @@.t;Miss Timms@@ looks hopeful, and not to mention really fucking cute.
+
+@@.e;Yeah@@, she says, nodding vigorously.
+
+@@.t;Yay@@! Beams @@.t;Miss Timms@@ and throws her arms around @@.e;Etta@@.
+
+After nearly fainting with shock, she returns the embrace. Even with such an obviously friendly hug, it feels unimaginably sexy to have her busty teacher&#x27;s body against hers. She even starts to get a little wet. The contact only lasts for a few blissful seconds but it’s more than enough for @@.e;Etta@@.
+
+@@.t;I@@’@@.t;m so pleased@@, says @@.t;Miss Timms@@. @@.t;I was hoping we could meet up sometime next week so I could talk over a few ideas with you@@. @@.t;Monday@@?
+
+@@.e;Oh@@, says @@.e;Etta@@ and starts telling her about her job at $job1.
+
+@@.t;Wow@@, says @@.t;Miss Timms@@, clearly impressed. @@.t;One day out of college and you@@’@@.t;ve already got a job@@? @@.t;Then again@@, @@.t;who am I kidding@@. @@.t;This is Etta we@@’@@.t;re talking about here@@! She stops to think for a moment. @@.t;Monday evening@@?
+
+@@.e;Yeah@@, @@.e;that should be fine@@. @@.e;We can even meet at my place if you want@@?
+
+@@.t;Your family wouldn@@’@@.t;t mind that@@?
+
+@@.e;Of course not@@! @@.e;I@@’@@.e;ll write down the address for you@@. @@.e;Do you have a pen and paper@@? 
+
+@@.t;Miss Timms@@ roots around in her bag for a second and hands her a scrap of paper and a pink biro. She smiles bashfully and says, @@.t;what can I say@@? @@.t;I@@’@@.t;ve always been a bit of a princess at heart@@.
+
+@@.e;Etta@@ scribbles down the address and hands it over. @@.e;Come over at around 7@@. @@.e;I@@’@@.e;ll make us something to eat@@.
+
+@@.t;Wonderful@@. @@.t;I can’t wait@@.
+
+@@.e;Me neither@@. @@.e;See you then@@, @@.e;Miss Timms@@.
+
+@@.t;Please@@, @@.t;call me Sophie@@.
+
+Her head swimming with joy, @@.e;Etta@@ watches her teacher walk away, her eyes fixed on the swaying beauty of her succulent rump. That couldn’t have turned out better if she’d tried!
+
+@@.e;Etta@@ has arranged a private meeting with &lt;&lt;click &quot;Miss Timms&quot;&gt;&gt;&lt;&lt;goto &quot;MissTimms&quot;&gt;&gt;&lt;&lt;/click&gt;&gt;. Maybe this could be the start of something wonderful?
+
+[[Catch the bus back home|backhomep1]].
+
+&lt;&lt;set $teachchar.fuck to &quot;@@.embold;Sexual Involvement@@: After successfully arranging a time to meet up and talk about the university application support group, @@.e;Etta@@ and @@.t;Sophie@@ are on first names now. Things can only get better!&quot;&gt;&gt;
+
+&lt;&lt;set $timmsmeeting to true&gt;&gt;
+
+&lt;&lt;set $teachchar.name to &quot;@@.t;Miss Timms@@ (@@.t;Sophie@@)&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="timms3" tags="" position="1760,2304">@@.e;Etta@@ decides that she’s in no way prepared to meet with @@.t;Miss Timms@@ in such a casual setting. She quickly ducks behind a phone booth as her teacher passes by. After waiting a few moments she peeks out to see if the coast is clear and catches a glimpse of her turning the corner at the end of the street. &lt;em&gt;Phew! She didn’t see me&lt;/em&gt;, thinks @@.e;Etta@@. She straightens up, catching a few strange glances from passersby as she emerges from behind her hiding place. An idea strikes her. There’s been rumour going around college for quite some time that @@.t;Miss Timms@@ lives in an apartment above a lingerie shop in this part of town. @@.e;Etta@@ has no idea if it’s true but now seems like a great opportunity to find out for herself.
+
+She hurries down the road, being careful not to bump into anyone as she goes. When she reaches the corner she stands on her tiptoes and try to find a sign of her teacher. Town is absolutely packed, the pavements thronging with people. @@.e;Etta@@ searches and searches but sees no sign of her quarry. Just when she’s about to give up she catches a glimpse of that dazzling blonde hair. Thank God @@.t;Miss Timms@@ is so tall!
+
+@@.e;Etta@@ quickly crosses to the other side of the road, hurrying but trying to behave as discretely as possible. She can’t help but feel a little ridiculous, acting as she is like some sort of spy or private detective, but whatever. She follows her for a couple more blocks until she reaches...shit, the rumour was right all along! @@.t;Miss Timms@@ has stopped at a plain looking door next to a lingerie shop and is rummaging around in her handbag. It’s not one of those sleazy high-street shops either. This is the sort of place that sells bridal wear, designer corsets and the like. Behind the plate glass windows there are a number of mannequins, all wearing what look to be very expensive examples of what the shop has on offer. A quiver travels over @@.e;Etta@@’s body as she imagines @@.t;Miss Timms@@ modelling them for her. 
+
+@@.t;Miss Timms@@ fishes a set of keys out of her bag for a moment and then unlocks the door. She turns around and looks about for a few moments before pushing open the door and disappearing inside. @@.e;Etta@@ isn’t sure whether you should feel ashamed or not. What she just did definitely qualifies as stalking, but at least she’s confirmed the rumour.
+
+@@.e;Etta@@ now knows where &lt;&lt;click &quot;Miss Timms&quot;&gt;&gt;&lt;&lt;goto &quot;MissTimms&quot;&gt;&gt;&lt;&lt;/click&gt;&gt; lives.
+
+[[Catch the bus home|backhomep1]].
+
+&lt;&lt;set $teachchar.fuck to &quot;@@.embold;Sexual Involvement@@: @@.e;Etta@@ stalked her teacher back to her flat above the lingerie store. What she’s going to do with that discovery, however, she’s not entirely sure.&quot;&gt;&gt;
+
+&lt;&lt;set $timmshome to &quot;known&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="97" name="backhomep1" tags="" position="2033,2050">&lt;&lt;if $timmsmeeting is true&gt;&gt;
+On the bus back home @@.e;Etta@@ considers the victories of the day so far. Not only has she succeeded in getting a job, but she also considerably advanced her relationship with @@.t;Miss Timms@@. With her teacher (ex-teacher - school’s out now, remember!) coming over on Monday, who knows what might take place. As the bus leaves the bustling town centre behind, she allows herself to daydream, of leading a blushing @@.t;Sophie@@ up into her bedroom. She squirms in her seat, feeling her panties getting moister by the second, as she imagines removing each item of her clothing in slow succession. She’s so deep into her fantasy that she nearly misses her stop, only just managing to ring the stop bell in time. She hops down from the and heads home.
+&lt;&lt;else&gt;&gt;
+On the bus back home @@.e;Etta@@ considers the activities of the day so far. What was she thinking by following @@.t;Miss Timms@@ home like that? Does she think she’s just going to waltz over there, knock on the door and invite herself in? She balls her fists in frustration. What is the use of knowing something like that when she can’t even face talking to her? Oh well, at least she got a job, meaning the day wasn’t a total failure. That’s what she came out for, right? Not to score a date with her damn teacher. There will be other opportunities for that. @@.e;Etta@@ rings the bell when the bus nears her stop and gets off.
+&lt;&lt;/if&gt;&gt;
+Approaching the house she sees @@.mo;Molly@@’s car in the driveway; she must be back early from work. @@.e;Etta@@ bounds up to the house, already excited to share her news with her family.
+
+[[Enter the house|loungep1]].
+
+&lt;&lt;set $time to &quot;Evening&quot;&gt;&gt;
+&lt;&lt;set $mast to false&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="Molly talk" tags="" position="1976,1190">&lt;&lt;if $box.contains(&quot;@@.mo;Molly@@&#x27;s dildo&quot;)&gt;&gt;@@.mo;Molly@@ looks up from where she rummaging under her bed. She&#x27;s wearing nothing but a towel and her hair is wrapped in a tight bun at the back of her head. She sees @@.e;Etta@@ and smiles. @@.mo;Hey there@@, @@.mo;sis@@, she says.
+
+@@.e;What are you doing down there@@? @@.e;Is now not a good time@@?
+
+@@.mo;Molly@@ gets up and dusts herself off. @@.mo;Of course not@@, she says. @@.mo;I@@’@@.mo;m just trying to find something@@. @@.mo;I could have sworn I left it under my bed@@.
+
+@@.e;Etta@@ tries her best not to look guilty. She hadn’t expected for her @@.mo;sister@@ to notice the missing dildo so soon. &lt;&lt;if $dildouse is &quot;1&quot;&gt;&gt;@@.e;Etta@@, for a fleeting moment, considers admitting her theft, adding to the confession a deliberate retelling of how she used the thing to get herself off. She can’t even begin to imagine how @@.mo;Molly@@ might react to such a perversion of their relationship.&lt;&lt;else&gt;&gt;@@.e;Etta@@, for a fleeting moment, considers admitting her theft, but quickly decides better of it.&lt;&lt;/if&gt;&gt; @@.e;What@@’@@.e;s missing@@, she asks innocently, before adding slyly, @@.e;maybe@@ @@.e;I@@’@@.e;ve seen it@@?
+
+@@.mo;Molly@@ laughs. @@.mo;I doubt it@@.
+
+@@.e;Well@@, says @@.e;Etta@@, @@.e;I@@’@@.e;m here if you need a helping hand@@.
+
+@@.mo;Thanks@@, @@.mo;Ett@@. @@.mo;So@@, @@.mo;mum says you went job hunting today@@. @@.mo;How@@’@@.mo;d that go@@?
+&lt;&lt;else&gt;&gt;
+@@.mo;Molly@@ is sitting on her bed looking out of the window. She’s wrapped in a towel, having obviously just finished in the shower, her hair held up in a tight bun. She hasn’t noticed @@.e;Etta@@ so far and appears to be lost in her own world.
+
+@@.e;Hey@@, says @@.e;Etta@@.
+
+@@.mo;Molly@@ turns, startled, but her expression softens to a smile as soon as she sees her little @@.e;sister@@.
+
+@@.e;You OK@@, @@.e;Mol@@?
+
+@@.mo;Molly@@ shoulders lift as she takes in a deep chest full of breath. She holds it for a moment before exhaling slowly. @@.mo;Yeah@@, she says. @@.mo;A long day@@, @@.mo;that@@’@@.mo;s all@@.
+
+@@.e;Etta@@ sits next to her and puts an arm around her shoulder. It’s been quite some time since she got to see @@.mo;Molly@@. She only got back from her holiday with @@.j;Jules@@ a few nights ago and they haven’t had much time to catch up since. &lt;&lt;if $mollydiary is &quot;read&quot;&gt;&gt;Having read her diary, @@.e;Etta@@ knows all about what happened between her @@.mo;sister@@ and @@.j;Jules@@. @@.mo;Molly@@ is clearly deeply troubled by the complicated state of affairs that exists between the two women, but now is not the time for @@.e;Etta@@ to reveal that she is privy to such knowledge.&lt;&lt;else&gt;&gt;There’s something bothering @@.mo;Molly@@, that much is for certain. But what can @@.e;Etta@@ do? Maybe now is not the time to probe.&lt;&lt;/if&gt;&gt; @@.e;I@@’@@.e;m glad you@@’@@.e;re back home@@, she says.
+
+@@.mo;Me too@@. @@.mo;It felt like I was away for weeks@@. @@.mo;So@@, @@.mo;mum says you went job hunting today@@. @@.mo;How@@’@@.mo;d that go@@?
+&lt;&lt;/if&gt;&gt;
+@@.e;Etta@@ tells @@.mo;Molly@@ about her job at $job1. &lt;&lt;if $timmshome is &quot;known&quot;&gt;&gt; She very nearly goes on to say about how she found out that @@.t;Miss Timms@@ does in fact live about a lingerie store, but quickly thinks better of it. For one, @@.mo;Molly@@ doesn’t know who she is, and, probably more importantly, @@.e;Etta@@ doesn’t want her to get the wrong idea, whatever that may be.&lt;&lt;else&gt;&gt;She very nearly goes on to mention her meeting with @@.t;Sophie@@ but quickly remembers that @@.mo;Molly@@ won’t actually have any idea who she’s talking about. Maybe they’ll meet on Monday, depending on how long the meeting goes on for? Time will tell.&lt;&lt;/if&gt;&gt;
+
+@@.mo;Nice one@@, @@.mo;Ett@@! She seems genuinely pleased for you. @@.mo;This definitely calls for a celebration@@. @@.mo;When do you start@@?
+
+@@.e;Monday morning@@, @@.e;so I@@’@@.e;ve got the rest of the weekend free@@.
+
+@@.mo;Right@@, says @@.mo;Molly@@. She stands up and checks her wall planner. @@.mo;No plans for tomorrow@@?
+
+@@.e;None so far@@!
+
+@@.mo;In that case you@@’@@.mo;re coming with me to the gym@@!
+
+@@.e;Etta@@’s expression must be clear because @@.mo;Molly@@ bursts out laughing.
+
+@@.mo;Relax@@, @@.mo;sis@@, she says. @@.mo;I@@’@@.mo;m not thinking about exercise@@. @@.mo;I@@’@@.mo;m talking spa day@@! @@.mo;Massages@@, @@.mo;saunas@@, @@.mo;the lot@@!
+
+@@.e;Won@@’@@.e;t that cost a fortune@@?
+
+@@.mo;Molly@@ winks deviously. @@.mo;No point in working there if I don@@’@@.mo;t get some benefits@@, @@.mo;eh@@?
+
+@@.e;That sounds wonderful@@.
+
+Well, that’s tomorrow sorted. A day out at the spa with @@.mo;Molly@@. @@.e;Etta@@ is definitely up for a bit of pampering.
+
+[[Back|mollyroomp1]].
+
+&lt;&lt;set $mollytalk to true&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="helentalk" tags="" position="1332,1371">@@.m;Helen@@ is busy loading the washing machine. She’s humming to herself softly as she shoves handfuls of dirty underwear into the drum. &lt;&lt;if $box.contains(&quot;@@.m;Helen@@&#x27;s dirty knickers&quot;)&gt;&gt;&lt;em&gt;There’ll be one less pair in there&lt;/em&gt;, thinks @@.e;Etta@@ slyly.&lt;&lt;/if&gt;&gt;
+
+@@.e;Etta@@ rushes and hugs her tightly from behind. @@.e;Guess who@@’@@.e;s got a job@@?
+
+ @@.m;Oh darling@@, says @@.m;Helen@@. @@.m;That@@’@@.m;s brilliant@@! @@.m;So soon@@! She strokes her daughter’s arm. @@.m;Let me get up and give you a proper cuddle@@!
+
+@@.e;Etta@@ obliges, letting go and allowing her @@.m;mother@@ to stand. She allows herself to be enveloped, nestling in close and resting her head on her boobs. She can smell the scene of a hard day’s work; soil and perspiration. For a moment she almost swoons, lost in the safe comfort of her @@.m;mother@@’s loving embrace. She can feel her heart beating under her breast.
+
+@@.m;I@@’@@.m;m so proud of you@@, says @@.m;Helen@@, and kisses the top of her head. @@.m;Tell me all about it@@.
+
+@@.e;Etta@@ reluctantly leaves the haven of her @@.m;mother@@’s arms and sits down on one of the stools at the bar. She recalls the events of the day, telling @@.m;Helen@@ all about $employerchar.name and the job at $job1.
+&lt;&lt;if $job1 is &quot;Rainbow Boutique&quot;&gt;&gt;
+@@.m;I don@@’@@.m;t think I@@’@@.m;ve ever heard of that place@@. @@.m;You say it@@’@@.m;s been there for quite some time@@?
+
+@@.e;Yeah@@, @@.e;years and years@@, @@.e;I think@@.
+
+@@.m;Well@@, @@.m;Mary sounds like a lovely woman@@.
+
+@@.e;Oh@@, @@.e;she is@@. @@.e;I can@@’@@.e;t wait to work with her@@.
+&lt;&lt;elseif $job1 is &quot;Spirella&#x27;s&quot;&gt;&gt;
+@@.m;Well@@, says @@.m;Helen@@, her brow furrowed by a deep frown. @@.m;I@@’@@.m;m not sure I like the sound of this Archie fellow@@.
+
+@@.e;I think he@@’@@.e;s just really busy@@. @@.e;I don@@&#x27;@@.e; think he@@&#x27;@@.e;s intentionally nasty@@.
+
+@@.m;Hmm@@, @@.m;that@@’@@.m;s no reason to be so rude@@. @@.m;Don@@’@@.m;t stand for any of that@@. @@.m;You will have to learn to stick up for yourself@@.
+
+@@.e;I won@@’@@.e;t let him walk over me@@, @@.e;Mum@@, @@.e;don@@’@@.e;t worry@@.
+&lt;&lt;/if&gt;&gt;
+@@.m;So when do you start@@?
+
+@@.e;First thing on Monday morning@@, says @@.e;Etta@@ proudly.
+
+@@.m;My little Etta@@, @@.m;all grown up@@. @@.m;How about takeout to celebrate@@?
+
+@@.e;YES@@! cries @@.e;Etta@@. Her stomach, as if privy to the conversation, starts to rumble. God good, she hadn’t realised just how hungry she was.
+
+@@.m;That@@’@@.m;s settled then@@. @@.m;I@@’@@.m;ll get a bottle of wine to go with it@@. @@.m;I am working tomorrow but who cares@@! @@.m;Be a dear and just go and check whether Molly is planning to stick around this evening@@.
+
+[[Back|kitchenp1]].
+
+&lt;&lt;set $helentalk1 to true&gt;&gt;
+
+&lt;&lt;set $takeout to true&gt;&gt;</tw-passagedata><tw-passagedata pid="100" name="takeout" tags="" position="2312,1898">&lt;&lt;if $mollytakeout is true&gt;&gt;
+@@.e;Etta@@ takes a handful takeout menus from the rack next to the phone. There’s so much to chose from. Eventually, after some careful consideration, she whittles the options down to three top contenders:
+
+There’s [[Mozzarella Dreams|callpizza]], a top-end Italian pizza joint.
+
+Then there’s [[Beijing City|callchinese]], a highly rated Chinese with an extensive and mouth-watering menu.
+
+Finally there is [[Mumbai Rumble|callindian]], a modern curry house that specialises in Maharashtrian cuisine.
+&lt;&lt;else&gt;&gt;
+@@.e;Etta@@ should check what @@.mo;Molly@@ wants first.
+&lt;&lt;/if&gt;&gt;
+[[Back|loungep1]].</tw-passagedata><tw-passagedata pid="101" name="mollytakeout" tags="" position="2183,1193">@@.e;Mum says we can get takeout tonight@@. @@.e;You@@’@@.e;re not planning on going out are you@@?
+
+@@.mo;I hadn@@’@@.mo;t planned on it@@, @@.mo;no@@. She grins and pats her belly. @@.mo;Definitely not now@@! 
+
+@@.e;Any particular preference@@? @@.e;Pizza@@? @@.e;Chinese@@? @@.e;Indian@@?
+
+@@.mo;Nah@@, @@.mo;I@@’@@.mo;m happy with anything@@. @@.mo;It@@’@@.mo;s your celebration@@, @@.mo;Ett@@, @@.mo;you decide@@.
+
+[[Back|mollyroomp1]].
+
+&lt;&lt;set $mollytakeout to true&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="skip" tags="" position="763,589">[[Let the invasion commence|contents]].
+
+You can skip the introduction and head straight to [[day 1|tldr]] if you want.
+
+</tw-passagedata><tw-passagedata pid="103" name="tldr" tags="" position="942,632">[[Wake the host|p1-1]].</tw-passagedata><tw-passagedata pid="104" name="callpizza" tags="" position="2181,1862">&lt;em&gt;It’s going to have to be Pizza,&lt;/em&gt; thinks @@.e;Etta@@ as she looks over the menu. Not particularly imaginative, no, but you can never go wrong with pizza, right? She calls up and places a considerable order: a margherita, a meat feast, a vegetable supreme and a ham and pineapple (that last one especially for @@.mo;Molly@@ - @@.e;Etta@@ herself hates it). She adds a couple of extras, garlic bread, mozzarella sticks and a portion of breaded mushrooms. The order successfully placed, she hangs up.
+
+Now there’s not a lot to do but [[wait|dinnerp1]]. It shouldn’t be too long, but it’ll definitely be worth it.
+
+&lt;&lt;set $takeout to &quot;pizza&quot;&gt;&gt; </tw-passagedata><tw-passagedata pid="105" name="callchinese" tags="" position="2147,1987">@@.e;Etta@@ keeps the menu for Beijing City and puts the other ones away. It’s been quite a while since they’ve had chinese and while reading over the different dishes she got a real craving for spring rolls. She picks out a variety of dishes: chicken chow mein, szechuan beef, satay crispy chicken and sweet and sour pork. To go with those she adds a few dishes of rice and noodles. She’s just about to conclude the order when she realises she’s forgotten the spring rolls. That won’t do, will it? She orders three portions for good measure.
+
+Now there’s not a lot to do but [[wait|dinnerp1]]. It shouldn’t be too long, but it’ll definitely be worth it.
+
+&lt;&lt;set $takeout to &quot;chinese&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="callindian" tags="" position="2272,2034">Mumbai Rumble is pretty new, judging by the flashy menu. The glossy pamphlet boasts of original dishes based on traditional Maharashtrian recipes prepared by award-winning chefs using the freshest ingredients. It’s certainly a risk, but @@.e;Etta@@ decides to go for it. You don’t get anywhere if you don’t try anything new, right? She considers ordering the safe favourites, a tikka massala, a korma and a jalfrezi but realises that this would more or less defeat the point in her choosing Mumbai Rumble. She orders a set meal for 5 (yeah, there are only three of them, but she’s hungry, OK?)
+
+Now there’s not a lot to do but [[wait|dinnerp1]]. It shouldn’t be too long, but it’ll definitely be worth it.
+
+&lt;&lt;set $takeout to &quot;Indian&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="Objective" tags="" position="592,525">&lt;&lt;back&gt;&gt;
+
+@@.embold;Phase One@@:
+
+Your objective is to help the Progenitor break through @@.e;Etta@@&#x27;s defences and leave her vulnerable to future infestation. You have two days.
+&lt;&lt;if $pchar.cor eq 0&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 20/20
+
+She will resist every attempt the Progenitor makes.
+&lt;&lt;elseif $pchar.cor eq 1&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 19/20
+
+She will probably still resist every attempt the Progenitor makes.
+&lt;&lt;elseif $pchar.cor eq 2&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 18/20
+
+She will probably still resist every attempt the Progenitor makes.
+&lt;&lt;elseif $pchar.cor eq 3&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 17/20
+
+Her resistance is still strong but the cracks are starting to show.
+&lt;&lt;elseif $pchar.cor eq 4&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 16/20
+
+Her resistance is still strong but the cracks are starting to show.
+&lt;&lt;elseif $pchar.cor eq 5&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 15/20
+
+Her resistance is still strong but the cracks are starting to show.
+&lt;&lt;elseif $pchar.cor eq 6&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 14/20
+
+Through continued efforts the Progenitor has made a considerable dent in her sense of propriety.
+&lt;&lt;elseif $pchar.cor eq 7&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 13/20
+
+Through continued efforts the Progenitor has made a considerable dent in her sense of propriety.
+&lt;&lt;elseif $pchar.cor eq 8&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 12/20
+
+As the Progenitor pushes her towards increased sexual activity, her resistance plummets.
+&lt;&lt;elseif $pchar.cor eq 9&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 11/20
+
+As the Progenitor pushes her towards increased sexual activity, her resistance plummets.
+&lt;&lt;elseif $pchar.cor eq 10&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 10/20
+
+The Progenitor is halfway to breaking the will of its host entirely. It could probably infest her right now with only minimal resistance.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="dinnerp1" tags="" position="2430,1546">Around forty-five minutes later the food arrives. @@.m;Helen@@ goes to pay the delivery driver while @@.mo;Molly@@ gets the plates and cutlery, leaving @@.e;Etta@@ waiting impatiently on the sofa in the lounge.
+
+@@.m;Here it is@@, says @@.m;Helen@@ as she heaves two huge, food-laden carriers bags onto the coffee table. @@.m;I hope you two are hungry@@!
+
+@@.mo;Mmm@@, says @@.mo;Molly@@. @@.mo;That smells incredible@@.
+
+@@.e;I went for $takeout in the end@@. @@.e;I hope you guys are OK with that@@. @@.e;I don@@’@@.e;t know about you but I feel like I could eat anything right now@@.
+
+@@.m;Fine by me@@. @@.m;As long as there@@’@@.m;s wine to wash it down with@@.
+
+@@.e;Etta@@ pours out three glasses while the other two dish out the food.
+
+@@.mo;Flipping heck@@, @@.mo;Ett@@. @@.mo;How much did you get@@?
+
+@@.e;Enough for us all@@, says @@.e;Etta@@ and sticks out her tongue.
+
+The family sit down to eat and for once they leave the T.V. off; tonight is a celebration, after all.
+
+@@.m;To Etta@@, says @@.m;Helen@@ as she lifts up her glass to make a toast.
+
+@@.mo;To Etta@@, agrees @@.mo;Molly@@.
+&lt;&lt;if $takeout is &quot;pizza&quot;&gt;&gt;
+The food goes down remarkably quickly considering how much there is. The garlic bread is gone within a couple of minutes, soon followed by the mozzarella sticks.
+
+@@.mo;You got ham and pineapple@@, cries @@.mo;Molly@@!
+
+@@.e;Yeah@@. @@.e;Just don@@’@@.e;t bring it anywhere near me@@.
+&lt;&lt;elseif $takeout is &quot;chinese&quot;&gt;&gt;
+The food goes down remarkably quickly considering how much there is.
+
+@@.m;Slow down with those spring rolls@@, @@.m;dear@@, says @@.m;Helen@@. @@.m;You won@@’@@.m;t have any room for anything else@@.
+
+@@.mo;More for us@@!
+&lt;&lt;else&gt;&gt;
+The food goes down remarkably quickly considering how much there is. The set menu is truly inspired, featuring many dishes none of the women have even heard of, let alone tasted.
+
+@@.mo;So what@@’@@.mo;s this then@@? asks @@.mo;Molly@@, lifting up a shard of popadom slathered in a sweet-smelling paste.
+
+@@.e;I@@&#x27;@@.e;ve no idea@@, laughs @@.e;Etta@@. @@.e;It@@’@@.e;s pretty good though@@.
+&lt;&lt;/if&gt;&gt;
+By the time they’ve eaten their fill they’ve made considerable progress in polishing off the entire order. The table is littered with scraps and three wine bottles are standing empty among the debris.
+
+[[Next|dinner2]].</tw-passagedata><tw-passagedata pid="109" name="bedday1" tags="" position="2430,1697">
+Still absolutely stuffed and more than a little tipsy, @@.e;Etta@@ retires to her bedroom. It’s been a packed day, fulfilling and very productive, but long and tiring all the same. She’s looking forward to her and @@.mo;Molly@@’s spa day tomorrow. &lt;&lt;if $mollydiary is &quot;read&quot;&gt;&gt;She wonders whether she’ll get a chance to talk to her about what happened with @@.j;Jules@@. She can’t bring it up herself, obviously, but maybe it’ll come up by herself. @@.e;Etta@@ is deeply concerned about her @@.mo;sister@@, but she’d be lying if she said she wasn’t a little excited to learn how far they actually went&lt;&lt;else&gt;&gt;It’ll be a good chance for them to catch up, talk about what’s going on in their respective lives. @@.e;Etta@@ just hopes that it is just a spa day; it wouldn’t be the first time that @@.mo;Molly@@ has tried to fool her into mounting a treadmill&lt;&lt;/if&gt;&gt;.
+
+As she gets ready for bed she thinks back to seeing @@.s;Mr@@. @@.s;Shaw@@. His dogs are certainly something else, aren’t they? &lt;&lt;if $jackson is true&gt;&gt;She can’t help but feel a little disgusted with herself for letting that animal do that to her. She’s never in her life considered herself even remotely interested in zoophilia, so why that sudden abandonment? She decides there and then that it won’t happen again&lt;&lt;else&gt;&gt;She’s more than a little shocked at the tenacity of Jackson. He’s never been like that around her before, so why did he behave in such a peculiar way. Perhaps somebody has been taking advantage of @@.s;Mr@@. @@.s;Shaw@@’s blindness and has been doing things with Jackson behind his back. That might explain things. Whatever, @@.e;Etta@@ decides to keep away from now on&lt;&lt;/if&gt;&gt;. Thinking of dogs, @@.e;Etta@@ wonders about Rocket. Why was he acting so strange? He’s never shown even the slightest hint of aggression before, so why has he started now. It might be a good idea to bring that up with her @@.m;mother@@ tomorrow.
+
+Finally, as she snuggles under her duvet, her thoughts drift towards @@.t;Miss Timms@@. &lt;&lt;if $timmshome is &quot;known&quot;&gt;&gt;She feels pretty about stalking her. How can she hope to ever get close to her if she acts like that. @@.e;Etta@@ can’t help but think herself a coward. Deep down, however, she wonders whether she might be able to do something with the knowledge. Perhaps she can arrange things to she accidentally “bumps” into her one afternoon. That might work&lt;&lt;else&gt;&gt;She feels elated to think that in only a couple of days time she’ll be in her house. Sure, they’re talking about important, grown-up things, but there’s no reason why they can’t get friendly once the work is done. @@.e;Etta@@ resolves that the only way forward is to attack, to charm @@.t;Sophie@@ into her bed. But how to do that? And does she really think she knows what to do with a woman in bed? &lt;&lt;if $mollydiary is &quot;read&quot;&gt;&gt;Maybe, if it comes up, she can ask @@.mo;Molly@@?&lt;&lt;else&gt;&gt;Maybe @@.l;Lily@@ could give her a few tips?&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+As the Progenitor shifts and stirs behind her, its arms still wrapped around her food-filled belly, @@.e;Etta@@ drifts off to [[sleep|progday1]].</tw-passagedata><tw-passagedata pid="110" name="progday1" tags="" position="2438,1847">As @@.e;Etta@@ sleeps the Progenitor assesses the effect it has had on it’s host. A diagnostic of her mental state reveals the following:
+&lt;&lt;if $pchar.cor eq 0&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 20/20
+
+In this near-unpolluted state she is likely to resist infestation tooth and nail. 
+&lt;&lt;elseif $pchar.cor eq 1&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 19/20
+
+Modest progerss has been made but the host will still resist every attempt the Progenitor makes.
+&lt;&lt;elseif $pchar.cor eq 2&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 18/20
+
+Modest progerss has been made but the host will still resist every attempt the Progenitor makes.
+&lt;&lt;elseif $pchar.cor eq 3&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 17/20
+
+The host&#x27;s resistance is still strong but the it is doubtful she could resist infestation for long. Still, a more compliant host would be useful.
+&lt;&lt;elseif $pchar.cor eq 4&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 16/20
+
+The host&#x27;s resistance is still strong but the it is doubtful she could resist infestation for long. Still, a more compliant host would be useful.
+&lt;&lt;elseif $pchar.cor eq 5&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 15/20
+
+The host&#x27;s resistance is still strong but the it is doubtful she could resist infestation for long. Still, a more compliant host would be useful.
+&lt;&lt;elseif $pchar.cor eq 6&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 14/20
+
+Considerable damage has been inflicted upon the host&#x27;s inhibtions. She might not welcome infestation but certainly won&#x27;t resist.
+&lt;&lt;elseif $pchar.cor eq 7&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 13/20
+
+Considerable damage has been inflicted upon the host&#x27;s inhibtions. She might not welcome infestation but certainly won&#x27;t resist.
+&lt;&lt;elseif $pchar.cor eq 8&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 12/20
+
+Considerable damage has been inflicted upon the host&#x27;s inhibtions. She might not welcome infestation but certainly won&#x27;t resist.
+&lt;&lt;elseif $pchar.cor eq 9&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 11/20
+
+Considerable damage has been inflicted upon the host&#x27;s inhibtions. She might not welcome infestation but certainly won&#x27;t resist.
+&lt;&lt;elseif $pchar.cor eq 10&gt;&gt;
+@@.e;Etta@@&#x27;s inhibition level is currently 10/20
+
+At this rate the host will be ready and willing to accept the gift of infestation. Perhaps the Progenitor should slow down, lest it break her mind entirely.
+&lt;&lt;/if&gt;&gt;
+Inside the Progenitor’s body a clutch of eggs is growing. Within these eggs lie the tiny embryonic forms of hundreds of drone-bugs. The simplest form of all the aliens&#x27; many possible incarnations, these creatures will form the bedrock, the foundation, of @@.e;Etta@@’s brood. But @@.e;Etta@@’s body is not yet ready for those eggs. Before they can be laid inside her, she needs to be fertilised, her fallow soils tilled. In her current state, the eggs would lie dormant inside her and she would remain nothing but mere carrier. If the eggs are to gestate and mature properly, the Progenitor needs to make a few changes to her body. Nothing catastrophic, not at this point anyway, just a few minor adjustments that will give her the capability to nourish the eggs that will soon be laid within her body. To do this it must implant a number of microscopic organisms inside her. Tiny, but infinitely complex, these worm-like beings will act as genetic engineers and radically transform @@.e;Etta@@’s reproductive potential, turning her from barren carrier to hyper-fertile brood mother. The process, swift and painless as it is, will escape her awareness entirely, until the work is done and she has to discharge waste materials, that is. By that point, however, her will should be broken. The Progenitor opens its snout, its long tentacular tongue protruding slowly; [[it is time|insem1]]. </tw-passagedata><tw-passagedata pid="111" name="dinner2" tags="" position="2564,1548">@@.m;Goodness me@@, groans @@.m;Helen@@. @@.m;I don@@’@@.m;t think I could manage another mouthful@@.
+
+@@.mo;Me neither@@, says @@.mo;Molly@@, followed by a loud belch. She pats her stomach and says, @@.mo;pardon me@@.
+
+@@.e;Etta@@ is lounging in the armchair with her feet up on the table, while her @@.mo;sister@@ and @@.m;mother@@ are on the sofa. @@.mo;Molly@@ is laying down with her head on the older woman’s lap. 
+
+For some time now they’ve been talking about their lives. @@.mo;Molly@@ has spoke a bit about her holiday with @@.j;Jules@@ but seems awfully reticent when pressed for detail. &lt;&lt;if $mollydiary is &quot;read&quot;&gt;&gt;@@.e;Etta@@, of course, knows the reason for this. She can see that @@.mo;Molly@@ is clearly hurting.&lt;&lt;else&gt;&gt;Something&#x27;s obviously bothering her, but nobody can force her to talk about it if she doesn’t want to&lt;&lt;/if&gt;&gt;.
+
+@@.m;Helen@@ talks a little about work and eventually admits to getting friendly with one of delivery drivers. @@.m;It@@’@@.m;s nothing serious@@, she says. @@.m;We just get on so well@@.
+
+@@.e;When do we get to meet the lucky man@@?
+
+@@.m;Helen@@ blushes like a schoolgirl. @@.m;I don@@’@@.m;t know@@. @@.m;Do you think I should ask him out@@?
+
+&lt;em&gt;YES&lt;/em&gt;, shout @@.e;Etta@@ and @@.mo;Molly@@ in unison.
+
+@@.m;But I haven@@’@@.m;t been on a date with a man since@@ … @@.m;well@@, @@.m;since your Dad left@@.
+
+@@.mo;All the more reason to go@@, says @@.mo;Molly@@.
+
+@@.m;You think so@@?
+
+@@.e;Mum@@, says @@.e;Etta@@, her voice full of comic exasperation. @@.e;If you don@@’@@.e;t ask him one of us will@@!
+
+@@.m;Helen@@ strokes @@.mo;Molly@@&#x27;s hair and smiles affectionately at @@.e;Etta@@. @@.m;You girls make me feel so lucky@@. @@.m;I couldn@@&#x27;@@.m;t ask for a better family@@.
+
+@@.mo;Uh-oh@@, says @@.mo;Molly@@, and makes a sudden wretching sound. @@.mo;Sap alert@@! @@.mo;Sap alert@@!
+
+The talk goes on for many more hours, covering a whole array of subjects. Eventually, however, @@.e;Etta@@ starts to grow weary. @@.e;I think I@@&#x27;@@.e;m going to turn in now@@, @@.e;guys@@, she says. @@.e;I@@&#x27;@@.e;m bushed@@.
+
+@@.mo;Me too@@, yawns @@.mo;Molly, sitting up and stretching@@. @@.mo;Don@@&#x27;@@.mo;t forget about the gym tomorrow@@.
+
+@@.e;You mean spa@@, corrects @@.e;Etta@@.
+
+@@.mo;Yeah@@, @@.mo;Yeah@@. @@.mo;I@@&#x27;@@.mo;ll get you on that exercise bike one of these days@@.
+
+@@.m;Don@@&#x27;@@.m;t be so sure about that@@, says @@.m;Helen@@. @@.m;You girls go off to bed@@. @@.m;I@@&#x27;@@.m;ll tidy up here@@.
+
+@@.e;Etta@@ kisses her @@.m;mother@@ and @@.mo;sister@@ goodnight and heads upstairs to [[bed|bedday1]]. What a lovely evening it&#x27;s been.</tw-passagedata><tw-passagedata pid="112" name="insem1" tags="" position="2558,1695">&lt;&lt;if $pchar.cor lte 3&gt;&gt;
+So far the Progenitor has done little to dampen the inhibitions of the host animal. If it tried to infest her in her present state she would likely wake and put up a hard fight; a being of her size and strength could easily inflict mortal damage upon its delicate body. Although there is still time to influence her, it needs to plant the worms inside her right away. The eggs already developing inside its swollen body need to be placed within her womb tomorrow or they will shrivel and die.
+
+It injects a heavy dose of sedatives into her bloodstream; now even the most violent interruptions will not wake her. As she sinks deeper and deeper into slumber, the Progenitor’s tongue reaches her pussy. It waits for a moment as from the tip beads a thick green fluid, lubrication for its unaided entry. Moving slowly and carefully to avoid causing damage, the Progenitor pushes its sticky appendage into @@.e;Etta@@’s vaginal opening. The host doesn’t stir for an instant; she lies dreaming, totally unaware of the invasion between her thighs. 
+
+Deep inside her cunt, the Progenitor’s phallic tongue has met the wall of her cervix. To penetrate this formidable barrier it begins to secrete a powerful muscle relaxant. After some minutes it detects a slackening in @@.e;Etta@@’s body and soon the cervix opens to allow its uninvited guest. Stretching the walls of her vagina, the Progenitor pushes its tongue further and further until it has reached its destination: the womb. 
+
+A bulge passes along the length of the tongue, squeezing through the narrow passage of the birth canal until it bursts in a flood of viscous green goo. The goo sloshes into the host&#x27;s empty womb, quickly filling the unused space. With no time to lose, the miniscule worms, carried along by the flow, get to work on their new surroundings. They burrow into the surrounding flesh, infiltrating deep inside the intimacy of the host’s cells. The Progenitor keeps pumping, sending load after load of the worm-laden goo into @@.e;Etta@@’s womb. Already affected by the work of the worms, her belly gradually expands, the skin stretching and rising in a bump  that slowly lifts the duvet that rests over her body. Soon she is full up, her worm-infested belly a veritable pot. Now empty, the Progenitor withdraws its tongue, the appendage leaving @@.e;Etta@@’s pussy with a loud slurp. Almost instantly she begins to ooze, excess goo leaking out of her body in a dark-green cream pie. Her cervix quickly clamps back shut, sealing her closed and locking the parasites inside.
+
+It’s job complete, the Progenitor enters a rest state. Unaware of the creatures that now infest her womb, @@.e;Etta@@ continues to snore, her swollen belly rising like a hillock under the duvet. Deep inside her the aliens are hard at work, rewriting her genetic code, and also her destiny.
+
+@@.e;Etta@@&#x27;s infestation [[level|Status]] has changed.
+
+&lt;&lt;set $pchar.womb to &quot;@@.i;The Progenitor has infested Etta while she was sleeping and her womb is absolutely brimming with microscopic worm organisms. These tiny creatures will prepare her for the many eggs to come@@.&quot;&gt;&gt;
+&lt;&lt;elseif $pchar.cor lt 8&gt;&gt;
+At this stage in its mission the Progenitor has made decent progress in breaking the inhibitions of its host. By tomorrow evening, if it carries on at this rate, @@.e;Etta@@ will have become a fully compliant breeding machine, enslaved to the will of the hive; she will gladly volunteer her body for the carrying of future generations and even aid in the infestation and enslavement of her family and friends. All of that, however, lies in the future. The Progenitor still has much work to do. If it is to lay the eggs inside @@.e;Etta@@ tomorrow evening then it needs to lay the groundwork right away.
+
+The phallic tongue slides between @@.e;Etta@@’s plump butt-cheeks, reaching upwards to the opening of her snatch. Her eyelids flicker open as she wakes. The Progenitor, however, is not alarmed by this new development; indeed it was to be expected. In her sleepy state, @@.e;Etta@@ is barely aware of what is happening, only of a growing pleasure as something thick and slimey squeezes between her thighs. She obliges, allowing her legs to be parted, moaning ever so softly as the Progenitor’s tongue slips between her wet lips. It pushes inside, meeting next to no resistance from the naturally lubricated hole. @@.e;Etta@@’s pussy is tight, clearly unused to such large visitors, but it gives way as from the tip of the tongue flows a potent muscle relaxant. 
+
+Deep inside her cunt, the Progenitor’s phallic tongue has met the wall of @@.e;Etta@@’s cervix. Penetrated for the first time, she moans and snakes a languid hand down to her clit. As she sleepily jills herself, her cervix loosens and the tongue slips inside. @@.e;Etta@@ is by now fully awake but she’s so overcome with her own desire that she doesn’t for a moment stop. With one hand on her bare breast and the other fingering her clitty, she is sublimely unaware of her impending infestation. Stretching the walls of her vagina, the Progenitor pushes that tongue further and further until it has reached its destination: the womb.
+
+A fat bulge passes along the length of the tongue imbedded inside, squeezing through the narrow passage of her birth canal. The feeling of her pussy swelling with the added volume is too much for @@.e;Etta@@ and she comes hard. Inside her the bulge bursts into her womb in a flood of viscous green goo. The goo sloshes into the empty space, quickly filling her up. With no time to lose, the miniscule worms, carried by the flow, get to work on their new surroundings. They burrow into surrounding flesh, infiltrating the intimacy of the host’s cells. The Progenitor keeps pumping, sending load after load of the worm-laden goo into @@.e;Etta@@’s womb. Already affected by the work of the worms, her belly gradually expands, pushing her arms away until she can no longer reach her clit. By this point it doesn’t matter; @@.e;Etta@@ is practically insensate, her body shaking with orgasmic bliss with every fresh load of goo pumped inside her. Soon she is full up, her worm-infested belly now a veritable pot. Finally empty, the Progenitor withdraws its tongue, leaving @@.e;Etta@@’s pussy with a loud slurp. Almost instantly she begins to ooze, excess goo leaking out of her body in a dark-green cream pie. Her cervix quickly clamps shut, sealing her new residents safely inside her.
+
+It’s job complete, the Progenitor enters a rest state, while @@.e;Etta@@, exhausted by the storm of pleasure she has just weathered but unaware of the creatures that now infest her womb, also falls asleep, a content smile spread across her blood-flushed face. As she snores her swollen belly rises like a hillock under the duvet. Deep inside her the aliens are hard at work, rewriting her genetic code, and also her destiny.
+
+@@.e;Etta@@&#x27;s infestation [[level|Status]] has changed.
+
+&lt;&lt;set $pchar.womb to &quot;@@.i;Etta let the Progenitor pump her full of worm-laced goo. Her womb is now heavily infested; she&#x27;s going to have a hard time hiding that bump@@!&quot;&gt;&gt;
+&lt;&lt;elseif $pchar.cor gte 8&gt;&gt;
+At this stage in its mission the Progenitor has made considerable progress towards rendering @@.e;Etta@@’s inhibitions completely ineffective. By tomorrow evening, if it carries on at this rate, @@.e;Etta@@ will be a fully compliant breeding machine, devoted wholeheartedly to the will of her lover, the hive; she will lovingly offer up her body for the carrying and birthing of many future generations and even aid in the infestation and corruption of her family and friends. All of that, however, lies in the future. The Progenitor still has much work to do. If it is to lay the eggs inside @@.e;Etta@@ tomorrow evening then it needs to lay the groundwork right away.
+
+The tentacle slips between @@.e;Etta@@’s plump butt-cheeks, tickling around the rim her her anus along the way, and reaches upwards to the opening of her snatch. Her eyelids flicker open as she wakes, but the expression of stunned shock soon gives way to one of hopeful expectation. The Progenitor, however, is not alarmed by this new development; indeed it was about to wake her itself. @@.e;Etta@@ has proven a willing host and, therefore, deserves compensation. It injects her with a stimulant and in a matter of seconds she is wide awake and hungry with lust. She groans and moans, obediently opening her legs wide as the tongue thrashes between her thighs. The Progenitor doesn’t know if @@.e;Etta@@ knows what the result of their coupling will entail, but it will not do to pass up what she is offering willingly. A brief inspection of her pussy reveals that she is wet and ready, her engorged lips glistening with girly lubricants. Wasting no more time the Progenitor plunges inside her, battering its way into her pussy with a firm thrust. @@.e;Etta@@ bucks and lets out a cry. Her virgin cunt is tight, clearly not used to admitting such sizable visitors, but it gives way as from the tip of the tongue flows a potent muscle relaxant. 
+
+Conscious of the host&#x27;s needs and desires, the Progenitor pumps its tongue in and out of her, each thrust penetrating further inside her until the blunt tip bumps against the wall of her cervix. @@.e;Etta@@ holds her legs back and bites on her duvet as the rampant fucking gets harder and harder; her vaginal muscles relax from the effects of the alien’s powerful secretions and her cervix loosens to finally admit the tentacle even deeper. Overcome as she is with desire, it’s not pain she feels, but pleasure. As the walls of her vagina stretch to admit the base of the tongue’s greater girth, she tosses her head back and forth, muttering incoherent obscenities. With one final push the Progenitor has reach its destination: the womb.
+
+@@.e;Etta@@ looks up to see a colossal bulge travelling along the length of the tentacle imbedded in her cunt. She clambers awkwardly to her knees and grips the turgid appendage with both hands, yanking with all her might. Recognising this behaviour as a product of animal-lust, the Progenitor does not fight. Instead, it pumps harder and the resulting blast catches @@.e;Etta@@ square in the face; caught open mouthed, she has no choice but to swallow the sticky load. The goo feels warm as it slides down her throat and soon she is hungrily lapping up the leftovers. Recognising the interior of their host, and immune to the acidity of her stomach, the worms carried along by the sludge immediately get to work. It might not be her womb they&#x27;ve found themselves but there is work they can do here. @@.e;Etta@@ reaches back, cooling goop dripping lewdly from her chin, and attempts to insert the tongue back into her pussy. Spurred on by her wild abandon, however, the Progenitor has other ideas. 
+
+@@.e;Etta@@’s eyes widen as she feels the tentacle barge its way into her anus in one powerful thrust. She clamps a hand over her mouth to suppress her groans as the the tentacle begins to infiltrate her bowels; she can feel it moving inside her, tunnelling deep into the maze of her gut. She places her hand flat against her belly, shocked and more than a little excited to detect the motion of her body&#x27;s unnatural invader. Deep inside her, the tentacle is shooting gouts of worm-goo into her gut, infesting her from the inside. As good as any womb, this dark and warm place will be an excellent places for vulnerable eggs to mature and grow. Soon the Progenitor&#x27;s supplies are exhausted. @@.e;Etta@@ shudders in never-before-felt bliss as the tongue is pulled from its lodgings in her butt with an almost romantic care. It leaves her feeling well-used but content. She flops forward onto her bed, feeling the gaping emptiness of her now unplugged sphincter.
+
+Its job complete, the Progenitor enters a resting state. Not aware of the creatures that now infest her stomach and bowels, @@.e;Etta@@ languishs in post-coital exhaustion, her body messy with sweat and drying sludge. Deep within her the worms are hard at work, rewriting her genetic code, and also her destiny. Before long she is asleep, her fucked-out body deserving of a long break.
+
+@@.e;Etta@@&#x27;s infestation [[level|Status]] has changed.
+
+&lt;&lt;set $pchar.belly to &quot;@@.i;Etta&#x27;s gut is teeming with alien life. Although intendedfor her womb, the worms are hard at work preparing her gut for eggs; warm and moist, this place is as good as any womb. Her belly is swollen into a soft mound@@.&quot;&gt;&gt;
+&lt;&lt;set $pchar.stomach to &quot;@@.i;After swallowing a considerable helping of the Progenitor&#x27;s load, Etta has a stomach full of worm goo. Anything if not versatile, the organisms are already hard at work preparing the space for future impregnation@@.&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+[[End|disclaim]]</tw-passagedata></tw-storydata>

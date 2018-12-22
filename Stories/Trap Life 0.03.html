@@ -1,0 +1,2068 @@
+<tw-storydata name="Trap Life 0.03" startnode="1" creator="Twine" creator-version="2.2.1" ifid="AD5E9887-C22A-4D31-AF87-5BB20FA7A736" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Body Logic" tags="" position="5,7" size="100,100">&lt;&lt;set $body = 
+{
+	build :
+	{
+		desc : &quot;&quot;,
+		rank : 0,
+	},
+	face :
+	{
+		desc : &quot;boyish&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;boyish&quot;;
+			else if(this.rank = 1)
+				this.desc = &quot;androgynous&quot;;
+			else if(this.rank gt 1)
+				this.desc = &quot;feminine&quot;;
+		},
+	},
+	skin :
+	{
+		desc : &quot;&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+	},
+	eye :
+	{
+		desc : &quot;&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+	},
+	hair :
+	{
+		desc : &quot;short&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+		length : &quot;&quot;,
+		setStyle : function(x)
+		{
+			this.desc = x;
+		},
+		setLength : function()
+		{
+			if(this.rank lte 0)
+				this.length = &quot;short&quot;;
+			else if(this.rank = 1)
+				this.length = &quot;medium&quot;;
+			else if(this.rank gt 1)
+				this.length = &quot;long&quot;;
+		},
+	},
+	penis :
+	{
+		desc : &quot;average cock&quot;,
+		rank : 5,
+		set: function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;clitty&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;micro-dick&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;tiny weenie&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;small penis&quot;;
+			else if(this.rank eq 4)
+				this.desc = &quot;below average penis&quot;;
+			else if(this.rank eq 5)
+				this.desc = &quot;average cock&quot;;
+			else if(this.rank eq 6)
+				this.desc = &quot;above average cock&quot;;
+			else if(this.rank eq 6)
+				this.desc = &quot;large cock&quot;;
+			else
+				this.desc = &quot;huge cock&quot;;
+		},
+	},
+	anus :
+	{
+		desc : &quot;virgin anus&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;virgin anus&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;tight asshole&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;used asshole&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;loose asshole&quot;;
+			else
+				this.desc = &quot;boipussy&quot;;
+		},
+	},
+	hips :
+	{
+		desc : &quot;straight hips&quot;,
+		rank : 0,
+		set : function()
+		{
+			if (this.rank lte 0)
+				this.desc = &quot;straight hips&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;girlish hips&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;curvy hips&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;wide hips&quot;;
+			else
+				this.desc = &quot;fertile hips&quot;;
+		},
+	},
+	ass :
+	{
+		desc : &quot;dainty butt&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;dainty butt&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;round ass&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;big booty&quot;;
+			else
+				this.desc = &quot;T H I C C ass&quot;;
+		},
+	},
+	breasts :
+	{
+		desc : &quot;flat chest&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;flat chest&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;perky breasts&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;small breasts&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;prominent breasts&quot;;
+			else if(this.rank eq 4)
+				this.desc = &quot;large breasts&quot;;
+			else 
+				this.desc = &quot;huge knockers&quot;;
+		},
+	},
+	nipplse :
+	{
+		desc : &quot;inverted nipples&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;inverted nipples&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;puffy nipples&quot;;
+			else 
+				this.desc = &quot;pointy nipples&quot;;
+		},
+	},
+	lips :
+	{
+		desc : &quot;soft lips&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;soft lips&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;plump lips&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;thick lips&quot;;
+			else
+				this.desc = &quot;cock-sucking lips&quot;;
+		},
+	},
+	makeup :
+	{
+		desc : &quot;no makeup&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;no makeup&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;light makeup&quot;;
+			else
+				this.desc = &quot;slutty makeup&quot;;
+		},
+	},
+	shave :
+	{
+		desc : &quot;hairless&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;hairless&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;stubbly&quot;;
+			else
+				this.desc = &quot;hairy&quot;;
+		},
+	},
+}&gt;&gt;
+
+&lt;&lt;goto [[Sex Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Sex Logic" tags="" position="119,6" size="100,100">&lt;&lt;set $sex =
+{
+	vsex : 0,
+	man : 0,
+	org : 0,
+	pmassage : 0,
+	apitch : 0,
+	acatch : 0,
+	aorg : 0,
+	bjg : 0,
+	bjr : 0,
+	dpth: 0,
+	face : 0,
+	swallow : 0,
+	gang : 0,
+	exhib : 0,
+	daysorg : 0,
+	dayslock : 0,
+	addOrgs : function(orgs) 
+	{
+		this.org += orgs;
+		this.daysorg = 0;
+		$pc.addHorny(-30);
+		$pc.libido--;
+	},
+	addAorgs : function(orgs)
+	{
+		this.aorg += orgs;
+		this.daysorg = 0;
+		$pc.addHorny(-50);
+		$pc.addEnergy(-50);
+		$pc.libido--;
+	},
+	jOff : function()
+	{
+		if($pc.caged == 0)
+		{
+			$time.addTicks(1);
+			$pc.addEnergy(-20);
+			this.addOrgs(1);
+			this.man++;
+		}
+		else
+			return 0;
+	},
+}&gt;&gt;
+
+&lt;&lt;goto [[Wardrobe Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Wardrobe Logic" tags="" position="230,4" size="100,100">&lt;&lt;set $ward = []&gt;&gt;
+&lt;&lt;set $worn = []&gt;&gt;
+&lt;&lt;set $clothes =
+{
+	addWard : function(x)
+	{
+		$ward.push(x);
+		_o = $ward.length - 1;
+		$ward[_o].have = 1;
+	},
+	strip : function()
+	{
+		$worn[0] = $topless;
+		$worn[1] = $commando;
+		$worn[2] = $barefoot;
+	},
+	dOn : function(x)
+	{
+		for(_i = 0; _i &lt; $ward.length; _i++)
+		{
+			_o = $ward[_i];
+			if(_o.name == x)
+			{
+				if(_o.type == $cltype.school || _o.type == $cltype.casual || _o.type == $cltype.cosplay)
+					$worn[0] = _o;
+				else if(_o.type == $cltype.uwear)
+					$worn[1] = _o;
+				else if(_o.type == $cltype.shoes)
+					$worn[2] = _o;
+				else if(_o.type == $cltype.swim)
+				{
+					this.strip();
+					$worn[0] = _o;
+				}
+				else if(_o.type == $cltype.cage)
+				{
+					$worn[3] = _o;
+					$pc.caged = 1;
+				}
+				else if(_o.type == $cltype.plug)
+				{
+					$worn[4] = _o;
+					$pc.plugged = 1;
+				}
+				else
+					$worn[0] = &quot;ERROR&quot;;
+			}
+		}
+	},
+	cageOff : function()
+	{
+		$pc.caged = 0;
+	},
+	plugOff : function()
+	{
+		$pc.plugged = 0;
+	},
+	saveSchool : function()
+	{
+		$saveschool = $worn;
+	},
+	saveCasual : function()
+	{
+		$savecasual = $worn;
+	},
+	loadSchool : function()
+	{
+		$worn = $saveschool;
+	},
+	loadCasual : function()
+	{
+		$worn = $savecasual;
+	},
+}&gt;&gt;
+&lt;&lt;set $saveschool = [] &gt;&gt;
+&lt;&lt;set $savecasual = [] &gt;&gt;
+&lt;&lt;set $cltype =
+{
+	none : 0,
+	school : 1,
+	casual : 2,
+	uwear : 3,
+	shoes : 4,
+	cosplay : 5,
+	swim : 6,
+	cage : 7,
+	plug : 8,
+}&gt;&gt;
+&lt;&lt;set $topless = 
+{
+	name : &quot;Topless&quot;,
+	type : $cltype.none,
+	gender : 0,
+	slutty : 1,
+	cost : 0,
+	have : 1,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $commando =
+{
+	name : &quot;Commando&quot;,
+	type : $cltype.none,
+	gender : 0,
+	slutty : 1,
+	cost : 0,
+	have : 1,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $barefoot =
+{
+	name : &quot;Barefoot&quot;,
+	type : $cltype.none,
+	gender : 0,
+	slutty : 1,
+	cost : 0,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $bschoolu = 
+{
+	name : &quot;Boy&#39;s Uniform&quot;,
+	type : $cltype.school,
+	gender : 0,
+	slutty : 0,
+	cost : 20,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $gschoolu =
+{
+	name : &quot;Girl&#39;s Uniform&quot;,
+	type : $cltype.school,
+	gender : 1,
+	slutty : 0,
+	cost : 25,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $sluttyu =
+{
+	name : &quot;Slutty School Uniform&quot;,
+	type : $cltype.school,
+	gender : 1,
+	slutty : 1,
+	cost : 30,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $mcasual =
+{
+	name : &quot;T-Shirt and Jeans&quot;,
+	type : $cltype.casual,
+	gender : 0,
+	slutty : 0,
+	cost : 20,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $mskirt =
+{
+	name : &quot;Tanktop and Miniskirt&quot;,
+	type : $cltype.casual,
+	gender : 1,
+	slutty : 1,
+	cost : 35,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $sdress =
+{
+	name : &quot;Summer Dress&quot;,
+	type : $cltype.casual,
+	gender : 1,
+	slutty : 0,
+	cost : 45,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $cldress =
+{
+	name : &quot;Slutty Clubbing Dress&quot;,
+	type : $cltype.school,
+	gender : 1,
+	slutty : 1,
+	cost : 70,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $boxers =
+{
+	name : &quot;Boxers&quot;,
+	type : $cltype.uwear,
+	gender : 0,
+	slutty : 0,
+	cost : 10,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $panties =
+{
+	name : &quot;Panties&quot;,
+	type : $cltype.uwear,
+	gender : 1,
+	slutty : 0,
+	cost : 15,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $gstring =
+{
+	name : &quot;G-String&quot;,
+	type : $cltype.uwear,
+	gender : 1,
+	slutty : 1,
+	cost : 35,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $lingerie =
+{
+	name : &quot;Lingerie&quot;,
+	type : $cltype.uwear,
+	gender : 1,
+	slutty : 0,
+	cost : 100,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $sneakers =
+{
+	name : &quot;Sneakers&quot;,
+	type : $cltype.shoes,
+	gender : 0,
+	slutty : 0,
+	cost : 25,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $flats =
+{
+	name : &quot;Girl&#39;s Flats&quot;,
+	type : $cltype.shoes,
+	gender : 1,
+	slutty : 0,
+	cost : 25,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $heels =
+{
+	name : &quot;High Heels&quot;,
+	type : $cltype.shoes,
+	gender : 1,
+	slutty : 1,
+	cost : 45,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $sheels =
+{
+	name : &quot;Stripper Heels&quot;,
+	type : $cltype.shoes,
+	gender : 1,
+	slutty : 1,
+	cost : 65,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $maidu =
+{
+	name : &quot;Maid Uniform&quot;,
+	type : $cltype.cosplay,
+	gender : 1,
+	slutty : 0,
+	cost : 50,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $smaidu =
+{
+	name : &quot;Sexy Maid Uniform&quot;,
+	type : $cltype.cosplay,
+	gender : 1,
+	slutty : 1,
+	cost : 75,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $cheer =
+{
+	name : &quot;Cheerleader Uniform&quot;,
+	type : $cltype.cosplay,
+	gender : 1,
+	slutty : 0,
+	cost : 60,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $slcheer =
+{
+	name : &quot;Slutty Cheerleader Uniform&quot;,
+	type : $cltype.cosplay,
+	gender : 1,
+	slutty : 1,
+	cost : 120,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $shimakaze =
+{
+	name : &quot;Shimakaze Cosplay&quot;,
+	type : $cltype.cosplay,
+	gender : 1,
+	slutty : 1,
+	cost : 300,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $trunks =
+{
+	name : &quot;Swim Trunks&quot;,
+	type : $cltype.swim,
+	gender : 0,
+	slutty : 0,
+	cost : 15,
+	have : 1,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $thong =
+{
+	name : &quot;Thong&quot;,
+	type : $cltype.swim,
+	gender : 0,
+	slutty : 1,
+	cost : 20,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $opiece =
+{
+	name : &quot;One Piece&quot;,
+	type : $cltype.swim,
+	gender : 1,
+	slutty : 0,
+	cost : 45,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $bikini =
+{
+	name : &quot;Bikini&quot;,
+	type : $cltype.swim,
+	gender : 1,
+	slutty : 1,
+	cost : 70,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $sbikini =
+{
+	name : &quot;Sexy Bikini&quot;,
+	type : $cltype.swim,
+	gender : 1,
+	slutty : 1,
+	cost : 90,
+	have : 0,
+	wear : 0,
+}&gt;&gt;
+&lt;&lt;set $cage = 
+{
+	name : &quot;Chastity Cage&quot;,
+	type : $cltype.cage,
+	gender : 0,
+	slutty : 1,
+	cost : 30,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+&lt;&lt;set $egg =
+{
+	name : &quot;Egg Vibrator&quot;,
+	type : $cltype.plug,
+	gender : 1,
+	slutty : 1,
+	cost : 35,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+&lt;&lt;set $dildo =
+{
+	name : &quot;Dildo&quot;,
+	type : $cltype.plug,
+	gender : 1,
+	slutty : 1,
+	cost : 40,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+&lt;&lt;set $buttplug =
+{
+	name : &quot;Buttplug&quot;,
+	type : $cltype.plug,
+	gender : 1,
+	slutty : 1,
+	cost : 45,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+&lt;&lt;set $aneros =
+{
+	name : &quot;Aneros&quot;,
+	type : $cltype.plug,
+	gender : 1,
+	slutty : 1,
+	cost : 50,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+&lt;&lt;set $cockring =
+{
+	name : &quot;Cockring&quot;,
+	type : $cltype.plug,
+	gender : 0,
+	slutty : 1,
+	cost : 30,
+	have : 0,
+	wear : 0
+}&gt;&gt;
+
+&lt;&lt;goto [[School Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="School Logic" tags="" position="342,2" size="100,100">&lt;&lt;set $school =
+{
+	attend : 0,
+	late : 0,
+	absent : 0,
+	latedays : 0,
+	absentdays : 0,
+	over : 0,
+	punish : 0,
+	perv : 0,
+	addLate : function()
+	{
+		this.late++;
+		this.latedays++;
+		this.punish++;
+	},
+	addAbsent : function()
+	{
+		this.absent++;
+		this.absentdays++;
+		this.punish++;
+	},
+	isLate : function()
+	{
+		return ((!$time.isWeekend()) &amp;&amp; ($time.phase == 1) &amp;&amp; 	($school.over eq 0) &amp;&amp; ($time.ticks lt 3));
+	},
+	goClass : function()
+	{
+		this.attend = 1;
+		$pc.addEnergy(-20);
+		$pc.addHorny(30);
+	},
+	classOver : function()
+	{
+		$pc.addEnergy(-20);
+		$time.addTicks(3);
+		this.over = 1;
+	},
+	eatLunch : function()
+	{
+		$time.addTicks(1);
+		$pc.addEnergy(20);
+	},
+	classEvent : function()
+	{
+	
+		if ($pc.horny gt 90 &amp;&amp; $pc.caged == 1)
+		{
+			this.punish++;
+			this.perv++;
+			return 2;
+		}
+		else if($pc.horny gt 90)
+		{
+			this.punish++;
+			this.perv++;
+			return 1;
+		}
+		else
+			return 0;
+	},
+	gymDay : function()
+	{
+		return((passage() == &quot;Aft Class&quot;) &amp;&amp; (($time.weekDay() == 2) || ($time.weekDay() == 4)));
+	},
+}&gt;&gt;	
+
+&lt;&lt;goto [[Inventory Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Inventory Logic" tags="" position="453,5" size="100,100">&lt;&lt;set $inv =
+{
+	razors : 0,
+	makeup : 0,
+	gloss: 0,
+	polish : 0,
+	sunscreen : 0,
+	ties : 0,
+	webcam : 0,
+	condoms : 0,
+	lube : 0,
+	buyRazors : function()
+	{
+		this.razors += 10;
+		$cash.useCash($cost.razors);
+	},
+	useRazors : function()
+	{
+		if(this.razors lte 0)
+		{
+			this.razors = 0;
+			return 0;
+		}
+		else
+			this.razors -= 1;
+	},
+	buyMakeup : function()
+	{
+		this.makeup += 10;
+		$cash.useCash($cost.makeup);
+	},
+	useMakeup : function()
+	{
+		if(this.makeup lte 0)
+		{
+			this.makeup = 0;
+			return 0;
+		}
+		else
+			this.makeup -= 1;
+	},
+	buyGloss : function()
+	{
+		this.gloss += 10;
+		$cash.useCash($cost.gloss);
+	},
+	useGloss : function()
+	{
+		if(this.gloss lte 0)
+		{
+			this.gloss = 0;
+			return 0;
+		}
+		else
+			this.gloss -= 1;
+	},
+	buyPolish : function()
+	{
+		this.polish += 10;
+		$cash.useCash($cost.polish);
+	},
+	usePolish : function()
+	{
+		if(this.polish lte 0)
+		{
+			this.polish = 0;
+			return 0;
+		}
+		else
+			this.polish -= 1;
+	},
+	buySunscreen : function()
+	{
+		this.sunscreen += 10;
+		$cash.useCash(cost.sunscreen);
+	},
+	useSunscreen : function()
+	{
+		if(this.sunscreen lte 0)
+		{
+			this.sunscreen = 0;
+			return 0;
+		}
+		else
+			this.sunscreen -= 1;
+	},
+	buyTies : function()
+	{
+		this.ties += 10;
+		$cash.useCash($cost.ties);
+	},
+	useTies : function()
+	{
+		if(this.ties lte 0)
+		{
+			this.ties = 0;
+			return 0;
+		}
+		else
+			this.ties -= 1;
+	},
+	buyCondoms : function()
+	{
+		this.condoms += 10;
+		$cash.useCash($cost.condomms);
+	},
+	useCondoms : function()
+	{
+		if(this.condoms lte 0)
+		{
+			this.condoms = 0;
+			return 0;
+		}
+		else
+			this.condoms -= 1;
+	},
+	buyLube : function()
+	{
+		this.lube += 10;
+		$cash.useCash($cost.lube);
+	},
+	useLube : function()
+	{
+		if(this.lube lte 0)
+		{
+			this.lube = 0;
+			return 0;
+		}
+		else
+			this.condoms -= 1;
+	}
+}&gt;&gt;
+&lt;&lt;set $cost = 
+{
+	razors : 10,
+	makeup : 50,
+	gloss: 10,
+	polish : 20,
+	sunscreen : 20,
+	ties : 10,
+	webcam : 150,
+	condoms : 20,
+	lube : 10,
+}&gt;&gt;
+
+&lt;&lt;goto [[Time Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Time Logic" tags="" position="561,4" size="100,100">//Time related stuff
+&lt;&lt;set $time = 
+{
+	ticks : 0,
+	phase : 0,
+	phsname : &quot;Night&quot;,
+	day : 1,
+	date : 1,
+	month : 9,
+	year : 2016,
+	addTicks : function(x)
+	{
+		this.ticks += x;
+		while (this.ticks gte 5)
+		{
+			this.ticks -= 5;
+			this.addPhase(1);
+		}
+	},
+	addPhase : function(x)
+	{
+		this.phase += x;
+		while (this.phase gte 4)
+		{
+			this.phase -= 4;
+			this.addDays(1);
+		}
+		this.dayPhase();
+		$pc.addHorny($pc.libido * x); 
+	},
+	setPhase : function(x)
+	{
+		this.ticks = 0;
+		x -= this.phase;
+		while(x lte 0)
+			x += 4;
+			this.addPhase(x);
+	},
+	dayPhase : function()
+	{
+		if (this.phase == 0)
+			this.phsname = &quot;Night&quot;;
+		else if (this.phase == 1)
+			this.phsname = &quot;Morning&quot;;
+		else if (this.phase == 2)
+			this.phsname = &quot;Afternoon&quot;;
+		else
+			this.phsname = &quot;Evening&quot;;
+	},
+	weekDay : function() 
+	{ 
+		return this.day % 7;
+	},
+	addDays : function(days)	
+	{
+		this.day += days;
+		this.date += days;
+		$pc.newDay();
+		while (this.date gt this.daysInMonth(this.month)) 
+		{
+			this.date -= this.daysInMonth(this.month);
+			this.addMonths(1);
+		}
+	},
+	isWeekend : function()	
+	{
+		return (this.day % 7 eq 0) || (this.day % 7 eq 6);
+	},
+	daysInMonth : function(month)	
+	{
+		if ((month eq 1) || 
+			(month eq 3) ||
+			(month eq 5) ||
+			(month eq 7) ||
+			(month eq 8) ||
+			(month eq 10) ||
+			(month eq 12))	
+		{
+			return 31;
+		}
+		else if (month eq 2)	
+		{
+			return 28;
+		}
+		else 	
+		{
+			return 30;
+		}
+	},
+	addMonths : function(months) 
+	{
+		this.month += months;
+		while (this.month gt 12) 
+		{
+			this.month -= 12;
+			this.addYears(1);
+		}
+	},
+	addYears : function(years) 
+	{
+		this.year += years;
+	},
+	sleep : function()
+	{
+		if(this.phase == 0)
+			$pc.addEnergy(60);
+		else
+			$pc.addEnergy(90);
+			
+		this.setPhase(1);
+	},
+}&gt;&gt;
+&lt;&lt;set $Days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, 				&quot;Friday&quot;, &quot;Saturday&quot;]&gt;&gt;
+&lt;&lt;set $Months = [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, 				&quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]&gt;&gt;
+
+&lt;&lt;goto[[PC Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="PC Logic" tags="" position="670,3" size="100,100">//Player stats
+&lt;&lt;set $pc = 
+{
+	name : &quot;&quot;,
+	age : 16,
+	bmonth : 10,
+	bday : 12,
+	sissy : 0,
+	horny : 0,
+	libido : 10,
+	energy : 100,
+	dom : 0,
+	rep : 0,
+	caged : 0,
+	plugged : 0,
+	addHorny : function(x)
+	{
+		this.horny += x;
+		if(this.horny gt 100)
+			this.horny = 100;
+		else if(this.horny lt 0)
+			this.horny = 0;
+	},
+	addEnergy : function(x)
+	{
+		this.energy += x;
+		if(this.energy gt 100)
+			this.energy = 100;
+		else if(this.energy lt 0)
+			this.energy = 0;
+	},
+	addLibido : function()
+	{
+		this.libido += $sex.daysorg + $sex.dayslock;
+	},
+	newDay : function()
+	{
+		$school.attend = 0;
+		$school.over = 0;
+		$school.late = 0;
+		$school.absent = 0;
+		$school.punish = 0;
+		$sex.daysOrg++;
+		this.addLibido();
+		$work.reset();
+	},
+}&gt;&gt;
+&lt;&lt;goto [[Character Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Character Logic" tags="" position="781,3" size="100,100">&lt;&lt;set $mom =
+{
+	name : &quot;Anri&quot;,
+	QW : 0,
+	meet : 1,
+	rel : 20,
+	reldesc : &quot;Normal&quot;,
+	dialogue : 0,
+	punish : 0,
+	quest1 : function()
+	{
+		if(($teach.punish eq 1) &amp;&amp; (this.QW lte 0) &amp;&amp; (this.rel gte 40))
+		{
+			this.QW = 1;
+			this.setrel(10);
+			return 1;
+		}
+		else
+			return 0;
+	},
+	isHome : function()
+	{
+		return(($time.phase == 1) || ($time.phase == 3));
+	},
+	isSleep : function()
+	{
+		return($time.phase == 0);
+	},
+	isYoga : function()
+	{
+		return($time.phase == 2);
+	},
+	setRel : function(x)
+	{
+		this.rel += x;
+		if(this.rel lt 20)
+		{
+			this.reldesc = &quot;Bad&quot;;
+			if (this.rel lt 0)
+				this.rel = 0;
+		}
+		else if(this.rel lt 40)
+			this.reldesc = &quot;Normal&quot;;
+		else if(this.rel lt 60)
+			this.reldesc = &quot;Good&quot;;
+		else if(this.rel gte 60)
+			this.reldesc = &quot;Great&quot;;
+	},
+	desc : &quot;A curvy, athletic futanari that teaches yoga. She has blonde hair and brown eyes. You often see her wearing her yoga clothes both before and after school, even when it&#39;s drenched with sweat. Her futanari pheremones has an erotic effect on those around her, though she seems to either be unaware of this fact, or trying to spread it on purpose.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $sis =
+{
+	name : &quot;Aika&quot;,
+	QW : 0,
+	meet : 1,
+	rel : 20,
+	reldesc : &quot;Normal&quot;,
+	paid : 0,
+	payment : 0,
+	punish : 0,
+	inRoom : function()
+	{
+		return ((!$time.isWeekend() &amp;&amp; ($time.phase != 2)) || ($time.isWeekend() &amp;&amp; $time.phase == 1));
+	},
+	isSleep : function()
+	{
+		return($time.phase == 0);
+	},
+	quest1 : function()
+	{
+		if ((!this.inRoom()) &amp;&amp; ($pc.horny gt 60) &amp;&amp; (this.QW lte 0))
+		{
+			this.QW = 1;
+			$pc.sissy++;
+			this.setrel(10);
+			this.payment = 20;
+			return 1;
+		}
+		else
+			return 0;
+	},
+	setRel : function(x)
+	{
+		this.rel += x;
+		if(this.rel lt 20)
+		{
+			this.reldesc = &quot;Bad&quot;;
+			if (this.rel lt 0)
+				this.rel = 0;
+		}
+		else if(this.rel lt 40)
+			this.reldesc = &quot;Normal&quot;;
+		else if(this.rel lt 60)
+			this.reldesc = &quot;Good&quot;;
+		else if(this.rel gte 60)
+			this.reldesc = &quot;Great&quot;;
+	},
+	desc : &quot;A gyaru slut that spends most of her time socializing and fucking and thinks of you as a virgin loser. She lives an expensive lifestyle, spending a lot of money on makeup and clothes. She is 1 year above you in high school.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $teach =
+{
+	name : &quot;Ms. Michaels&quot;,
+	first : &quot;Gianna&quot;,
+	QW : 0,
+	meet : 0,
+	rel : 20,
+	reldesc : &quot;Normal&quot;,
+	punish : 0,
+	cages : 0,
+	assist : 0,
+	quest1 : function()
+	{
+		if(($teach.QW lte 0) &amp;&amp; ($school.punish gt 0))
+		{
+			this.QW = 1;
+			this.setrel(10);
+			return this.QW;
+		}
+	},
+	quest2 : function()
+	{
+		if((this.QW eq 1 &amp;&amp; this.inOffice() &amp;&amp; passage() == &quot;Teacher Office&quot;) || (this.QW eq 1 &amp;&amp; passage() == &quot;Detention&quot;))
+		{
+			if(this.QW lt 2)
+			{
+				this.QW = 2;
+				this.setrel(1);
+				return 1;
+			}
+			else
+				return 1;
+		}
+		else
+			return 0;
+	},
+	inOffice : function()
+	{
+	 return ((!$time.isWeekend()) &amp;&amp; ($time.phase == 1 || $time.phase == 2))
+	},
+	setPunish : function()
+	{
+				this.punish = $school.punish;
+				return this.punish;
+	},
+	setRel : function(x)
+	{
+		this.rel += x;
+		if(this.rel lt 20)
+		{
+			this.reldesc = &quot;Bad&quot;;
+			if (this.rel lt 0)
+				this.rel = 0;
+		}
+		else if(this.rel lt 40)
+			this.reldesc = &quot;Normal&quot;;
+		else if(this.rel lt 60)
+			this.reldesc = &quot;Good&quot;;
+		else if(this.rel gte 60)
+			this.reldesc = &quot;Great&quot;;
+	},
+	desc : &quot;A voluptous woman that dresses to leave little to the imagination. Her tight bun and thick square glasses gives off the impression of a stern disciplinarian.&quot;, 
+}&gt;&gt;
+&lt;&lt;set $cissy = 
+{
+	name : &quot;Cissy&quot;,
+	QW : 0,
+	meet : 0,
+	rel : 20,
+	reldesc : &quot;Normal&quot;,
+	setRel : function(x)
+	{
+		this.rel += x;
+		if(this.rel lt 20)
+		{
+			this.reldesc = &quot;Bad&quot;;
+			if (this.rel lt 0)
+				this.rel = 0;
+		}
+		else if(this.rel lt 40)
+			this.reldesc = &quot;Normal&quot;;
+		else if(this.rel lt 60)
+			this.reldesc = &quot;Good&quot;;
+		else if(this.rel gte 60)
+			this.reldesc = &quot;Great&quot;;
+	},
+	desc: &quot;An incubus that disguises himself as a female student at your school. His human appearance is that of an extremely attractive girl with blonde hair tied in twin tails, and with green eyes. He has small flat breasts and a tight firm butt, making him look like a young middle schooler rather than a high schooler. In demon form he has blueish skin, crimson eyes, a horn in the middle of his forehead, and a tail ending in a spade.&quot; 
+}&gt;&gt;
+&lt;&lt;set $coach =
+{
+	name : &quot;Mr. Rocco&quot;
+	meet : 1,
+}&gt;&gt;
+&lt;&lt;goto [[Money Logic]]&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Money Logic" tags="" position="890,3" size="100,100">&lt;&lt;set $cash =
+{
+	money : 0,
+	addCash : function(amt)
+	{
+		this.money += amt;
+	},
+	useCash : function(amt)
+	{
+		if (this.money lt amt)
+			return 0;
+		else
+		{
+			this.money -= amt;
+			return 1;
+		}	
+	},
+	checkCash : function(amt)
+	{
+		return (this.money gte amt);
+	},
+}&gt;&gt;
+&lt;&lt;set $jobs = []&gt;&gt;
+
+&lt;&lt;set $work =
+{
+	addJob : function(x)
+	{
+		$jobs.push(x);
+		_o = $jobs.length - 1;
+		$jobs[_o].have = 1;
+	},
+	do : function(x)
+	{
+		$time.addTicks(x.ticks);
+		$pc.addEnergy(x.energy);
+		$cash.addCash(x.pay);
+		x.done = 1;
+	},
+	reset : function()
+	{
+		for(_i = 0; _i lt $jobs.length; _i++)
+			$jobs[_i].done = 0;
+	},
+}&gt;&gt;
+&lt;&lt;set $pboy =
+{
+		ticks : 2,
+		energy : -25,
+		pay : 10,
+		done : 0,
+		phase : 1,
+		have : 0,
+}&gt;&gt;
+&lt;&lt;set $lib =
+{
+		ticks : 3,
+		energy : -20,
+		pay : 15,
+		done : 0,
+		phase : 2,
+		have : 0,
+}&gt;&gt;
+&lt;&lt;set $waiter =
+{
+		ticks : 4,
+		energy : -40,
+		pay : 20,
+		done : 0,
+		phase : 3,
+		have : 0,
+}&gt;&gt;
+&lt;&lt;goto [[Welcome]]&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Welcome" tags="" position="1002,3" size="100,100">!!Welcome to Trap Life!!
+
+[[Normal|Character Creation][$debug to 0]]
+[[Debug Mode|Character Creation][$debug to 1]]</tw-passagedata><tw-passagedata pid="11" name="Character Creation" tags="" position="999,108" size="100,100">Character Name: &lt;&lt;textbox &quot;$pc.name&quot; &quot;Trap&quot;&gt;&gt;
+
+Hair Color: 
+&lt;&lt;nobr&gt;&gt;
+Black&lt;&lt;radiobutton &quot;$body.hair.color&quot; &quot;blonde&quot;&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.hair.color&quot; &quot;brown&quot; checked&gt;&gt;
+Blonde&lt;&lt;radiobutton &quot;$body.hair.color&quot; &quot;black&quot;&gt;&gt;
+Red&lt;&lt;radiobutton &quot;$body.hair.color&quot; &quot;red&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+Eye Color:
+&lt;&lt;nobr&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.eye.color&quot; &quot;brown&quot; checked&gt;&gt;
+Green&lt;&lt;radiobutton &quot;$body.eye.color&quot; &quot;green&quot;&gt;&gt;
+Blue&lt;&lt;radiobutton &quot;$body.eye.color&quot; &quot;blue&quot;&gt;&gt;
+Hazel&lt;&lt;radiobutton &quot;$body.eye.color&quot; &quot;hazel&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+Skin Color:
+&lt;&lt;nobr&gt;&gt;
+Pale&lt;&lt;radiobutton &quot;$body.skin.color&quot; &quot;pale&quot; checked&gt;&gt;
+Tanned&lt;&lt;radiobutton &quot;$body.skin.color&quot; &quot;tanned&quot;&gt;&gt;
+Olive&lt;&lt;radiobutton &quot;$body.skin.color&quot; &quot;olive&quot;&gt;&gt;
+Brown&lt;&lt;radiobutton &quot;$body.skin.color&quot; &quot;brown&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+There is no character customization beyond this because, as the name implies, this game is about playing as a trap, so you will be a trap. There will be methods to change your face and body in the game, but for now you will start as a trap.
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $clothes.addWard($topless); $clothes.addWard($commando); $clothes.addWard($barefoot); $clothes.addWard($bschoolu); $clothes.addWard($sneakers); $clothes.addWard($boxers);  $clothes.addWard($mcasual)&gt;&gt;
+&lt;&lt;set $clothes.dOn($bschoolu.name); $clothes.dOn($boxers.name); $clothes.dOn($sneakers.name)&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+
+[[Start the Game|Intro1]]
+[[Skip Intro|Your Bedroom][$school.goClass(); $time.setPhase(2); $school.eatLunch(); $school.classOver();$pc.addHorny(50);$time.addTicks(2)]]</tw-passagedata><tw-passagedata pid="12" name="Intro1" tags="" position="888,109" size="100,100">
+
+[[Start|Your Bedroom]]</tw-passagedata><tw-passagedata pid="13" name="Your Bedroom" tags="" position="891,270" size="100,100">@@.l;Your Bedroom@@
+
+In your bedroom you see your [[bed]], your [[desk]], your [[computer]] and your [[wardrobe]].
+[[Masturbate|Your Bedroom][$sex.jOff()]]
+&lt;&lt;if ($pboy.have == 1) &amp;&amp; ($pboy.phase == $time.phase) &amp;&amp; ($pboy.done lt 1)&gt;&gt;\
+	&lt;&lt;link &quot;Deliver Papers&quot; &quot;Paper Boy&quot;&gt;&gt;
+	&lt;&lt;set $work.do($pboy)&gt;&gt;
+&lt;&lt;/link&gt;&gt;\
+&lt;&lt;/if&gt;&gt;
+[[Exit Room|Home]]
+&lt;&lt;if $worn[0].type eq $cltype.none&gt;&gt;\
+@@.x;You need to wear clothes to go outside!@@
+&lt;&lt;elseif $worn[2].type eq $cltype.none&gt;&gt;\
+@@.x;You need to wear shoes to go outside!@@
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;if ($time.isWeekend() eq 1)&gt;&gt;\
+	It&#39;s the weekend!
+	&lt;&lt;elseif $worn[0].type neq $cltype.school&gt;&gt;\
+	@@.x;You need to wear a school uniform to go to school!@@
+	&lt;&lt;else&gt;&gt;\
+	[[Go to school|School Grounds]]
+	&lt;&lt;/if&gt;&gt;\
+[[Go outside|Neighborhood]]
+&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;if $debug == 1&gt;&gt;\
+Debug
+[[Add $100|Your Bedroom][$cash.addCash(100)]]
+
+[[Add 100 Horny|Your Bedroom][$pc.addHorny(100)]]
+[[Sub 100 Horny|Your Bedroom][$pc.addHorny(-100)]]
+[[Add 100 Energy|Your Bedroom][$pc.addEnergy(100)]]
+[[Sub 100 Energy|Your Bedroom][$pc.addEnergy(-100)]]
+
+[[Next Phase|Your Bedroom][$time.addPhase(1)]]
+[[Add Tick|Your Bedroom][$time.addTicks(1)]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="wardrobe" tags="" position="768,270" size="100,100">@@.l;Wardrobe@@
+[[Strip|wardrobe][$clothes.strip()]]
+&lt;&lt;if $worn[0].type eq $cltype.school&gt;&gt;\
+[[Save Uniform|wardrobe][$clothes.saveSchool()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $worn[0].type eq $cltype.casual&gt;&gt;\
+[[Save Casual|wardrobe][$clothes.saveCasual()]]
+&lt;&lt;/if&gt;&gt;\
+//Load Outfits//
+[[Uniform|wardrobe][$clothes.loadSchool()]] 
+[[Casual|wardrobe][$clothes.loadCasual()]]
+@@.i;School Uniforms@@
+&lt;&lt;if $bschoolu.have eq 1&gt;&gt;\
+[[$bschoolu.name|wardrobe][$clothes.dOn($bschoolu.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $gschoolu.have eq 1&gt;&gt;\
+[[$gschoolu.name|wardrobe][$clothes.dOn($gschoolu.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sluttyu.have eq 1&gt;&gt;\
+[[$sluttyu.name|wardrobe][$clothes.dOn($sluttyu.name)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Casual Clothes@@
+&lt;&lt;if $mcasual.have eq 1&gt;&gt;\
+[[$mcasual.name|wardrobe][$clothes.dOn($mcasual.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sdress.have eq 1&gt;&gt;\
+[[$sdress.name|wardrobe][$clothes.dOn($sdress.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $mskirt.have eq 1&gt;&gt;\
+[[$mskirt.name|wardrobe][$clothes.dOn($mskirt.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $cldress.have eq 1&gt;&gt;\
+[[$cldress.name|wardrobe][$clothes.dOn($cldress.name)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Underwear@@
+&lt;&lt;if $boxers.have eq 1&gt;&gt;\
+[[$boxers.name|wardrobe][$clothes.dOn($boxers.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $panties.have eq 1&gt;&gt;\
+[[$panties.name|wardrobe][$clothes.dOn($panties.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $gstring.have eq 1&gt;&gt;\
+[[$gstring.name|wardrobe][$clothes.dOn($gstring.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $lingerie.have eq 1&gt;&gt;\
+[[$lingerie.name|wardrobe][$clothes.dOn($lingerie.name)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Cosplay Outfits@@
+&lt;&lt;if $maidu.have eq 1&gt;&gt;\
+[[$maidu.name|wardrobe][$clothes.dOn($maidu.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $smaidu.have eq 1&gt;&gt;\
+[[$smaidu.name|wardrobe][$clothes.dOn($smaidu.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $cheer.have eq 1&gt;&gt;\
+[[$cheer.name|wardrobe][$clothes.dOn($cheer.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $slcheer.have eq 1&gt;&gt;\
+[[$slcheer.name|wardrobe][$clothes.dOn($slcheer.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $shimakaze.have eq 1&gt;&gt;\
+[[$shimakaze.name|wardrobe][$clothes.dOn($shimakaze.name)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Swimsuits@@
+&lt;&lt;if $trunks.have eq 1&gt;&gt;\
+[[$trunks.name|wardrobe][$clothes.dOn($trunks.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $thong.have eq 1&gt;&gt;\
+[[$thong.name|wardrobe][$clothes.dOn($thong.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $opiece.have eq 1&gt;&gt;\
+[[$opiece.name|wardrobe][$clothes.dOn($opiece.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $bikini.have eq 1&gt;&gt;\
+[[$bikini.name|wardrobe][$clothes.dOn($bikini.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sbikini.have eq 1&gt;&gt;\
+[[$sbikini.name|wardrobe][$clothes.dOn($sbikini.name)]]
+&lt;&lt;/if&gt;&gt;\
+@@.i;Shoes@@
+&lt;&lt;if $sneakers.have eq 1&gt;&gt;\
+[[$sneakers.name|wardrobe][$clothes.dOn($sneakers.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $flats.have eq 1&gt;&gt;\
+[[$flats.name|wardrobe][$clothes.dOn($flats.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $heels.have eq 1&gt;&gt;\
+[[$heels.name|wardrobe][$clothes.dOn($heels.name)]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sheels.have eq 1&gt;&gt;\
+[[$sheels.name|wardrobe][$clothes.dOn($sheels.name)]]
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Your Bedroom]]</tw-passagedata><tw-passagedata pid="15" name="computer" tags="" position="467,267" size="100,100">@@.l;Computer@@
+Computers/CamWhoring
+
+[[Shutdown your laptop|Your Bedroom]]</tw-passagedata><tw-passagedata pid="16" name="desk" tags="" position="356,267" size="100,100">@@.l;Desk@@
+Homework and stuff
+
+[[Return|Your Bedroom]]</tw-passagedata><tw-passagedata pid="17" name="bed" tags="" position="590,266" size="100,100">@@.l;In Bed@@
+You lie down in bed.
+
+[[Get out of bed|Your Bedroom]]
+[[Go to Sleep|Sleep][$time.sleep()]]
+
+
+</tw-passagedata><tw-passagedata pid="18" name="Sleep" tags="" position="591,381" size="100,100">Sleeping, dreaming.
+[[Wake Up|Wake]]</tw-passagedata><tw-passagedata pid="19" name="Wake" tags="" position="710,384" size="100,100">Wake up.
+
+[[Get out of bed|Your Bedroom]]</tw-passagedata><tw-passagedata pid="20" name="Home" tags="" position="894,495" size="100,100">@@.l;Your Home@@
+
+[[Go to your bedroom|Your Bedroom]]
+
+[[Go to the living room|Living Room]]
+[[Go to the Kitchen|Kitchen]]
+[[Go to your mother&#39;s room|Mother Room]]
+[[Go to your sister&#39;s room|Sister Room]]
+[[Go to the bathroom |Bathroom]]
+
+&lt;&lt;if $worn[0].type eq $cltype.none&gt;&gt;\
+@@.x;You need to wear clothes to go outside!@@
+&lt;&lt;elseif $worn[2].type eq $cltype.none&gt;&gt;\
+@@.x;You need to wear shoes to go outside!@@
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;if ($time.isWeekend() eq 1)&gt;&gt;\
+	It&#39;s the weekend!
+	&lt;&lt;elseif $worn[0].type neq $cltype.school&gt;&gt;\
+	@@.x;You need to wear a school uniform to go to school!@@
+	&lt;&lt;else&gt;&gt;\
+	[[Go to school|School Grounds]]
+	&lt;&lt;/if&gt;&gt;\
+[[Go outside|Neighborhood]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="21" name="Kitchen" tags="" position="601,600" size="100,100">@@.l;Kitchen@@
+&lt;&lt;if $time.phsname == &quot;Evening&quot;&gt;&gt;\
+@@.m;$mom.name@@ has finished preparing dinner.
+[[Eat Dinner|Kitchen][$pc.addEnergy(30); $time.addTicks(1)]]
+&lt;&lt;/if&gt;&gt;
+
+[[Exit|Home]]
+
+</tw-passagedata><tw-passagedata pid="22" name="Living Room" tags="" position="722,600" size="100,100">@@.l;Living Room@@
+A standard living room with a couch, coffee table, some armchairs, and a TV.
+&lt;&lt;if $mom.isHome() == 1&gt;&gt;\
+@@.m;$mom.name@@ is in here watching TV.
+[[Talk with her|Mom Talk]]
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Home]]</tw-passagedata><tw-passagedata pid="23" name="Bathroom" tags="" position="837,599" size="100,100">@@.l;Bathroom@@
+&lt;&lt;display &quot;Shower&quot;&gt;&gt;
+
+[[Exit|Home]]
+</tw-passagedata><tw-passagedata pid="24" name="Mother Room" tags="" position="954,600" size="100,100">@@.l;Mother&#39;s Bedroom@@
+
+[[Exit|Home]]
+
+</tw-passagedata><tw-passagedata pid="25" name="Sister Room" tags="" position="1075,598" size="100,100">@@.l;Sister&#39;s Bedroom@@
+
+&lt;&lt;if $sis.inRoom() eq 0&gt;&gt;\
+@@.s;$sis.name@@ is not in her room.
+&lt;&lt;elseif $sis.inRoom() eq 1 &amp;&amp; $sis.QW eq 1&gt;&gt;\
+Go in and talk with @@.s;$sis.name@@. [[Talk|Sis Talk]]
+&lt;&lt;else&gt;&gt;\
+@@.s;$sis.name@@ is in there right now, you&#39;d better not disturb her.
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sis.quest1() eq 1&gt;&gt;\
+	&lt;&lt;link &quot;Search her room for panties&quot; &quot;sisQW1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Home]]
+
+</tw-passagedata><tw-passagedata pid="26" name="Mom Talk" tags="" position="719,724" size="100,100">@@.l;Mom Main Page@@
+
+Description of Mom
+Talk Options
+[[Return|Living Room]]</tw-passagedata><tw-passagedata pid="27" name="Sis Talk" tags="" position="1075,712" size="100,100">@@.l;Sis Talk@@
+Sis description
+Sis options
+[[Return|Sister Room]]</tw-passagedata><tw-passagedata pid="28" name="Neighborhood" tags="" position="900,805" size="100,100">[[Go Home|Home]]
+[[Take the Bus|Bus]]</tw-passagedata><tw-passagedata pid="29" name="Bus" tags="" position="896,945" size="100,100">@@.l;Bus@@
+
+[[Stop at home|Neighborhood]]
+[[Stop at school|School Grounds]]
+[[Stop downtown|Downtown]]
+</tw-passagedata><tw-passagedata pid="30" name="Downtown" tags="" position="775,1334" size="100,100">@@.l;Downtown@@
+
+[[Go to the Mall|Mall]]
+[[Go to the Post Office|Post Office]]
+
+[[Go to the Library|Library]]
+[[Go to the Club|Club]]
+[[Go to the Park|Park]]
+[[Go to the Beach|Beach]]
+[[Go down the Alleyway|Alleyway]]
+[[Go to the Gym|Gym]]
+[[Go to the hospital|Hospital]]
+
+[[Take the Bus|Bus]]
+</tw-passagedata><tw-passagedata pid="31" name="Beach" tags="" position="941,1522" size="100,100">@@.l;Beach@@
+
+[[Go downtown|Downtown]]
+</tw-passagedata><tw-passagedata pid="32" name="Park" tags="" position="1071,1524" size="100,100">@@.l;Park@@
+
+[[Go downtown|Downtown]]
+
+In the park
+[[Public Restrooms]]</tw-passagedata><tw-passagedata pid="33" name="Public Restrooms" tags="" position="1201,1522" size="100,100">@@.l;Public Restrooms@@
+
+Gloryholes/public cumdump stuff.
+
+[[Exit|Park]]</tw-passagedata><tw-passagedata pid="34" name="Post Office" tags="" position="760,1522" size="100,100">@@.l;Post Office@@
+&lt;&lt;if $pboy.have lt 1&gt;&gt;\
+&lt;&lt;linkappend &quot;Apply to be a paperboy&quot;&gt;&gt;
+&lt;&lt;set $work.addJob($pboy)&gt;&gt;\
+You talk with the post office manager and get the paper boy job. Papers will be delivered to your home each morning where you can deliver them.
+&lt;&lt;/linkappend&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Downtown]]</tw-passagedata><tw-passagedata pid="35" name="Club" tags="" position="758,1635" size="100,100">@@.l;Club@@
+
+[[Exit|Downtown]]</tw-passagedata><tw-passagedata pid="36" name="Library" tags="" position="638,1524" size="100,100">@@.l;Library@@
+
+[[Exit|Downtown]]</tw-passagedata><tw-passagedata pid="37" name="Hospital" tags="" position="640,1637" size="100,100">@@.l;Hospital@@
+
+[[Exit|Downtown]]
+</tw-passagedata><tw-passagedata pid="38" name="Alleyway" tags="" position="531,1642" size="100,100">@@.l;Alleyway@@
+Prostitution stuffs
+[[Go downtown|Downtown]]
+</tw-passagedata><tw-passagedata pid="39" name="Mall" tags="" position="308,1324" size="100,100">@@.l;Mall@@
+
+[[Go downtown|Downtown]]
+
+In the Mall
+[[General Store]]
+[[Salon]]
+[[Cafe]]
+[[Clothing Store]]
+[[Tattoos and Piercings|Tattoo]]
+[[Adult Store]]
+</tw-passagedata><tw-passagedata pid="40" name="Gym" tags="" position="881,1632" size="100,100">@@.l;Gym@@
+
+[[Leave|Downtown]]</tw-passagedata><tw-passagedata pid="41" name="Salon" tags="" position="191,1640" size="100,100">@@.l;Salon@@
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="42" name="Cafe" tags="" position="196,1524" size="100,100">@@.l;Cafe@@
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="43" name="Tattoo" tags="" position="196,1402" size="100,100">@@.Tattoo and Piercings@@
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="44" name="General Store" tags="" position="188,1282" size="100,100">@@.l;General Store@@
+&lt;&lt;print &quot;$&quot; + $cost.razors&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.razors) eq 0&gt;&gt;\
+//You do not have enough money to buy razors//
+&lt;&lt;else&gt;&gt;\
+[[Razors(10)|General Store][$inv.buyRazors()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.makeup&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.makeup) eq 0&gt;&gt;\
+//You do not have enough money to buy makeup//
+&lt;&lt;else&gt;&gt;\
+[[Makeup(10)|General Store][$inv.buyMakeup()]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.gloss&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.gloss) eq 0&gt;&gt;\
+//You do not have enough money to buy lipgloss//
+&lt;&lt;else&gt;&gt;\
+[[Lip Gloss(10)|General Store][$inv.buyGloss()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.polish&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.polish) eq 0&gt;&gt;\
+//You do not have enough money to buy nail polish//
+&lt;&lt;else&gt;&gt;\
+[[Nail Polish(10)|General Store][$inv.buyPolish()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.sunscreen&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.sunscreen) eq 0&gt;&gt;\
+//You do not have enough money to buy sunscreen//
+&lt;&lt;else&gt;&gt;\
+[[Sunscreen(10)|General Store][$inv.buySunscreen()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.ties&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.ties) eq 0&gt;&gt;\
+//You do not have enough money to buy hair ties//
+&lt;&lt;else&gt;&gt;\
+[[Hair Ties(10)|General Store][$inv.buyTies()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.condoms&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.condoms) eq 0&gt;&gt;\
+//You do not have enough money to buy condoms//
+&lt;&lt;else&gt;&gt;\
+[[Condoms(10)|General Store][$inv.buyCondoms()]] 
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cost.lube&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cost.lube) eq 0&gt;&gt;\
+//You do not have enough money to buy lube//
+&lt;&lt;else&gt;&gt;\
+[[Lube(10)|General Store][$inv.buyLube()]] 
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;print &quot;$&quot; + $cost.webcam&gt;&gt;\
+&lt;&lt;if $inv.webcam eq 1&gt;&gt;\
+//You already have a webcam//
+&lt;&lt;elseif $cash.checkCash($cost.webcam) eq 0&gt;&gt;\
+//You do not have enough money to buy the webcam//
+&lt;&lt;else&gt;&gt;\
+[[Webcam|General Store][$inv.webcam + 1, $cash.useCash($cost.webcam)]] 
+&lt;&lt;/if&gt;&gt;
+
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="45" name="Adult Store" tags="" position="188,1162" size="100,100">@@.l;Adult Store@@
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="46" name="Clothing Store" tags="" position="188,1044" size="100,100">@@.l;Clothing Store@@
+
+@@.i;Clothes@@
+&lt;&lt;print &quot;$&quot; + $bschoolu.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($bschoolu.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $bschoolu.name//
+&lt;&lt;elseif $bschoolu.have == 0&gt;&gt;\
+[[$bschoolu.name|Clothing Store][$clothes.addWard($bschoolu); $cash.useCash($bschoolu.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $bschoolu.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $gschoolu.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($gschoolu.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $gschoolu.name//
+&lt;&lt;elseif $gschoolu.have == 0&gt;&gt;\
+[[$gschoolu.name|Clothing Store][$clothes.addWard($gschoolu); $cash.useCash($gschoolu.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $gschoolu.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $sluttyu.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($sluttyu.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $sluttyu.name//
+&lt;&lt;elseif $sluttyu.have == 0&gt;&gt;\
+[[$sluttyu.name|Clothing Store][$clothes.addWard($sluttyu; $cash.useCash($sluttyu.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $sluttyu.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $mcasual.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($mcasual.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $mcasual.name//
+&lt;&lt;elseif $ward.mcasual == 0&gt;&gt;\
+[[$mcasual.name|Clothing Store][$clothes.addWard($mcasual); $cash.useCash($mcasual.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $mcasual.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $sdress.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($sdress.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $sdress.name//
+&lt;&lt;elseif $sdress.have == 0&gt;&gt;\
+[[$sdress.name|Clothing Store][$clothes.addWard($sdress); $cash.useCash($sdress.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $sdress.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $mskirt.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($mskirt.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $mskirt.name//
+&lt;&lt;elseif $mskirt.have == 0&gt;&gt;\
+[[$mskirt.name|Clothing Store][$clothes.addWard($mskirt); $cash.useCash($mskirt.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $mskirt.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cldress.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cldress.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $cldress.name//
+&lt;&lt;elseif $cldress.have == 0&gt;&gt;\
+[[$cldress.name|Clothing Store][$clothes.addWard($cldress); $cash.useCash($cldress.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $cldress.name
+&lt;&lt;/if&gt;&gt;\
+
+@@.i;Underwear@@
+&lt;&lt;print &quot;$&quot; + $boxers.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($boxers.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $boxers.name//
+&lt;&lt;elseif $boxers.have == 0&gt;&gt;\
+[[$boxers.name|Clothing Store][$clothes.addWard($boxers); $cash.useCash($boxers.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $boxers.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $panties.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($panties.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $panties.name//
+&lt;&lt;elseif $panties.have == 0&gt;&gt;\
+[[$panties.name|Clothing Store][$clothes.addWard($panties); $cash.useCash($panties.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $panties.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $gstring.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($gstring.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $gstring.name//
+&lt;&lt;elseif $gstring.have == 0&gt;&gt;\
+[[$gstring.name|Clothing Store][$clothes.addWard($gstring); $cash.useCash($gstring.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $gstring.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $lingerie.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($lingerie.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $lingerie.name//
+&lt;&lt;elseif $lingerie.have == 0&gt;&gt;\
+[[$lingerie.name|Clothing Store][$clothes.addWard($lingerie); $cash.useCash($lingerie.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $lingerie.name
+&lt;&lt;/if&gt;&gt;\
+
+[[Shoe Section]]
+[[Cosplay Section]]
+[[Swimwear Section]]
+[[Exit|Mall]]</tw-passagedata><tw-passagedata pid="47" name="Shoe Section" tags="" position="325,1009" size="100,100">@@.i;Shoes@@
+&lt;&lt;print &quot;$&quot; + $sneakers.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($sneakers.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $sneakers.name//
+&lt;&lt;elseif $sneakers.have == 0&gt;&gt;\
+[[$sneakers.name|Clothing Store][$clothes.addWard($sneakers); $cash.useCash($sneakers.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $sneakers.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $flats.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($flats.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $flats.name//
+&lt;&lt;elseif $flats.have == 0&gt;&gt;\
+[[$flats.name|Clothing Store][$clothes.addWard($flats); $cash.useCash($flats.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $flats.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $heels.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($heels.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $heels.name//
+&lt;&lt;elseif $heels.have == 0&gt;&gt;\
+[[$heels.name|Clothing Store][$clothes.addWard($heels); $cash.useCash($heels.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $heels.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $sheels.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($sheels.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $sheels.name//
+&lt;&lt;elseif $sheels.have == 0&gt;&gt;\
+[[$sheels.name|Clothing Store][$clothes.addWard($sheels); $cash.useCash($sheels.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $sheels.name
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Clothing Store]]</tw-passagedata><tw-passagedata pid="48" name="Cosplay Section" tags="" position="445,1009" size="100,100">
+@@.i;Cosplay@@
+&lt;&lt;print &quot;$&quot; + $maidu.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($maidu.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $maidu.name//
+&lt;&lt;elseif $$maidu.have == 0&gt;&gt;\
+[[$maidu.name|Clothing Store][$clothes.addWard($maidu); $cash.useCash($maidu.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $maidu.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $smaidu.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($smaidu.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $smaidu.name//
+&lt;&lt;elseif $smaidu.have == 0&gt;&gt;\
+[[$smaidu.name|Clothing Store][$clothes.addWard($smaidu); $cash.useCash($smaidu.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $smaidu.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $cheer.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($cheer.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $cheer.name//
+&lt;&lt;elseif $cheer.have == 0&gt;&gt;\
+[[$cheer.name|Clothing Store][$clothes.addWard($cheer); $cash.useCash($cheer.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $cheer.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $slcheer.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($slcheer.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $slcheer.name//
+&lt;&lt;elseif $slcheer.have == 0&gt;&gt;\
+[[$slcheer.name|Clothing Store][$clothes.addWard($slcheer); $cash.useCash($slcheer.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $slcheer.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $shimakaze.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($shimakaze.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $shimakaze.name//
+&lt;&lt;elseif $ward.shimakaze == 0&gt;&gt;\
+[[$shimakaze.name|Clothing Store][$clothes.addWard($shimakaze); $cash.useCash($shimakaze.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $shimakaze.name
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Clothing Store]]</tw-passagedata><tw-passagedata pid="49" name="Swimwear Section" tags="" position="325,1124" size="100,100">@@.i;Swimwear@@
+&lt;&lt;print &quot;$&quot; + $trunks.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($trunks.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $trunks.name//
+&lt;&lt;elseif $trunks.have == 0&gt;&gt;\
+[[$trunks.name|Clothing Store][$clothes.addWard($trunks); $cash.useCash($trunks.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $trunks.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $thong.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($thong.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $thong.name//
+&lt;&lt;elseif $thong.have== 0&gt;&gt;\
+[[$thong.name|Clothing Store][$clothes.addWard($thong); $cash.useCash($thong.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $thong.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $opiece.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($opiece.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $opiece.name//
+&lt;&lt;elseif $opiece.have == 0&gt;&gt;\
+[[$opiece.name|Clothing Store][$clothes.addWard($opiece); $cash.useCash($opiece.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $opiece.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $bikini.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($bikini.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $bikini.name//
+&lt;&lt;elseif $bikini.have == 0&gt;&gt;\
+[[$bikini.name|Clothing Store][$clothes.addWard($bikini); $cash.useCash($bikini.cost)]]
+&lt;&lt;else&gt;&gt;\
+Bought $bikini.name
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;print &quot;$&quot; + $sbikini.cost + &quot; &quot;&gt;&gt;\
+&lt;&lt;if $cash.checkCash($sbikini.cost) eq 0&gt;&gt;\
+//You don&#39;t have enough money to buy the $sbikini.name//
+&lt;&lt;elseif $sbikini.have == 0&gt;&gt;\
+[[$sbikini.name|Clothing Store][$clothes.addWard($sbikini); $cash.useCash($sbikini.cost)]] 
+&lt;&lt;else&gt;&gt;\
+Bought $sbikini.name
+&lt;&lt;/if&gt;&gt;\
+
+[[Exit|Clothing Store]]</tw-passagedata><tw-passagedata pid="50" name="School Grounds" tags="" position="2168,1162" size="100,100">@@.l;School Grounds@@
+
+&lt;&lt;if $school.isLate() eq 1&gt;&gt;\
+[[You are late for class!|Late Class][$school.addLate()]]
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;if $teach.QW gt 0 &amp;&amp; $pc.caged eq 0&gt;&gt;\
+	//You are expected in @@.t;$teach.name@@&#39;s office!//
+	&lt;&lt;else&gt;&gt;\
+	[[Go to class|Homeroom]]
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+[[Go to Ms. Michael&#39;s Office|Teacher Office]]
+
+&lt;&lt;silently&gt;&gt;
+[[Go to the restrooms|Restrooms]]
+[[Go to the gym|School Gym]]
+[[Go to the school rooftop|Roof]]
+&lt;&lt;/silently&gt;&gt;
+[[Go Home|Home]]
+[[Take the bus|Bus]]</tw-passagedata><tw-passagedata pid="51" name="Roof" tags="" position="2296,992" size="100,100">@@.l;School Roof@@
+
+[[Go to the school grounds|School Grounds]]</tw-passagedata><tw-passagedata pid="52" name="School Gym" tags="" position="2375,1157" size="100,100">@@.l;Gym@@
+
+[[Go to the school grounds|School Grounds]]
+/*
+[[Go to the track field|Track]]
+[[Go to the pool|Pool]]
+[[Go in the gym storage room|Storage]]
+
+[[Go to the boy&#39;s lockerroom|BLocker]]
+[[Go to the girl&#39;s lockerroom|Glocker]]*/</tw-passagedata><tw-passagedata pid="53" name="StoryInit" tags="" position="1201,5" size="100,100">&lt;&lt;set $debug to 0&gt;&gt;
+</tw-passagedata><tw-passagedata pid="54" name="StoryCaption" tags="" position="1325,5" size="100,100">!!!Date\
+$time.year / $time.month / $time.date
+&lt;&lt;print $Days[$time.weekDay()]&gt;&gt;
+!!!Time
+&lt;&lt;print $time.phsname&gt;&gt;
+&lt;&lt;print &quot;Ticks: &quot; + (6 - $time.ticks)&gt;&gt;
+!!!!Cash:$cash.money
+!!!!Horniness: $pc.horny
+!!!!Energy: $pc.energy
+[[Journal]]
+[[Check Self]]
+[[Inventory]]
+
+&lt;&lt;if $debug eq 1&gt;&gt;\
+[[Debug]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="55" name="Inventory" tags="" position="1430,4" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;silently&gt;&gt;
+@@.i;Useable Items@@
+Razors : $inv.razors
+Makeup : $inv.makeup
+Lip Gloss : $inv.gloss
+Nail Polish : $inv.polish
+Sunscreen : $inv.sunscreen
+Hair Ties : $inv.ties
+Condoms : $inv.condoms
+Lube : $inv.lube
+&lt;&lt;/silently&gt;&gt;
+@@.i;Toys@@
+&lt;&lt;for _i to 0; _i lt $ward.length; _i++&gt;&gt;\
+	&lt;&lt;if (ward[_i].type == $cltype.cage) || (ward[_i].typ == $cltype.plug&gt;&gt;\
+	&lt;&lt;print ward[_i].name&gt;&gt;
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/for&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="56" name="Check Self" tags="" position="1206,114" size="100,100">&lt;&lt;back&gt;&gt;
+
+You are a @@.b;$pc.age@@ year old.
+Your face is @@.b;$body.face.desc@@ with @@.b;$body.makeup.desc@@ applied. 
+You have @@.b;$body.lips.desc@@, @@.b;$body.eye.color@@ eyes, @@.b;$body.hair.color $body.hair.desc@@ hair, and @@.b;$body.skin.color skin@@.
+You have @@.b;$body.breasts.desc@@, @@.b;$body.hips.desc@@, and a @@.b;$body.ass.desc@@.
+You have a @@.b;$body.penis.desc@@ and @@.b;$body.anus.desc@@ between your legs.
+/%Your body is @@.b;$body.shaved@@%/
+&lt;&lt;if $cissy.QW gt 0&gt;&gt;\
+You have a demonic heart shaped tattoo on your pubic area from @@.c;$cissy.name@@&#39;s curse
+&lt;&lt;/if&gt;&gt;\
+/%Current Hairstyle:@@.b;$body.hairstyle@@%/
+
+Clothes:@@.b;$worn[0].name@@
+Underwear:@@.b;$worn[1].name@@	
+Shoes:@@.b;$worn[2].name@@		
+
+
+</tw-passagedata><tw-passagedata pid="57" name="Journal" tags="" position="1326,109" size="100,100">&lt;&lt;back&gt;&gt;
+&lt;&lt;if $mom.meet == 1&gt;&gt;\
+[[$mom.name|Mom Journal]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $sis.meet == 1&gt;&gt;\
+[[$sis.name|Sis Journal]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $teach.meet == 1&gt;&gt;\
+[[$teach.name|Teach Journal]]
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $cissy.meet == 1&gt;&gt;\
+[[$cissy.name|Cissy Journal]]
+&lt;&lt;/if&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="58" name="Debug" tags="" position="1431,109" size="100,100">&lt;&lt;back&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Homeroom" tags="" position="1923,1320" size="100,100">@@.l;Homeroom@@
+&lt;&lt;if $school.over eq 0&gt;&gt;\
+[[Attend morning classes|Morning Class][$school.goClass()]]
+&lt;&lt;/if&gt;&gt;\
+[[Go to the school grounds|School Grounds]]
+[[Go to the restrooms|Restrooms]]</tw-passagedata><tw-passagedata pid="60" name="Teacher Office" tags="" position="2008,1167" size="100,100">@@.l;Ms. Michaels Office@@
+&lt;&lt;if $teach.inOffice() eq 1&gt;&gt;\
+@@.t;$teach.name@@ is in her office
+&lt;&lt;else&gt;&gt;\
+@@.t;$teach.name@@ is //not// in her office
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $teach.QW gte 2 &amp;&amp; !$school.over&gt;&gt;\
+	&lt;&lt;link &quot;Daily Check-up&quot; &quot;teachDailyOn&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $teach.QW gte 2 &amp;&amp; school.over&gt;&gt;\
+	&lt;&lt;link &quot;Daily Check-up&quot; &quot;teachDailyOff&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $teach.quest2() eq 1&gt;&gt;\
+	&lt;&lt;link &quot;Present Yourself&quot; &quot;teachQW2&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;elseif $teach.quest1() eq 1&gt;&gt;\
+	&lt;&lt;link &quot;Detention with Ms. Michaels&quot; &quot;teachQW1&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+You have no business with @@.t;$teach.name@@ today.
+&lt;&lt;/if&gt;&gt;\
+[[Exit|School Grounds]]</tw-passagedata><tw-passagedata pid="61" name="Late Class" tags="" position="1755,1199" size="100,100">@@.l;Late for Class@@
+&lt;&lt;set $school.addLate()&gt;&gt;
+[[Next|Morning Class]]</tw-passagedata><tw-passagedata pid="62" name="Morning Class" tags="" position="1726,1346" size="100,100">@@.l;Class@@
+
+&lt;&lt;set _x to $school.classEvent()&gt;&gt;\
+&lt;&lt;if _x eq 2&gt;&gt;\
+	&lt;&lt;display &quot;School Caged&quot;&gt;&gt;\
+&lt;&lt;elseif _x eq 1&gt;&gt;\
+	&lt;&lt;display &quot;School Horny&quot;&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+	&lt;&lt;display &quot;School Normal&quot;&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[Go to lunch|Lunch][$time.setPhase(2)]]</tw-passagedata><tw-passagedata pid="63" name="Lunch" tags="" position="1775,1477" size="100,100">@@.l;Lunch@@
+&lt;&lt;if $school.late eq 1&gt;&gt;\
+[[Go to lunch detention|Detention]]
+&lt;&lt;else&gt;&gt;\
+	[[Go to afternoon classes|Aft Class][$school.eatLunch()]]
+	&lt;&lt;if $pc.horny gt 75&gt;&gt;\
+	[[Masturbate in the Restrooms|School Mast][$sex.jOff()]]
+	&lt;&lt;/if&gt;&gt;\
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="School Mast" tags="" position="1905,1487" size="100,100">You masturbate in the restrooms
+
+[[Go to class|Aft Class][$sex.jOff()]]</tw-passagedata></tw-storydata>

@@ -1,0 +1,461 @@
+<tw-storydata name="test" startnode="1" creator="Twine" creator-version="2.2.1" ifid="DA09BBDE-71FA-4707-BBDE-374842F857F0" zoom="1" format="SugarCube" format-version="2.21.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="start" tags="" position="412,210" size="100,100">&lt;&lt;set $ward = [] &gt;&gt;
+&lt;&lt;set $clothingtype =
+{
+	none : 0,
+	school : 1,
+	casual : 2,
+	uwear : 3,
+	shoe : 4,
+	cosplay : 5,
+	swim : 6
+}&gt;&gt;
+&lt;&lt;set $bschoolu = 
+{
+	name : &quot;Boy&#39;s Uniform&quot;,
+	type : $clothingtype.school,
+	gender : 0,
+	slutty : 0,
+	price : 10,
+	have : 1,
+}&gt;&gt;
+&lt;&lt;set $gschoolu =
+{
+	name : &quot;Girl&#39;s Uniform&quot;,
+	type : $clothingtype.school,
+	gender : 1,
+	slutty : 0,
+	price : 10,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $sluttyu =
+{
+	name : &quot;Slutty School Uniform&quot;,
+	type : $clothingtype.school,
+	gender : 1,
+	slutty : 1,
+	price : 30,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $mcasual =
+{
+	name : &quot;T-Shirt and Jeans&quot;,
+	type : $clothingtype.casual,
+	gender : 0,
+	slutty : 0,
+	price : 20,
+	have : 1,
+}&gt;&gt;
+&lt;&lt;set $fskirt =
+{
+	name : &quot;Blouse and Short Skirt&quot;,
+	type : $clothingtype.casual,
+	gender : 1,
+	slutty : 1,
+	price : 35,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $ldress =
+{
+	name : &quot;Summer Dress&quot;,
+	type : $clothingtype.casual,
+	gender : 1,
+	slutty : 0,
+	price : 25,
+	have : 0,
+	}&gt;&gt;
+&lt;&lt;set $fslutty =
+{
+	name : &quot;Slutty Clubbing Clothes&quot;,
+	type : $clothingtype.school,
+	gender : 1,
+	slutty : 1,
+	price : 40,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $boxers =
+{
+	name : &quot;Boxers&quot;,
+	type : $clothingtype.uwear,
+	gender : 0,
+	slutty : 0,
+	price : 10,
+	have : 1,
+}&gt;&gt;
+&lt;&lt;set $panties =
+{
+	name : &quot;Panties&quot;,
+	type : $clothingtype.uwear,
+	gender : 1,
+	slutty : 0,
+	price : 15,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $gstring =
+{
+	name : &quot;G-String&quot;,
+	type : $clothingtype.uwear,
+	gender : 1,
+	slutty : 1,
+	price : 30,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $lingerie =
+{
+	name : &quot;Lingerie&quot;,
+	type : $clothingtype.uwear,
+	gender : 1,
+	slutty : 0,
+	price : 70,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $sneakers =
+{
+	name : &quot;Sneakers&quot;,
+	type : $clothingtype.shoes,
+	gender : 0,
+	slutty : 0,
+	price : 25,
+	have : 1,
+}&gt;&gt;
+&lt;&lt;set $flats =
+{
+	name : &quot;Girl&#39;s Flats&quot;,
+	type : $clothingtype.shoes,
+	gender : 1,
+	slutty : 0,
+	price : 25,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $heels =
+{
+	name : &quot;High Heels&quot;,
+	type : $clothingtype.shoes,
+	gender : 1,
+	slutty : 1,
+	price : 45,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $sheels =
+{
+	name : &quot;Stripper Heels&quot;,
+	type : $clothingtype.shoes,
+	gender : 1,
+	slutty : 1,
+	price : 65,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $maidu =
+{
+	name : &quot;Maid Uniform&quot;,
+	type : $clothingtype.cosplay,
+	gender : 1,
+	slutty : 0,
+	price : 40,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $smaidu =
+{
+	name : &quot;Sexy Maid Uniform&quot;,
+	type : $clothingtype.cosplay,
+	gender : 1,
+	slutty : 1,
+	price : 60,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $cheerleader =
+{
+	name : &quot;Cheerleader Uniform&quot;,
+	type : $clothingtype.cosplay,
+	gender : 1,
+	slutty : 0,
+	price : 35,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $sluttycheer =
+{
+	name : &quot;Slutty Cheerleader Uniform&quot;,
+	type : $clothingtype.cosplay,
+	gender : 1,
+	slutty : 1,
+	price : 50,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $shimakaze =
+{
+	name : &quot;Shimakaze Cosplay&quot;,
+	type : $clothingtype.cosplay,
+	gender : 1,
+	slutty : 1,
+	price : 100,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $trunks =
+{
+	name : &quot;Swim Trunks&quot;,
+	type : $clothingtype.swim,
+	gender : 0,
+	slutty : 0,
+	price : 15,
+	have : 1,
+}&gt;&gt;
+&lt;&lt;set $thong =
+{
+	name : &quot;Thong&quot;,
+	type : $clothingtype.swim,
+	gender : 0,
+	slutty : 1,
+	price : 20,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $opiece =
+{
+	name : &quot;One Piece&quot;,
+	type : $clothingtype.swim,
+	gender : 1,
+	slutty : 0,
+	price : 25,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $bikini =
+{
+	name : &quot;Bikini&quot;,
+	type : $clothingtype.swim,
+	gender : 1,
+	slutty : 1,
+	price : 45,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $sbikini =
+{
+	name : &quot;Thong&quot;,
+	type : $clothingtype.swim,
+	gender : 1,
+	slutty : 1,
+	price : 55,
+	have : 0,
+}&gt;&gt;
+&lt;&lt;set $body = 
+{
+	build :
+	{
+		desc : &quot;&quot;,
+		rank : 0,
+	},
+	face :
+	{
+		desc : &quot;boyish&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;boyish&quot;;
+			else if(this.rank = 1)
+				this.desc = &quot;androgynous&quot;;
+			else if(this.rank gt 1)
+				this.desc = &quot;feminine&quot;;
+		},
+	},
+	skin :
+	{
+		desc : &quot;&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+	},
+	eye :
+	{
+		desc : &quot;&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+	},
+	hair :
+	{
+		desc : &quot;short&quot;,
+		color : &quot;&quot;,
+		rank : 0,
+		length : &quot;&quot;,
+		setStyle : function(x)
+		{
+			this.desc = x;
+		},
+		setLength : function()
+		{
+			if(this.rank lte 0)
+				this.length = &quot;short&quot;;
+			else if(this.rank = 1)
+				this.length = &quot;medium&quot;;
+			else if(this.rank gt 1)
+				this.length = &quot;long&quot;;
+		},
+	},
+	penis :
+	{
+		desc : &quot;average cock&quot;,
+		rank : 5,
+		set: function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;clitty&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;micro-dick&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;tiny weenie&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;small penis&quot;;
+			else if(this.rank eq 4)
+				this.desc = &quot;below average penis&quot;;
+			else if(this.rank eq 5)
+				this.desc = &quot;average cock&quot;;
+			else if(this.rank eq 6)
+				this.desc = &quot;above average cock&quot;;
+			else if(this.rank eq 6)
+				this.desc = &quot;large cock&quot;;
+			else
+				this.desc = &quot;huge cock&quot;;
+		},
+	},
+	anus :
+	{
+		desc : &quot;virgin anus&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;virgin anus&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;tight asshole&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;used asshole&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;loose asshole&quot;;
+			else
+				this.desc = &quot;boipussy&quot;;
+		},
+	},
+	hips :
+	{
+		desc : &quot;straight hips&quot;,
+		rank : 0,
+		set : function()
+		{
+			if (this.rank lte 0)
+				this.desc = &quot;straight hips&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;girlish hips&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;curvy hips&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;wide hips&quot;;
+			else
+				this.desc = &quot;fertile hips&quot;;
+		},
+	},
+	ass :
+	{
+		desc : &quot;dainty butt&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;dainty butt&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;round ass&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;big booty&quot;;
+			else
+				this.desc = &quot;T H I C C ass&quot;;
+		},
+	},
+	breasts :
+	{
+		desc : &quot;flat chest&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;flat chest&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;perky breasts&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;small breasts&quot;;
+			else if(this.rank eq 3)
+				this.desc = &quot;prominent breasts&quot;;
+			else if(this.rank eq 4)
+				this.desc = &quot;large breasts&quot;;
+			else 
+				this.desc = &quot;huge knockers&quot;;
+		},
+	},
+	lips :
+	{
+		desc : &quot;soft lips&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;soft lips&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;plump lips&quot;;
+			else if(this.rank eq 2)
+				this.desc = &quot;thick lips&quot;;
+			else
+				this.desc = &quot;cock-sucking lips&quot;;
+		},
+	},
+	makeup :
+	{
+		desc : &quot;no makeup&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;no makeup&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;light makeup&quot;;
+			else
+				this.desc = &quot;slutty makeup&quot;;
+		},
+	},
+	shave :
+	{
+		desc : &quot;hairless&quot;,
+		rank : 0,
+		set : function()
+		{
+			if(this.rank lte 0)
+				this.desc = &quot;hairless&quot;;
+			else if(this.rank eq 1)
+				this.desc = &quot;stubbly&quot;;
+			else
+				this.desc = &quot;hairy&quot;;
+		},
+	},
+}&gt;&gt;
+
+
+[[next]]</tw-passagedata><tw-passagedata pid="2" name="next" tags="" position="598,262" size="100,100">&lt;&lt;for $i = 0; $i &lt; $ward.length; $i++&gt;&gt;
+	&lt;&lt;set $item = $ward[$i]&gt;&gt;
+	&lt;&lt;print $i + &quot; &quot; + $item.name&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+$body.penis.desc
+</tw-passagedata></tw-storydata>
